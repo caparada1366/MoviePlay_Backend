@@ -1,6 +1,9 @@
 const {DataTypes} = require('sequelize')
 const sequelize = require('../config/database')
 
+module.exports = (sequelize) =>{
+
+
 const Multimedia = sequelize.define('Multimedia', {
     id: {
         type: DataTypes.INTEGER,
@@ -16,7 +19,7 @@ const Multimedia = sequelize.define('Multimedia', {
         allowNull: false
     },
     genre: {
-        type: DataTypes.STRING,
+        type: DataTypes.ARRAY(DataTypes.STRING),
         allowNull: false
     },
     description: {
@@ -51,6 +54,11 @@ const Multimedia = sequelize.define('Multimedia', {
         type: DataTypes.INTEGER,
         allowNull: false
     },
-})
+    price: {
+        type: DataTypes.FLOAT,
+        allowNull: false
+    }
+});
+return Multimedia;
+}
 
-module.exports = Multimedia;
