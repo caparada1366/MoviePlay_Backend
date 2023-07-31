@@ -18,7 +18,7 @@ conn.sync({force: true}).then(async () => {     //aqui se configura si se reinic
 });
 
 app.get('/', (req, res) => {
-  res.send('¡Hola, este es un proyecto con Express y Sequelize!');
+  res.send('¡Hola, este es un proyecto con Express y Sequelize!!!!');
 });
 
 app.listen(DB_PORT, () => {
