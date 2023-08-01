@@ -2,7 +2,8 @@ const express = require('express');
 const { conn, sequelize } = require('./config/database')
 require("dotenv").config();
 const app = express();
-const { DB_PORT } = process.env;
+const { PORT } = process.env;
+const routes = require('./Routes/index');
 
 conn.sync({force: true}).then(async () => {     //aqui se configura si se reinicia la tabla o no
   try {
@@ -17,10 +18,12 @@ conn.sync({force: true}).then(async () => {     //aqui se configura si se reinic
   }
 });
 
-app.get('/', (req, res) => {
-  res.send('¡Hola, este es un proyecto con Express y Sequelize!!!!');
-});
+app.use('/', routes)
 
-app.listen(DB_PORT, () => {
-  console.log(`Servidor corriendo en http://localhost:${DB_PORT}`);
+// app.get('/', (req, res) => {
+//   res.send('¡Hola, este es un proyecto con Express y Sequelize!!!!');
+// });
+
+app.listen(PORT, () => {
+  console.log(`Servidor corriendo en http://localhost:${PORT}`);
 });
