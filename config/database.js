@@ -37,7 +37,12 @@ fs.readdirSync(path.join(__dirname, '../models'))
   
   sequelize.models = Object.fromEntries(capsEntries);
 
-  const { Multimedia, OrdenDeCompra } = sequelize.models;
+  const { Multimedia, OrdenDeCompra, Genres } = sequelize.models;
+
+  Multimedia.belongsToMany(Genres, {through: 'MultimediaGenres'});
+  Genres.belongsToMany(Multimedia, {through: 'MultimediaGenres'});
+
+  // User orden de compra relacion de uno a muchos...
 
 
 
