@@ -1,6 +1,10 @@
 const { DataTypes } = require('sequelize');
 const sequelize = require('../config/database');
 
+
+module.exports = (sequelize) =>{
+
+
 const OrdenDeCompra = sequelize.define('OrdenDeCompra', {
     id: {
         type: DataTypes.INTEGER,
@@ -15,6 +19,7 @@ const OrdenDeCompra = sequelize.define('OrdenDeCompra', {
         type: DataTypes.STRING,
         allowNull: false
     }
-})
+});
+    return OrdenDeCompra;
+}
 
-module.exports = OrdenDeCompra;
