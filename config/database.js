@@ -39,6 +39,11 @@ fs.readdirSync(path.join(__dirname, '../models'))
 
   const { Multimedia, OrdenDeCompra, Genres } = sequelize.models;
 
+  Multimedia.belongsToMany(Genres, {through: 'MultimediaGenres'});
+  Genres.belongsToMany(Multimedia, {through: 'MultimediaGenres'});
+
+  // User orden de compra relacion de uno a muchos...
+
 
 
 module.exports ={...sequelize.models, conn: sequelize, sequelize};
