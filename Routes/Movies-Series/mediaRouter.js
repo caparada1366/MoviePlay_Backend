@@ -5,9 +5,9 @@ const { getMedia, mediaByID, postMedia } = require('../../controllers/media/medi
 const mediaRouter = Router();
 
 
-mediaRouter.get('/', getMedia)  // Osea,  '/media';  Faltarían los handlers.
-mediaRouter.get('/:id', mediaByID) // Osea, '/media/id';  Faltarían los handlers.
-mediaRouter.post('/', postMedia) // Faltaría el handler
+mediaRouter.get('/', getMedia);  
+mediaRouter.get('/:id', mediaByID); 
+mediaRouter.post('/', postMedia); 
 
 
 module.exports = mediaRouter;

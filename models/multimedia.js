@@ -58,3 +58,4 @@ const Multimedia = sequelize.define('Multimedia', {
 return Multimedia;
 }
 
+

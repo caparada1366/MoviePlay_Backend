@@ -1,4 +1,4 @@
-export const apiMovie = [
+const apiMovie = [
     {    
         "name": "The Flash",
         "homepage": "https://www.dc.com/theflash",
@@ -242,7 +242,7 @@ export const apiMovie = [
 ];
 
 
-export const genres = [
+const genres = [
     {
       "name": "Action"
     },
