@@ -18,10 +18,6 @@ const Multimedia = sequelize.define('Multimedia', {
         type: DataTypes.STRING,
         allowNull: false
     },
-    genre: {
-        type: DataTypes.ARRAY(DataTypes.STRING),
-        allowNull: false
-    },
     description: {
         type: DataTypes.STRING,
         allowNull: false
