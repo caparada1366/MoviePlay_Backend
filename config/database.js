@@ -37,7 +37,7 @@ fs.readdirSync(path.join(__dirname, '../models'))
   
   sequelize.models = Object.fromEntries(capsEntries);
 
-  const { Multimedia, OrdenDeCompra } = sequelize.models;
+  const { Multimedia, OrdenDeCompra, Genres } = sequelize.models;
 
 
 
