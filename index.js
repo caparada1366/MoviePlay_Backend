@@ -13,14 +13,12 @@ conn.sync({force: false}).then(async () => {     //aqui se configura si se reini
       console.log(`Servidor corriendo en http://localhost:${PORT}`);
     });
     // Sincronizar el modelo con la base de datos (crear tablas si no existen)
-    await sequelize.sync({force: false});
+    
     console.log('Modelos sincronizados con la base de datos.');
   } catch (error) {
     console.error('Error al conectar y sincronizar con la base de datos:', error);
   }
 });
 
-// app.get('/', (req, res) => {
-//   res.send('¡Hola, este es un proyecto con Express y Sequelize!!!!');
-// });
+
 
