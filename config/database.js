@@ -37,11 +37,10 @@ fs.readdirSync(path.join(__dirname, '../models'))
   
   sequelize.models = Object.fromEntries(capsEntries);
 
-  const { Multimedia, OrdenDeCompra, Genres, Series, Episodios} = sequelize.models;
+  const { Multimedia, OrdenDeCompra, Genres } = sequelize.models;
 
-  Multimedia.belongsToMany(Genres, {through: 'MultimediaGenres', });
-  Genres.belongsToMany(Multimedia, {through: 'MultimediaGenres', });
-
+  Multimedia.belongsToMany(Genres, {through: 'MultimediaGenres', foreignKey: 'idgenre'});
+  Genres.belongsToMany(Multimedia, {through: 'MultimediaGenres', foreignKey: 'idmultimedia'});
 
 
   
@@ -52,5 +51,7 @@ fs.readdirSync(path.join(__dirname, '../models'))
   // Un episodio pertenece a una Serie
   Series.hasMany(Episodios, { foreignKey: 'serieId' });
   Episodios.belongsTo(Series, { foreignKey: 'episodiosId' });
+
+
 
 module.exports ={...sequelize.models, conn: sequelize, sequelize};
