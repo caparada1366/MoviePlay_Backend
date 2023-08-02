@@ -24,13 +24,13 @@ const mediaByID = async (req, res) => {
 
 
 const postMedia = async (req, res) => {
-    let {type, name, description, time, linkVideo, image, price, genres} = req.body  
+    let {type, name, description, linkVideo, image, genres} = req.body  
     try {
-        const response = await postNewMedia(type, name, description, time, linkVideo, image, price, genres); 
+        const response = await postNewMedia(type, name, description, linkVideo, image, genres); 
         res.status(200).json(response)
 
     } catch (error) {
-        res.status(400).json({ error: 'para la cola' })
+        res.status(400).json({ error: error.message })
     }
 }
 

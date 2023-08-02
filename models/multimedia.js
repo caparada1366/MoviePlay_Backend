@@ -1,5 +1,5 @@
 const {DataTypes} = require('sequelize')
-const sequelize = require('../config/database')
+const sequelize = require('../config/database');
 
 module.exports = (sequelize) =>{
 
@@ -19,13 +19,13 @@ const Multimedia = sequelize.define('Multimedia', {
         allowNull: false
     },
     description: {
-        type: DataTypes.STRING,
+        type: DataTypes.STRING(800),
         allowNull: false
     },
-    time: {
-        type: DataTypes.INTEGER,
-        allowNull: false
-    },
+    // time: {
+    //     type: DataTypes.INTEGER,
+    //     allowNull: false
+    // },
     linkVideo: {
         type: DataTypes.STRING,
         allowNull: false
@@ -34,26 +34,26 @@ const Multimedia = sequelize.define('Multimedia', {
         type: DataTypes.STRING,
         allowNull: false
     },
-    active: {
-        type: DataTypes.BOOLEAN,
-        allowNull: false
-    },
-    nameSerie: {
-        type: DataTypes.STRING,
-        allowNull: false
-    },
-    numCapitulo: {
-        type: DataTypes.INTEGER,
-        allowNull: false
-    },
-    numTeporada: {
-        type: DataTypes.INTEGER,
-        allowNull: false
-    },
-    price: {
-        type: DataTypes.FLOAT,
-        allowNull: false
-    }
+    // active: {
+    //     type: DataTypes.BOOLEAN,
+    //     allowNull: false
+    // },
+    // nameSerie: {
+    //     type: DataTypes.STRING,
+    //     allowNull: false
+    // },
+    // numCapitulo: {
+    //     type: DataTypes.INTEGER,
+    //     allowNull: false
+    // },
+    // numTeporada: {
+    //     type: DataTypes.INTEGER,
+    //     allowNull: false
+    // },
+    // price: {
+    //     type: DataTypes.FLOAT,
+    //     allowNull: false
+    //}
 });
 return Multimedia;
 }

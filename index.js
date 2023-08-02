@@ -1,4 +1,3 @@
-
 const { conn, sequelize } = require('./config/database')
 require("dotenv").config();
 const server = require('./config/app');
@@ -20,8 +19,6 @@ conn.sync({force: true}).then(async () => {     //aqui se configura si se reinic
     console.error('Error al conectar y sincronizar con la base de datos:', error);
   }
 });
-
-app.use('/', routes)
 
 // app.get('/', (req, res) => {
 //   res.send('¡Hola, este es un proyecto con Express y Sequelize!!!!');

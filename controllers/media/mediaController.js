@@ -1,22 +1,8 @@
 const { Multimedia, Genres } = require('../../config/database');
-const { apiMovie, genres } = require('../../config/apiMovie');
+const { apiMovie, genres } = require('../../apiData/apiMovie');
 
-  // Cargamos la db con los datos de la fake API:
+  // Cargamos la db con los datos de la fake API:  (esto es de prueba)
 const loadMultimedia = async() => {
-  // Mapeamos la api de movies y traemos la info que queramos:
-  // const moviesMapped = apiMovie.map( ele => {
-  //   return {
-  //     type: ele.type,
-  //     name: ele.name,
-  //     description: ele.description,
-  //     linkVideo: ele.linkVideo,
-  //     image: ele.image,
-  //   }
-  // } );
-
-  // // Cargamos a Multimedia:
-  // await Multimedia.bulkCreate(moviesMapped);
-
   try {
     // Mapeamos la api de movies y traemos la info que queramos:
     const moviesMapped = apiMovie.map((ele) => ({
@@ -43,12 +29,12 @@ const loadMultimedia = async() => {
 
 }
 
-
+// Esto es de prueba, podemos modificarlo para que quede mejor
 const loadGenres = async() => {
-  const apiGenres = genres;
+  // const apiGenres = genres;
   
     // Hacemos lo mismo con la api de genres:
-    const genresMapped = apiGenres.map( ele => {
+    const genresMapped = genres.map( ele => {
       return {
         name: ele.name,
       }
@@ -68,15 +54,19 @@ const getAllMedia = async() => {
     if( countMedia === 0 ) { // Si no hay nada, entonces activamos la función para cargar Multimedia
       await loadMultimedia();
     }
-    if( countGenre === 0 ) {
+    if( countGenre === 0 ) { // Si no hay nada, entonces activamos la función para cargar Genres
       await loadGenres();
     }
 
     const media = await Multimedia.findAll({
-      include: [Genres],
+      include: {
+        model: Genres,
+        attributes: ['name'],
+        through: { attributes: [], },  // así no nos trae la tabla de unión
+      },
     });
 
-    // Devolvemos media con toda la info cargada + los géneros relacionados
+    // Devolvemos media con toda la info cargada
     return media;
 
 
@@ -87,7 +77,11 @@ const getAllMedia = async() => {
 const getMediaById = async( id ) => {
     const media = await Multimedia.findOne({
         where: { id: id },
-        include: [{ model: Genres, through: 'MultimediaGenres' }]
+        include: { 
+          model: Genres, 
+          attributes: ['name'],
+          through: { attributes: [], },
+        },
     });
 
     if( !media ) {
@@ -97,90 +91,11 @@ const getMediaById = async( id ) => {
     return media;
 }
 
-// Solo me faltaría añadir la parte de series, pero quería que vieran el código primero. (Ah, me faltan validaciones específicas nomás)
-
-// const postNewMedia = async(type, name, description, time, linkVideo, image, price, genres) => {
-
-//     if( !type || !name || !description || !time || !linkVideo || !image || !price || genres.length === 0 ) {
-//         throw new Error( 'Missing Data: Please provide all required fields' );
-//     };
-
-//     // Después le voy a aplicar validaciones a cada parámetro
-
-//     if( type === 'movie' ) {
-//         let movieCreate = await Multimedia.create({
-//             type,
-//             name,
-//             description,
-//             time,
-//             linkVideo,
-//             image,
-//             price,
-//         });
-
-//         await Promise.all(genres.map(async (gen) => {
-//             const [associate] = await Genres.findOrCreate({ // findOrCreate por si necesitamos crear nuevos géneros, si no se lo saco.
-//                 where: { name: gen },
-//             });
-//             await movieCreate.addGenres(associate); // Asociamos la movie creada a sus géneros.
-//         }));
-
-//         return movieCreate;
-//     }
-// }
-
-
-/*
-Esta opción también puede ser:
-
-const postNewMedia = async (type, name, description, time, linkVideo, image, price, genres) => {
-  if (!type || !name || !description || !time || !linkVideo || !image || !price || genres.length === 0) {
-    throw new Error('Missing Data: Please provide all required fields.');
-  }
-
-  // Acá puedo agregar más validaciones para los tipos de datos, rangos, etc.
-
-  try {
-    // Uso una transacción para asegurarnos de que todas las operaciones se completen con éxito o se reviertan en caso de error.
-    const media = await sequelize.transaction(async (t) => {
-      // Creamos la película o serie
-      const media = await Multimedia.create({
-        type,
-        name,
-        description,
-        time,
-        linkVideo,
-        image,
-        price,
-      }, { transaction: t });
-
-      // Asociamos los géneros uno por uno. Uso un 'for of', distinto del 'Promise.all' con el 'map' de arriba.
-      for (const gen of genres) {
-        const [genre, created] = await Genres.findOrCreate({
-          where: { name: gen },
-          transaction: t,
-        });
-        if (created) {
-          // Aca podemos agregar lógica adicional si queremos hacer algo específico en caso de que se cree un nuevo género.
-          // Si no, lo borramos al carajo.
-        }
-        await media.addGenres(genre, { transaction: t });
-      }
-
-      return media;
-    });
-
-    return media;
-  } catch (error) {
-    throw new Error('Error creating media');
-  }
-};
- */
 
 
 const isValidUrl = (url) => {
   // Expresión regular para validar URLs generales
-  const urlPattern = /^(https?:\/\/)?([\da-z.-]+)\.([a-z.]{2,6})([/\w .-]*)*\/?$/i;
+  const urlPattern = /^https?:\/\/\S+$/;
   return urlPattern.test(url);
 };
 
@@ -191,9 +106,11 @@ const isValidImageUrl = (url) => {
 };
 
 
-const postNewMedia = async (type, name, description, time, linkVideo, image, price, genres) => {
 
-  // Validaciones de los datos:
+const postNewMedia = async(type, name, description, linkVideo, image, genres) => {
+
+  // VALIDACIONES ( SAQUÉ TIME, PRICE HASTA QUE LO AGREGUEMOS A LA API :) )
+
   if (!type || typeof type !== 'string' || !name || typeof name !== 'string' || 
       !description || typeof description !== 'string' || 
       // !Number.isInteger(time) || 
@@ -204,41 +121,27 @@ const postNewMedia = async (type, name, description, time, linkVideo, image, pri
     throw new Error('Invalid Data: Please provide valid values for all required fields.');
   }
 
-  // Acá puedo agregar más validaciones para los tipos de datos, rangos, etc.
 
-  try {
-    // Uso una transacción para asegurarnos de que todas las operaciones se completen con éxito o se reviertan en caso de error.
-    const createdMedia = await sequelize.transaction(async (t) => {
-      // Creamos la película o serie
-      const media = await Multimedia.create({
-        type,
-        name,
-        description,
-        // time,
-        linkVideo,
-        image,
-        // price,
-      }, { transaction: t });
-
-      // Asociamos los géneros uno por uno. Uso un 'for of', distinto del 'Promise.all' con el 'map' de arriba.
-      for (const gen of genres) {
-        const [genre] = await Genres.findOrCreate({
-          where: { name: gen },
-          transaction: t,
+    if( type === 'movie' ) {
+        let movieCreate = await Multimedia.create({
+            type,
+            name,
+            description,
+            linkVideo,
+            image,
         });
 
-        await media.addGenres(genre, { transaction: t });
-      }
+    for (const gen of genres) {
+      const [genre] = await Genres.findOrCreate({
+        where: { name: gen },
+      });
 
-      return media;
-    });
+      await movieCreate.addGenres(genre);
+    }
 
-    return createdMedia;
-  } catch (error) {
-    throw new Error('Error creating media');
-  }
-};
-
+      return movieCreate
+    }
+}
 
 
 module.exports = {
