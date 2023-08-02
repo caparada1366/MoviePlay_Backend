@@ -42,8 +42,6 @@ fs.readdirSync(path.join(__dirname, '../models'))
   Multimedia.belongsToMany(Genres, {through: 'MultimediaGenres', foreignKey: 'idgenre'});
   Genres.belongsToMany(Multimedia, {through: 'MultimediaGenres', foreignKey: 'idmultimedia'});
 
-
-  
   // Una serie puede tener varios episodios..
   Series.belongsToMany(Genres, {through: 'SeriesGenres'});
   Genres.belongsToMany(Series, {through: 'SeriesGenres'});

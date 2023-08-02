@@ -1,6 +1,7 @@
 const { DataTypes } = require('sequelize');
-const sequelize = require('./database');
+const sequelize = require('../config/database');
 
+module.exports = (sequelize) =>{
 const Episodios = sequelize.define('Episodios', {
   episodioId: {
     type: DataTypes.INTEGER,
@@ -15,11 +16,11 @@ const Episodios = sequelize.define('Episodios', {
     type: DataTypes.INTEGER,
     allowNull: false
   },
-  titulo: {
+  tituloEpisodio: {
     type: DataTypes.STRING,
     allowNull: false,
   },
-  descripcion: {
+  descripcionEpisodio: {
     type: DataTypes.TEXT,
     allowNull: false
   },
@@ -35,5 +36,4 @@ const Episodios = sequelize.define('Episodios', {
 { 
   timestamps: false,
 });
-
-module.exports = Episodios;
+}

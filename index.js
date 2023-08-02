@@ -4,7 +4,7 @@ require("dotenv").config();
 const server = require('./config/app');
 const { PORT } = process.env;
 
-conn.sync({force: true}).then(async () => {     //aqui se configura si se reinicia la tabla o no, true la reinicia false no
+conn.sync({force: false}).then(async () => {     //aqui se configura si se reinicia la tabla o no
   try {
     await sequelize.authenticate();
     console.log('Conexión a la base de datos establecida correctamente.');
@@ -13,7 +13,7 @@ conn.sync({force: true}).then(async () => {     //aqui se configura si se reinic
       console.log(`Servidor corriendo en http://localhost:${PORT}`);
     });
     // Sincronizar el modelo con la base de datos (crear tablas si no existen)
-    //await sequelize.sync({force: false});
+    await sequelize.sync({force: false});
     console.log('Modelos sincronizados con la base de datos.');
   } catch (error) {
     console.error('Error al conectar y sincronizar con la base de datos:', error);
