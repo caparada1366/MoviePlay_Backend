@@ -19,13 +19,13 @@ const Multimedia = sequelize.define('Multimedia', {
         allowNull: false
     },
     description: {
-        type: DataTypes.STRING(800),
+        type: DataTypes.TEXT,
         allowNull: false
     },
-    // time: {
-    //     type: DataTypes.INTEGER,
-    //     allowNull: false
-    // },
+    time: {
+        type: DataTypes.INTEGER,
+        allowNull: false
+    },
     linkVideo: {
         type: DataTypes.STRING,
         allowNull: false
@@ -34,26 +34,15 @@ const Multimedia = sequelize.define('Multimedia', {
         type: DataTypes.STRING,
         allowNull: false
     },
-    // active: {
-    //     type: DataTypes.BOOLEAN,
-    //     allowNull: false
-    // },
-    // nameSerie: {
-    //     type: DataTypes.STRING,
-    //     allowNull: false
-    // },
-    // numCapitulo: {
-    //     type: DataTypes.INTEGER,
-    //     allowNull: false
-    // },
-    // numTeporada: {
-    //     type: DataTypes.INTEGER,
-    //     allowNull: false
-    // },
-    // price: {
-    //     type: DataTypes.FLOAT,
-    //     allowNull: false
-    //}
+    active: {
+        type: DataTypes.BOOLEAN,
+        defaultValue: true, 
+        allowNull: false,
+    },
+    price: {
+        type: DataTypes.FLOAT,
+        allowNull: false
+    }
 });
 return Multimedia;
 }

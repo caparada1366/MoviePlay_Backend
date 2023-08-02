@@ -1,7 +1,7 @@
 const { Multimedia, Genres } = require('../../config/database');
 const { apiMovie, genres } = require('../../apiData/apiMovie');
 
-  // Cargamos la db con los datos de la fake API:  (esto es de prueba)
+  // Cargamos la db con los datos de la fake API:  (esto es para las pruebas)
 const loadMultimedia = async() => {
   try {
     // Mapeamos la api de movies y traemos la info que queramos:
