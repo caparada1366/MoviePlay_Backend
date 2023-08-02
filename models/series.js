@@ -14,9 +14,6 @@ const Series = sequelize.define('Series', {
   descripcion: {
     type: DataTypes.TEXT,
   },
-  puntuacion: {
-    type: DataTypes.FLOAT,
-  },
   yearEstreno: {
     type: DataTypes.INTEGER,
   },

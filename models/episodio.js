@@ -2,7 +2,7 @@ const { DataTypes } = require('sequelize');
 const sequelize = require('./database');
 
 const Episodios = sequelize.define('Episodios', {
-  EpisodioId: {
+  episodioId: {
     type: DataTypes.INTEGER,
     primaryKey: true,
     autoIncrement: true,
@@ -11,12 +11,17 @@ const Episodios = sequelize.define('Episodios', {
     type: DataTypes.INTEGER,
     allowNull: false,
   },
+  numTemporada:{
+    type: DataTypes.INTEGER,
+    allowNull: false
+  },
   titulo: {
     type: DataTypes.STRING,
     allowNull: false,
   },
   descripcion: {
     type: DataTypes.TEXT,
+    allowNull: false
   },
   linkVideo: {
     type: DataTypes.STRING,
@@ -25,11 +30,7 @@ const Episodios = sequelize.define('Episodios', {
   duracion: {
     type: DataTypes.STRING,
     allowNull: false
-  },
-  calificacion: {
-    type: DataTypes.INTEGER,
-    allowNull: false
-  },
+  }
 },
 { 
   timestamps: false,

@@ -37,23 +37,20 @@ fs.readdirSync(path.join(__dirname, '../models'))
   
   sequelize.models = Object.fromEntries(capsEntries);
 
-  const { Multimedia, OrdenDeCompra, Genres } = sequelize.models;
+  const { Multimedia, OrdenDeCompra, Genres, Series, Episodios} = sequelize.models;
 
   Multimedia.belongsToMany(Genres, {through: 'MultimediaGenres'});
   Genres.belongsToMany(Multimedia, {through: 'MultimediaGenres'});
 
   // User orden de compra relacion de uno a muchos...
 
-// Una serie puede tener varias temporadas
-Series.hasMany(Temporadas, { foreignKey: 'serieId' });
-
-// Una temporada pertenece a una serie
-Temporadas.belongsTo(Series, { foreignKey: 'serieId' });
-
-// Una temporada puede tener varios episodios
-Temporadas.hasMany(Episodios, { foreignKey: 'temporadaId' });
-
-// Un episodio pertenece a una temporada
-Episodios.belongsTo(Temporadas, { foreignKey: 'temporadaId' });
+  
+  // Una serie puede tener varios episodios..
+  Series.belongsToMany(Genres, {through: 'SeriesGenres'});
+  Genres.belongsToMany(Series, {through: 'SeriesGenres'});
+  
+  // Un episodio pertenece a una Serie
+  Series.hasMany(Episodios, { foreignKey: 'serieId' });
+  Episodios.belongsTo(Series, { foreignKey: 'episodiosId' });
 
 module.exports ={...sequelize.models, conn: sequelize, sequelize};
