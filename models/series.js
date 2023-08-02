@@ -1,7 +1,9 @@
 const { DataTypes } = require('sequelize');
 const sequelize = require('../config/database');
 
-const Series = (sequelize) => sequelize.define('Series', {
+
+module.exports = (sequelize) =>{
+const Series = sequelize.define('Series', {
   serieId: {
     type: DataTypes.INTEGER,
     primaryKey: true,
@@ -15,7 +17,8 @@ const Series = (sequelize) => sequelize.define('Series', {
     type: DataTypes.TEXT,
   },
   yearEstreno: {
-    type: DataTypes.INTEGER,
+    type: DataTypes.STRING,
+    allowNull: false,
   },
   actores: {
     type: DataTypes.ARRAY(DataTypes.STRING),
@@ -25,5 +28,4 @@ const Series = (sequelize) => sequelize.define('Series', {
 { 
   timestamps: false,
 });
-
-module.exports = Series;
+}
