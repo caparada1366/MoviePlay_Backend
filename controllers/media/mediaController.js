@@ -1,5 +1,5 @@
 const { Multimedia, Genres } = require("../../config/database");
-const { apiMovie, genres } = require("../../apiData/apiMovie");
+const { apiMovie, genres, apiMoviesySeries } = require("../../apiData/apiMovie");
 const { Op } = require("sequelize");
 
 // Cargamos la db con los datos de la fake API:  (esto es para las pruebas)
@@ -27,7 +27,7 @@ const loadMultimedia = async () => {
     //   genres: ele.genres
     // }));
 
-    apiMovie.forEach(async (ele) => {
+    apiMoviesySeries.forEach(async (ele) => {
       let movieCreate = await Multimedia.create({
         // type: ele.type,
         name: ele.name,
