@@ -26,7 +26,7 @@ const loadMultimedia = async() => {
 
      apiMovie.forEach(async ele=>{
       let movieCreate = await Multimedia.create({
-        type: ele.type,
+        // type: ele.type,
         name: ele.name,
         description: ele.description,
         time: 120,
