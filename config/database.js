@@ -44,6 +44,16 @@ fs.readdirSync(path.join(__dirname, '../models'))
 
   // User orden de compra relacion de uno a muchos...
 
+// Una serie puede tener varias temporadas
+Series.hasMany(Temporadas, { foreignKey: 'serieId' });
 
+// Una temporada pertenece a una serie
+Temporadas.belongsTo(Series, { foreignKey: 'serieId' });
+
+// Una temporada puede tener varios episodios
+Temporadas.hasMany(Episodios, { foreignKey: 'temporadaId' });
+
+// Un episodio pertenece a una temporada
+Episodios.belongsTo(Temporadas, { foreignKey: 'temporadaId' });
 
 module.exports ={...sequelize.models, conn: sequelize, sequelize};
