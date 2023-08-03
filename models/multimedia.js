@@ -42,7 +42,7 @@ const Multimedia = sequelize.define('Multimedia', {
     price: {
         type: DataTypes.FLOAT,
         allowNull: false
-    }
+    },
 });
 return Multimedia;
 }

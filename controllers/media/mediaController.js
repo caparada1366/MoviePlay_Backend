@@ -1,16 +1,27 @@
 const { Multimedia, Genres } = require('../../config/database');
 const { apiMovie, genres } = require('../../apiData/apiMovie');
+const { Op } = require('sequelize');
 
   // Cargamos la db con los datos de la fake API:  (esto es para las pruebas)
 const loadMultimedia = async() => {
   try {
+    // Verificamos si ya existen registros en la tabla Multimedia
+    const count = await Multimedia.count();
+    if (count > 0) {
+      console.log('La tabla Multimedia ya está poblada. No es necesario cargar los datos nuevamente.');
+      return;
+    }
+
     // Mapeamos la api de movies y traemos la info que queramos:
     const moviesMapped = apiMovie.map((ele) => ({
       type: ele.type,
       name: ele.name,
       description: ele.description,
+      time: 120,
       linkVideo: ele.linkVideo,
       image: ele.image,
+      active: true,
+      price: 5.5,
     }));
 
     // Cargamos a Multimedia usando bulkCreate
@@ -21,7 +32,7 @@ const loadMultimedia = async() => {
       throw new Error('Error loading multimedia: Some records were not created.');
     }
 
-    return createdMedia;
+    console.log('Datos de multimedia cargados correctamente.');
   } catch (error) {
     console.error('Error loading multimedia:', error);
     throw new Error('Error loading multimedia');
@@ -31,7 +42,6 @@ const loadMultimedia = async() => {
 
 // Esto es de prueba, podemos modificarlo para que quede mejor
 const loadGenres = async() => {
-  // const apiGenres = genres;
   
     // Hacemos lo mismo con la api de genres:
     const genresMapped = genres.map( ele => {
@@ -47,7 +57,7 @@ const loadGenres = async() => {
 }
 
 
-const getAllMedia = async() => {
+const getAllMedia = async(name) => {
     const countMedia = await Multimedia.count();  // con '.count()' obtenemos el número de registros 
     const countGenre = await Genres.count();
 
@@ -62,11 +72,21 @@ const getAllMedia = async() => {
       include: {
         model: Genres,
         attributes: ['name'],
-        through: { attributes: [], },  // así no nos trae la tabla de unión
+        through: { attributes: [] },
       },
+      where: name
+        ? {
+            name: {
+              [Op.iLike]: `%${name}%`,
+            },
+          }
+        : {},
     });
-
-    // Devolvemos media con toda la info cargada
+  
+    if (name && media.length === 0) {
+      throw new Error(`The movie with the name ${name} doesn't exist`);
+    }
+  
     return media;
 
 
@@ -107,16 +127,16 @@ const isValidImageUrl = (url) => {
 
 
 
-const postNewMedia = async(type, name, description, linkVideo, image, genres) => {
+const postNewMedia = async(type, name, description, time, linkVideo, image, price, genres) => {
 
   // VALIDACIONES ( SAQUÉ TIME, PRICE HASTA QUE LO AGREGUEMOS A LA API :) )
 
   if (!type || typeof type !== 'string' || !name || typeof name !== 'string' || 
       !description || typeof description !== 'string' || 
-      // !Number.isInteger(time) || 
+      typeof time !== 'number' || 
       !linkVideo || typeof linkVideo !== 'string' || !isValidUrl(linkVideo) || 
       !image || typeof image !== 'string' || !isValidImageUrl(image) || 
-      // typeof price !== 'number' || isNaN(price) || !isFinite(price) || 
+      typeof price !== 'number' || isNaN(price) || !isFinite(price) || 
       genres.length === 0) {
     throw new Error('Invalid Data: Please provide valid values for all required fields.');
   }
@@ -127,8 +147,10 @@ const postNewMedia = async(type, name, description, linkVideo, image, genres) =>
             type,
             name,
             description,
+            time,
             linkVideo,
             image,
+            price,
         });
 
     for (const gen of genres) {
