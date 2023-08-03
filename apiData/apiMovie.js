@@ -1,4 +1,4 @@
-export const apiMovie = [
+ const apiMoviesySeries = [
     {    
         "name": "The Flash",
         "homepage": "https://www.dc.com/theflash",
@@ -10,6 +10,7 @@ export const apiMovie = [
         "release_date": "2023-06-13",
         "type": "movie",
         "linkVideo":"https://youtu.be/jprhe-cWKGs",
+        "price": 4.00
     },
     {      
          "name": "Transformers: Rise of the Beasts",
@@ -22,6 +23,7 @@ export const apiMovie = [
          "release_date": "2023-06-06",
          "type": "movie",
          "linkVideo":"https://youtu.be/ZtuFgnxQMrA",
+         "price": 3.50
     },
     {
          "name": "Barbie",
@@ -34,6 +36,7 @@ export const apiMovie = [
          "release_date": "2023-07-19",
          "type": "movie",
          "linkVideo":"https://youtu.be/pBk4NYhWNMM",
+         "price": 1.50
     },
     {
          "name": "The Little Mermaid",
@@ -46,6 +49,7 @@ export const apiMovie = [
          "release_date": "2023-05-18",
          "type": "movie",
          "linkVideo":"https://youtu.be/kpGo2_d3oYE",
+         "price": 3.50
     },
     {
          "name": "バイオハザード：デスアイランド",
@@ -58,6 +62,7 @@ export const apiMovie = [
          "release_date": "2023-06-22",
          "type": "movie",
          "linkVideo":"https://youtu.be/L-vkuA8oqMY",
+         "price": 2.30
     },
     {
         "name": "Guardians of the Galaxy Vol. 3",
@@ -70,6 +75,7 @@ export const apiMovie = [
          "release_date": "2023-05-03",
          "type": "movie",
          "linkVideo":"https://youtu.be/AAE5VZktooM",
+         "price": 3.50
     },
     {
         "name": "Ruby Gillman, Teenage Kraken",
@@ -81,7 +87,8 @@ export const apiMovie = [
          "popularity": 2266.298,
          "release_date": "2023-06-28",
          "type": "movie",
-         "linkVideo":"https://youtu.be/u4uyD8FFUIw"
+         "linkVideo":"https://youtu.be/u4uyD8FFUIw",
+         "price": 2.95
     },
     {
          "name": "Fast X",
@@ -94,6 +101,7 @@ export const apiMovie = [
          "release_date": "2023-05-17",
          "type": "movie",
          "linkVideo":"https://youtu.be/eoOaKN4qCKw",
+         "price": 3.00
     },
     {
          "name": "Мавка: Лісова пісня",
@@ -106,6 +114,7 @@ export const apiMovie = [
          "release_date": "2023-03-02",
          "type": "movie",
          "linkVideo":"https://youtu.be/WZ1je_JJTv8",
+         "price": 2.80
     },
     {
          "name": "Warhorse One",
@@ -118,6 +127,7 @@ export const apiMovie = [
          "release_date": "2023-06-30",
          "type": "movie",
          "linkVideo":"https://youtu.be/63rL3f2zl8Q",
+         "price": 2.50
     },
     {
          "name": "Knights of the Zodiac",
@@ -130,6 +140,7 @@ export const apiMovie = [
          "release_date": "2023-04-27",
          "type": "movie",
          "linkVideo":"https://youtu.be/gZ3o0lTfYOs",
+         "price": 2.00
     },
     {
          "name": "John Wick: Chapter 4",
@@ -142,6 +153,7 @@ export const apiMovie = [
          "release_date": "2023-03-22",
          "type": "movie",
          "linkVideo":"https://youtu.be/yjRHZEUamCc",
+         "price": 3.10
     },
     {
          "name": "Oppenheimer",
@@ -154,6 +166,7 @@ export const apiMovie = [
          "release_date": "2023-07-19",
          "type": "movie",
          "linkVideo":"https://youtu.be/uYPbbksJxIg",
+         "price": 3.00
     },
     {
          "name": "The Super Mario Bros. Movie",
@@ -166,6 +179,7 @@ export const apiMovie = [
          "release_date": "2023-04-05",
          "type": "movie",
          "linkVideo":"https://youtu.be/RjNcTBXTk4I",
+         "price": 3.50
     },
     {
          "name": "Sound of Freedom",
@@ -177,7 +191,8 @@ export const apiMovie = [
          "popularity": 1240.461,
          "release_date": "2023-07-03",
          "type": "movie",
-         "linkVideo":"https://youtu.be/hyyyKcfJRGQ"
+         "linkVideo":"https://youtu.be/hyyyKcfJRGQ",
+         "price": 2
     },
     {
          "name": "Elemental",
@@ -190,6 +205,7 @@ export const apiMovie = [
          "release_date": "2023-06-14",
          "type": "movie",
          "linkVideo":"https://youtu.be/dJgSXsnrHrw",
+         "price": 2.70
     },
     {
          "name": "La Leyenda de los Chaneques",      
@@ -202,6 +218,7 @@ export const apiMovie = [
          "release_date": "2023-07-14",
          "type": "movie",
          "linkVideo":"https://youtu.be/iAdeQvl5qKg",
+         "price": 2.65
     },
     {
          "name": "Spider-Man: Across the Spider-Verse",
@@ -214,6 +231,7 @@ export const apiMovie = [
          "release_date": "2023-05-31",
          "type": "movie",
          "linkVideo":"https://youtu.be/b_yMOiRgMmQ",
+         "price": 2.60
     },
     { 
          "name": "Insidious: The Last Key",     
@@ -226,6 +244,7 @@ export const apiMovie = [
          "release_date": "2018-01-03",
          "type": "movie",
          "linkVideo":"https://youtu.be/lUwaosQZkHU",
+         "price": 2.55
     },
     {
          "name": "Fresh",     
@@ -237,68 +256,69 @@ export const apiMovie = [
          "popularity": 966.329,
          "type": "movie",
          "release_date": "2022-03-03",
-         "linkVideo": "https://youtu.be/wKk5VAK1GZQ"
+         "linkVideo": "https://youtu.be/wKk5VAK1GZQ",
+         "price": 2.50
     }
 ];
 
 
-export const genres = [
+ const genres = [
     {
-      "name": "Action"
+      "name": "Accion"
     },
     {
-      "name": "Adventure"
+      "name": "Adventura"
     },
     {
-      "name": "Animation"
+      "name": "Animacion"
     },
     {
-      "name": "Comedy"
+      "name": "Comedia"
     },
     {
-      "name": "Crime"
+      "name": "Crimen"
     },
     {
-      "name": "Documentary"
+      "name": "Documental"
     },
     {
       "name": "Drama"
     },
     {
-      "name": "Family"
+      "name": "Familiar"
     },
     {
-      "name": "Fantasy"
+      "name": "Fantasia"
     },
     {
-      "name": "History"
+      "name": "Historia"
     },
     {
-      "name": "Horror"
+      "name": "Terror"
     },
     {
-      "name": "Music"
+      "name": "Musical"
     },
     {
-      "name": "Mystery"
+      "name": "Misterio"
     },
     {
-      "name": "Romance"
+      "name": "Romanse"
     },
     {
-      "name": "Science Fiction"
+      "name": "Ciencia Ficcion"
     },
     {
-      "name": "TV Movie"
+      "name": "TV Pelicula"
     },
     {
       "name": "Thriller"
     },
     {
-      "name": "War"
+      "name": "Guerra"
     },
     {
-      "name": "Western"
+      "name": "Del Oeste"
     }
   ];
    
@@ -306,3 +326,273 @@ export const genres = [
         apiMovie,
         genres
     };
+
+    /*
+
+    {
+      "type": "serie",
+      "titulo": "Breaking Bad",
+      "yearEstreno": "2008-01-20",
+      "descripcion": "When Walter White, a New Mexico chemistry teacher, is diagnosed with Stage III cancer and given a prognosis of only two years left to live. He becomes filled with a sense of fearlessness and an unrelenting desire to secure his family's financial future at any cost as he enters the dangerous world of drugs and crime.",
+      "actores": [
+        {
+          "name": "Bryan Cranston"
+        },
+        {
+          "name": "Aaron Paul"
+        },
+        {
+          "name": "Anna Gunn"
+        },
+        {
+          "name": "Dean Norris"
+        },
+        {
+          "name": "Jonathan Banks"
+        },
+        {
+          "name": "Bob Odenkirk"
+        },
+        {
+          "name": "Betsy Brandt"
+        },
+        {
+          "name": "RJ Mitte"
+        }
+        ]
+    },
+    {
+      "type": "serie",
+      "titulo": "Arcane",
+      "yearEstreno": "2021-11-06",
+      "descripcion": "Amid the stark discord of twin cities Piltover and Zaun, two sisters fight on rival sides of a war between magic technologies and clashing convictions.",
+      "actores":[
+        {
+          "name": "Hailee Steinfeld"
+        },
+        {
+          "name": "Ella Purnell"
+        },
+        {
+          "name": "Kevin Alejandro"
+        },
+        {
+          "name": "Jason Spisak"
+        },
+        {
+          "name": "Toks Olagundoye"
+        },
+        {
+          "name": "Harry Lloyd"
+        },
+        {
+          "name": "Christian Linke"
+        }
+      ]
+    },
+    {
+      "type": "serie",
+      "yearEstreno": "1999-10-20",
+      "name": "One Piece",
+      "overview": "Years ago, the fearsome Pirate King, Gol D. Roger was executed leaving a huge pile of treasure and the famous \"One Piece\" behind. Whoever claims the \"One Piece\" will be named the new King of the Pirates.\n\nMonkey D. Luffy, a boy who consumed a \"Devil Fruit,\" decides to follow in the footsteps of his idol, the pirate Shanks, and find the One Piece. It helps, of course, that his body has the properties of rubber and that he's surrounded by a bevy of skilled fighters and thieves to help him along the way.\n\nLuffy will do anything to get the One Piece and become King of the Pirates!",
+      "actores": [
+        {
+          "name": "Mayumi Tanaka"
+        },
+        {
+          "name": "Kazuya Nakai"
+        },
+        {
+          "name": "Akemi Okamura"
+        },
+        {
+          "name": "Hiroaki Hirata"
+        },
+        {
+          "name": "Kappei Yamaguchi"
+        },
+        {
+          "name": "Yuriko Yamaguchi"
+        },
+        {
+          "name": "Ikue Otani"
+        },
+        {
+          "name": "Kazuki Yao"
+        },
+        {
+          "name": "Cho"
+        },
+        {
+          "name": "Katsuhisa Houki"
+        },
+        {
+           "name": "Tessyo Genda"
+        }
+      ]
+    },
+    {
+      "type": "serie",
+      "yearEstreno": "2013-12-02",
+      "name": "Rick and Morty",
+      "descripcion": "Rick is a mentally-unbalanced but scientifically gifted old man who has recently reconnected with his family. He spends most of his time involving his young grandson Morty in dangerous, outlandish adventures throughout space and alternate universes. Compounded with Morty's already unstable family life, these events cause Morty much distress at home and school.",
+      "actores": [
+        {
+          "name": "Justin Roiland"
+        },
+        {
+          "name": "Chris Parnell"
+        },
+        {
+          "name": "Spencer Grammer"
+        },
+        {
+          "name": "Sarah Chalke"
+        }
+      ]
+    },
+    {
+      "type": "serie",
+      "name": "Anne with an E",
+      "yearEstreno": "2017-03-19",
+      "descripcion": "A coming-of-age story about an outsider who, against all odds and numerous challenges, fights for love and acceptance and for her place in the world. The series centers on a young orphaned girl in the late 1890’s, who, after an abusive childhood spent in orphanages and the homes of strangers, is mistakenly sent to live with an elderly woman and her aging brother. Over time, 13-year-old Anne will transform their lives and eventually the small town in which they live with her unique spirit, fierce intellect and brilliant imagination.",
+      "actores": [
+        {
+          "name": "Amybeth McNulty",
+        },
+        {
+          "name": "Geraldine James"
+        },
+        {
+          "name": "R. H. Thomson"
+        },
+        {
+          "name": "Lucas Jade Zumann"
+        },
+        {
+          "name": "Kiawentiio"
+        }
+      ]
+    },
+    {
+      "type": "serie",
+      "name": "Fullmetal Alchemist: Brotherhood",
+      "yearEstreno": "2009-04-05",
+      "id": 31911,
+      "overview": "Edward and Alphonse Elric's reckless disregard for alchemy's fun­damental laws ripped half of Ed's limbs from his body and left Al's soul clinging to a cold suit of armor. To restore what was lost, the brothers scour a war-torn land for the Philosopher's Sto­ne, a fabled relic which grants the ability to perform alchemy in impossible ways.\n\nThe Elrics are not alone in their search; the corrupt State Military is also eager to harness the artifact's power. So too are the strange Homunculi and their shadowy creator. The mythical gem lures exotic alchemists from distant kingdoms, scarring some deeply enough to inspire murder. As the Elrics find their course altered by these enemies and allies, their purpose remains unchanged – and their bond unbreakable.",
+      "actores": []
+    },
+    {
+      "type": "serie",
+      "name": "Avatar: The Last Airbender",
+      "yearEstreno": "2005-02-21",
+      "id": 246,
+      "overview": "In a war-torn world of elemental magic, a young boy reawakens to undertake a dangerous mystic quest to fulfill his destiny as the Avatar, and bring peace to the world.",
+      "actores": []
+    },
+    {
+      "type": "serie",
+      "name": "The Last of Us",
+      "yearEstreno": "2023-01-15",
+      "id": 100088,
+      "overview": "Twenty years after modern civilization has been destroyed, Joel, a hardened survivor, is hired to smuggle Ellie, a 14-year-old girl, out of an oppressive quarantine zone. What starts as a small job soon becomes a brutal, heartbreaking journey, as they both must traverse the United States and depend on each other for survival.",
+      "actores": []
+    },
+    {
+      "type": "serie",
+      "name": "Demon Slayer: Kimetsu no Yaiba",
+      "yearEstreno": "2019-04-06",
+      "id": 85937,
+      "overview": "It is the Taisho Period in Japan. Tanjiro, a kindhearted boy who sells charcoal for a living, finds his family slaughtered by a demon. To make matters worse, his younger sister Nezuko, the sole survivor, has been transformed into a demon herself. Though devastated by this grim reality, Tanjiro resolves to become a “demon slayer” so that he can turn his sister back into a human, and kill the demon that massacred his family.",
+      "actores": []
+    },
+    {
+      "type": "serie",
+      "name": "Goblin",
+      "yearEstreno": "2016-12-02",
+      "id": 67915,
+      "overview": "In his quest for a bride to break his immortal curse, a 939-year-old guardian of souls meets a grim reaper and a sprightly student with a tragic past.",
+      "actores": []
+    },
+    {
+      "type": "serie",
+      "name": "Invincible",
+      "yearEstreno": "2021-03-25",
+      "id": 95557,
+      "overview": "Mark Grayson is a normal teenager except for the fact that his father is the most powerful superhero on the planet. Shortly after his seventeenth birthday, Mark begins to develop powers of his own and enters into his father’s tutelage.",
+      "actores": []
+    },
+    {
+      "type": "serie",
+      "name": "Regular Show",
+      "yearEstreno": "2010-09-06",
+      "id": 31132,
+      "overview": "Two bored groundskeepers, Mordecai (a six-foot-tall blue jay) and Rigby (a hyperactive raccoon) are best friends who spend their days trying to entertain themselves by any means necessary, much to the displeasure of their boss. Their everyday pursuits often lead to things spiraling out of control and into the surreal.",
+      "actores": []
+    },
+    {
+      "type": "serie",
+      "name": "My Hero Academia",
+      "yearEstreno": "2016-04-03",
+      "id": 65930,
+      "overview": "In a world where eighty percent of the population has some kind of super-powered Quirk, Izuku was unlucky enough to be born completely normal. But that won't stop him from enrolling in a prestigious hero academy. Now, he'll get his first taste of brutal rivalry from other schools as he braves the cutthroat, no-holds-barred provisional license exam.",
+      "actores": []
+    },
+    {
+      "type": "serie",
+      "name": "The Owl House",
+      "yearEstreno": "2020-01-10",
+      "id": 92685,
+      "overview": "An animated fantasy-comedy series that follows Luz, a self-assured teenage girl who accidentally stumbles upon a portal to a magical world where she befriends a rebellious witch, Eda, and an adorably tiny warrior, King. Despite not having magical abilities, Luz pursues her dream of becoming a witch by serving as Eda's apprentice at the Owl House and ultimately finds a new family in an unlikely setting.",
+      "actores": []
+    },
+    {
+      "type": "serie",
+      "name": "Primal",
+      "yearEstreno": "2019-10-08",
+      "id": 89456,
+      "overview": "A caveman forms a bond with a dinosaur as they struggle to survive in a hostile world.",
+      "actores": []
+    },
+    {
+      "type": "serie",
+      "name": "Be Eternal: Champions of America",
+      "yearEstreno": "2022-11-03",
+      "id": 213762,
+      "overview": "This series takes an unprecedented closeup look at Lionel Messi and the Argentine team's battle to break a 28-year title drought in 2021's Copa América.",
+      "actores": []
+    },
+    {
+      "type": "serie",
+      "name": "Once",
+      "yearEstreno": "2017-06-19",
+      "id": 72637,
+      "overview": "The series revolves around Gabo, a soccer-loving teenager who, upon receiving a scholarship from the prestigious Sports Academic Institute (IAD) of Buenos Aires, will see his dream of playing at Los Halcones Dorados, the renowned amateur team of the school, and also his longing to become a professional footballer.",
+      "actores": []
+    },
+    {
+      "type": "serie",
+      "name": "Attack on Titan",
+      "yearEstreno": "2013-04-07",
+      "id": 1429,
+      "overview": "Several hundred years ago, humans were nearly exterminated by Titans. Titans are typically several stories tall, seem to have no intelligence, devour human beings and, worst of all, seem to do it for the pleasure rather than as a food source. A small percentage of humanity survived by walling themselves in a city protected by extremely high walls, even taller than the biggest Titans. Flash forward to the present and the city has not seen a Titan in over 100 years. Teenage boy Eren and his foster sister Mikasa witness something horrific as the city walls are destroyed by a Colossal Titan that appears out of thin air. As the smaller Titans flood the city, the two kids watch in horror as their mother is eaten alive. Eren vows that he will murder every single Titan and take revenge for all of mankind.",
+      "actores": []
+    },
+    {
+      "type": "serie",
+      "name": "Weightlifting Fairy Kim Bok-joo",
+      "yearEstreno": "2016-11-16",
+      "id": 68349,
+      "overview": "A competitive swimmer crosses paths with his childhood friend, a rising weight lifting star, and realizes that she has a secret crush on his cousin.",
+      "actores": []
+    },
+    {
+      "type": "serie",
+      "name": "Hunter x Hunter",
+      "yearEstreno": "2011-10-02",
+      "id": 46298,
+      "overview": "Twelve-year-old Gon Freecss one day discovers that the father he had always been told was dead was alive. His Father, Ging, is a Hunter — a member of society's elite with a license to go anywhere or do almost anything. Gon, determined to follow in his father's footsteps, decides to take the Hunter Examination and eventually find his father to prove himself as a Hunter in his own right. But on the way, he learns that there is more to becoming a Hunter than previously thought, and the challenges that he must face are considered the toughest in the world.",
+      "actores": []
+    }
+  
+    */
