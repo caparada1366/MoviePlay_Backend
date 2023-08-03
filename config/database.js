@@ -37,7 +37,7 @@ fs.readdirSync(path.join(__dirname, '../models'))
   
   sequelize.models = Object.fromEntries(capsEntries);
 
-  const { Multimedia, OrdenDeCompra, Genres } = sequelize.models;
+  const { Multimedia, OrdenDeCompra, Genres, Series, Episodios } = sequelize.models;
 
   Multimedia.belongsToMany(Genres, {through: 'MultimediaGenres', foreignKey: 'idgenre'});
   Genres.belongsToMany(Multimedia, {through: 'MultimediaGenres', foreignKey: 'idmultimedia'});
