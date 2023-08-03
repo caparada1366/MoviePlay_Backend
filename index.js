@@ -1,8 +1,8 @@
-
 const { conn, sequelize } = require('./config/database')
 require("dotenv").config();
 const server = require('./config/app');
 const { PORT } = process.env;
+const routes = require('./Routes/index');
 
 conn.sync({force: false}).then(async () => {     //aqui se configura si se reinicia la tabla o no
   try {
