@@ -50,7 +50,7 @@ const loadMultimedia = async () => {
     });
 
     // Cargamos a Multimedia usando bulkCreate
-    //const createdMedia = await Multimedia.bulkCreate(moviesMapped);
+    const createdMedia = await Multimedia.bulkCreate(moviesMapped);
 
     // Verificamos si todos los registros se crearon con éxito
     if (createdMedia.length !== moviesMapped.length) {
@@ -83,43 +83,37 @@ const loadGenres = async () => {
 
 const getAllMedia = async (name) => {
   const countMedia = await Multimedia.count(); // con '.count()' obtenemos el número de registros
-  const countGenre = await Genres.findAll();
-  // console.log(countGenre);
+  const countGenre = await Genres.count();
 
-  const getAllMedia = async (name) => {
-    const countMedia = await Multimedia.count(); // con '.count()' obtenemos el número de registros
-    const countGenre = await Genres.count();
+  if (countMedia === 0) {
+    // Si no hay nada, entonces activamos la función para cargar Multimedia
+    await loadMultimedia();
+  }
+  if (countGenre === 0) {
+    // Si no hay nada, entonces activamos la función para cargar Genres
+    await loadGenres();
+  }
 
-    if (countMedia === 0) {
-      // Si no hay nada, entonces activamos la función para cargar Multimedia
-      await loadMultimedia();
-    }
-    if (countGenre === 0) {
-      // Si no hay nada, entonces activamos la función para cargar Genres
-      await loadGenres();
-    }
+  const media = await Multimedia.findAll({
+    include: {
+      model: Genres,
+      attributes: ["name"],
+      through: { attributes: [] },
+    },
+    where: name
+      ? {
+          name: {
+            [Op.iLike]: `%${name}%`,
+          },
+        }
+      : {},
+  });
 
-    const media = await Multimedia.findAll({
-      include: {
-        model: Genres,
-        attributes: ["name"],
-        through: { attributes: [] },
-      },
-      where: name
-        ? {
-            name: {
-              [Op.iLike]: `%${name}%`,
-            },
-          }
-        : {},
-    });
+  if (name && media.length === 0) {
+    throw new Error(`The movie with the name ${name} doesn't exist`);
+  }
 
-    if (name && media.length === 0) {
-      throw new Error(`The movie with the name ${name} doesn't exist`);
-    }
-
-    return media;
-  };
+  return media;
 };
 
 const getMediaById = async (id) => {
