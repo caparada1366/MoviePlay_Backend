@@ -52,7 +52,7 @@
          "price": 3.50
     },
     {
-         "name": "バイオハザード：デスアイランド",
+         "name": "Resident Evil: Death Island",
          "homepage": "https://www.sonypictures.com/movies/residentevildeathisland",
          "image":"https://www.themoviedb.org/t/p/w600_and_h900_bestv2/qayga07ICNDswm0cMJ8P3VwklFZ.jpg",
          "background_image":"https://www.themoviedb.org/t/p/original/7drO1kYgQ0PnnU87sAnBEphYrSM.jpg",
@@ -104,7 +104,7 @@
          "price": 3.00
     },
     {
-         "name": "Мавка: Лісова пісня",
+         "name": "Mavka: The Forest Song",
          "homepage": "https://mavka.ua",
          "image":"https://www.themoviedb.org/t/p/w600_and_h900_bestv2/eeJjd9JU2Mdj9d7nWRFLWlrcExi.jpg",
          "background_image":"https://www.themoviedb.org/t/p/original/14GEZCzCGhV7FMFaWi4Ec22Kcai.jpg",
@@ -239,7 +239,7 @@
          "image":"https://www.themoviedb.org/t/p/w600_and_h900_bestv2/nb9fc9INMg8kQ8L7sE7XTNsZnUX.jpg",
          "background_image":"https://www.themoviedb.org/t/p/original/PwI3EfasE9fVuXsmMu9ffJh0Re.jpg",
          "original_language": "en",
-         "description": "Parapsychologist Elise Rainier and her team travel to Five Keys, NM, to investigate a man’s claim of a haunting. Terror soon strikes when Rainier realizes that the house he lives in was her family’s old home.",
+         "description": "Parapsychologist Elise Rainier and her team travel to Five Keys, NM, to investigate a man's claim of a haunting. Terror soon strikes when Rainier realizes that the house he lives in was her family's old home.",
          "popularity": 988.343,
          "release_date": "2018-01-03",
          "type": "movie",
@@ -258,6 +258,435 @@
          "release_date": "2022-03-03",
          "linkVideo": "https://youtu.be/wKk5VAK1GZQ",
          "price": 2.50
+    },
+    {
+      "type": "serie",
+      "titulo": "Breaking Bad",
+      "yearEstreno": "2008-01-20",
+      "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/ggFHVNu6YYI5L9pCfOacjizRGt.jpg",
+      "descripcion": "When Walter White, a New Mexico chemistry teacher, is diagnosed with Stage III cancer and given a prognosis of only two years left to live. He becomes filled with a sense of fearlessness and an unrelenting desire to secure his family's financial future at any cost as he enters the dangerous world of drugs and crime.",
+      "actores": [
+        {
+          "name": "Bryan Cranston"
+        },
+        {
+          "name": "Aaron Paul"
+        },
+        {
+          "name": "Anna Gunn"
+        },
+        {
+          "name": "Dean Norris"
+        },
+        {
+          "name": "Jonathan Banks"
+        },
+        {
+          "name": "Bob Odenkirk"
+        },
+        {
+          "name": "Betsy Brandt"
+        },
+        {
+          "name": "RJ Mitte"
+        }
+        ]
+    },
+    {
+      "type": "serie",
+      "titulo": "Arcane",
+      "yearEstreno": "2021-11-06",
+      "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/fqldf2t8ztc9aiwn3k6mlX3tvRT.jpg",
+      "descripcion": "Amid the stark discord of twin cities Piltover and Zaun, two sisters fight on rival sides of a war between magic technologies and clashing convictions.",
+      "actores":[
+        {
+          "name": "Hailee Steinfeld"
+        },
+        {
+          "name": "Ella Purnell"
+        },
+        {
+          "name": "Kevin Alejandro"
+        },
+        {
+          "name": "Jason Spisak"
+        },
+        {
+          "name": "Toks Olagundoye"
+        },
+        {
+          "name": "Harry Lloyd"
+        },
+        {
+          "name": "Christian Linke"
+        }
+      ]
+    },
+    {
+      "type": "serie",
+      "titulo": "One Piece",
+      "yearEstreno": "1999-10-20",
+      "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/fcXdJlbSdUEeMSJFsXKsznGwwok.jpg",
+      "descripcion": "Years ago, the fearsome Pirate King, Gol D. Roger was executed leaving a huge pile of treasure and the famous \"One Piece\" behind. Whoever claims the \"One Piece\" will be named the new King of the Pirates.\n\nMonkey D. Luffy, a boy who consumed a \"Devil Fruit,\" decides to follow in the footsteps of his idol, the pirate Shanks, and find the One Piece. It helps, of course, that his body has the properties of rubber and that he's surrounded by a bevy of skilled fighters and thieves to help him along the way.\n\nLuffy will do anything to get the One Piece and become King of the Pirates!",
+      "actores": [
+        {
+          "name": "Mayumi Tanaka"
+        },
+        {
+          "name": "Kazuya Nakai"
+        },
+        {
+          "name": "Akemi Okamura"
+        },
+        {
+          "name": "Hiroaki Hirata"
+        },
+        {
+          "name": "Kappei Yamaguchi"
+        },
+        {
+          "name": "Yuriko Yamaguchi"
+        },
+        {
+          "name": "Ikue Otani"
+        }
+      ]
+    },
+    {
+      "type": "serie",
+      "titulo": "Rick and Morty",
+      "yearEstreno": "2013-12-02",
+      "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/5Yiep9EwcQgLolg013ETBVqHxuD.jpg",
+      "descripcion": "Rick is a mentally-unbalanced but scientifically gifted old man who has recently reconnected with his family. He spends most of his time involving his young grandson Morty in dangerous, outlandish adventures throughout space and alternate universes. Compounded with Morty's already unstable family life, these events cause Morty much distress at home and school.",
+      "actores": [
+        {
+          "name": "Justin Roiland"
+        },
+        {
+          "name": "Chris Parnell"
+        },
+        {
+          "name": "Spencer Grammer"
+        },
+        {
+          "name": "Sarah Chalke"
+        }
+      ]
+    },
+    {
+      "type": "serie",
+      "titulo": "Anne with an E",
+      "yearEstreno": "2017-03-19",
+      "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/6P6tXhjT5tK3qOXzxF9OMLlG7iz.jpg",
+      "descripcion": "A coming-of-age story about an outsider who, against all odds and numerous challenges, fights for love and acceptance and for her place in the world. The series centers on a young orphaned girl in the late 1890’s, who, after an abusive childhood spent in orphanages and the homes of strangers, is mistakenly sent to live with an elderly woman and her aging brother. Over time, 13-year-old Anne will transform their lives and eventually the small town in which they live with her unique spirit, fierce intellect and brilliant imagination.",
+      "actores": [
+        {
+          "name": "Amybeth McNulty",
+        },
+        {
+          "name": "Geraldine James"
+        },
+        {
+          "name": "R. H. Thomson"
+        },
+        {
+          "name": "Lucas Jade Zumann"
+        },
+        {
+          "name": "Kiawentiio"
+        }
+      ]
+    },
+    {
+      "type": "serie",
+      "titulo": "Fullmetal Alchemist: Brotherhood",
+      "yearEstreno": "2009-04-05",
+      "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/5ZFUEOULaVml7pQuXxhpR2SmVUw.jpg",
+      "descripcion": "Edward and Alphonse Elric's reckless disregard for alchemy's fundamental laws ripped half of Ed's limbs from his body and left Al's soul clinging to a cold suit of armor. To restore what was lost, the brothers scour a war-torn land for the Philosopher's Sto­ne, a fabled relic which grants the ability to perform alchemy in impossible ways.\n\nThe Elrics are not alone in their search; the corrupt State Military is also eager to harness the artifact's power. So too are the strange Homunculi and their shadowy creator. The mythical gem lures exotic alchemists from distant kingdoms, scarring some deeply enough to inspire murder. As the Elrics find their course altered by these enemies and allies, their purpose remains unchanged – and their bond unbreakable.",
+      "actores": [
+        {
+          "name": "Romi Park"
+        },
+        {
+          "name": "Rie Kugimiya"
+        },
+        {
+          "name": "Shin-ichiro Miki"
+        },
+        {
+           "name": "Kenta Miyake"
+        },
+        {
+           "name": "Fumiko Orikasa"
+        },
+        {
+          "name": "Megumi Takamoto"
+        },
+        {
+          "name": "Hidekatsu Shibata"
+        },
+        {
+          "name": "Mamoru Miyano"
+        }
+      ]
+    },
+    {
+      "type": "serie",
+      "titulo": "Avatar: The Last Airbender",
+      "yearEstreno": "2005-02-21",
+      "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/wymjTykWokonutxkeurydNvqN5Z.jpg",
+      "descripcion": "In a war-torn world of elemental magic, a young boy reawakens to undertake a dangerous mystic quest to fulfill his destiny as the Avatar, and bring peace to the world.",
+      "actores": [
+        {
+          "name": "Zach Tyler"
+        },
+        {
+          "name": "Mae Whitman"
+        },
+        {
+          "name": "Jack De Sena"
+        },
+        {
+          "name": "Dante Basco"
+        }
+      ]
+    },
+    {
+      "type": "serie",
+      "titulo": "The Last of Us",
+      "yearEstreno": "2023-01-15",
+      "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/tNQWO6cNzQYCyvw36mUcAQQyf5F.jpg",
+      "descripcion": "Twenty years after modern civilization has been destroyed, Joel, a hardened survivor, is hired to smuggle Ellie, a 14-year-old girl, out of an oppressive quarantine zone. What starts as a small job soon becomes a brutal, heartbreaking journey, as they both must traverse the United States and depend on each other for survival.",
+      "actores": [
+        {
+          "name": "Pedro Pascal"
+        },
+        {
+          "name": "Bella Ramsey"
+        }
+      ]
+    },
+    {
+      "type": "serie",
+      "titulo": "Demon Slayer: Kimetsu no Yaiba",
+      "yearEstreno": "2019-04-06",
+      "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/tK4GsDa6BREEh6Hfng1tWPuq8oE.jpg",
+      "descripcion": "It is the Taisho Period in Japan. Tanjiro, a kindhearted boy who sells charcoal for a living, finds his family slaughtered by a demon. To make matters worse, his younger sister Nezuko, the sole survivor, has been transformed into a demon herself. Though devastated by this grim reality, Tanjiro resolves to become a “demon slayer” so that he can turn his sister back into a human, and kill the demon that massacred his family.",
+      "actores": [
+        {
+          "name": "Natsuki Hanae"
+        },
+        {
+          "name": "Akari Kito"
+        },
+        {
+          "name": "Kengo Kawanishi"
+        }
+      ]
+    },
+    {
+      "type": "serie",
+      "name": "Goblin",
+      "yearEstreno": "2016-12-02",
+      "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/t7aUi8jbsIUSCNqA1akAbKjBWjU.jpg",
+      "descripcion": "In his quest for a bride to break his immortal curse, a 939-year-old guardian of souls meets a grim reaper and a sprightly student with a tragic past.",
+      "actores": [
+        {
+          "name": "Gong Yoo"
+        },
+        {
+          "name": "Kim Go-eun"
+        },
+        {
+          "name": "Lee Dong-wook"
+        }
+      ]
+    },
+    {
+      "type": "serie",
+      "titulo": "Invincible",
+      "yearEstreno": "2021-03-25",
+      "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/5VKvz8H12yVM5OmSKwmXmcU1Tpt.jpg",
+      "descripcion": "Mark Grayson is a normal teenager except for the fact that his father is the most powerful superhero on the planet. Shortly after his seventeenth birthday, Mark begins to develop powers of his own and enters into his father’s tutelage.",
+      "actores": [
+        {
+          "name": "Steven Yeun"
+        },
+        {
+          "name": "Sandra Oh"
+        },
+        {
+          "name": "J.K. Simmons"
+        }
+      ]
+    },
+    {
+      "type": "serie",
+      "titulo": "Regular Show",
+      "yearEstreno": "2010-09-06",
+      "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/6xea7V4d2xayrlBKOtMZ4wlV6wZ.jpg",
+      "descripcion": "Two bored groundskeepers, Mordecai (a six-foot-tall blue jay) and Rigby (a hyperactive raccoon) are best friends who spend their days trying to entertain themselves by any means necessary, much to the displeasure of their boss. Their everyday pursuits often lead to things spiraling out of control and into the surreal.",
+      "actores": [
+        {
+          "name": "William Salyers"
+        },
+        {
+          "name": "Mark Hamill"
+        },
+        {
+          "name": "Sam Marin"
+        }
+      ]
+    },
+    {
+      "type": "serie",
+      "titulo": "My Hero Academia",
+      "yearEstreno": "2016-04-03",
+      "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/ivOLM47yJt90P19RH1NvJrAJz9F.jpg",
+      "descripcion": "In a world where eighty percent of the population has some kind of super-powered Quirk, Izuku was unlucky enough to be born completely normal. But that won't stop him from enrolling in a prestigious hero academy. Now, he'll get his first taste of brutal rivalry from other schools as he braves the cutthroat, no-holds-barred provisional license exam.",
+      "actores": [
+        {
+          "name": "Daiki Yamashita"
+        },
+        {
+          "name": "Nobuhiko Okamoto"
+        },
+        {
+          "name": "Kenta Miyake"
+        }
+      ]
+    },
+    {
+      "type": "serie",
+      "titulo": "The Owl House",
+      "yearEstreno": "2020-01-10",
+      "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/lE5OYF0axjCVtrxLMetA8i8QpZ8.jpg",
+      "descripcion": "An animated fantasy-comedy series that follows Luz, a self-assured teenage girl who accidentally stumbles upon a portal to a magical world where she befriends a rebellious witch, Eda, and an adorably tiny warrior, King. Despite not having magical abilities, Luz pursues her dream of becoming a witch by serving as Eda's apprentice at the Owl House and ultimately finds a new family in an unlikely setting.",
+      "actores": [
+        {
+          "name": "Sarah-Nicole Robles"
+        },
+        {
+          "name": "Alex Hirsch"
+        }
+      ]
+    },
+    {
+      "type": "serie",
+      "titulo": "Primal",
+      "yearEstreno": "2019-10-08",
+      "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/9jIatSC61s5Y3d5Q63yIeZFvP7u.jpg",
+      "descripcion": "A caveman forms a bond with a dinosaur as they struggle to survive in a hostile world.",
+      "actores": [
+        {
+          "name": "Aaron LaPlante"
+        }
+      ]
+    },
+    {
+      "type": "serie",
+      "titulo": "Be Eternal: Champions of America",
+      "yearEstreno": "2022-11-03",
+      "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/kBlqr507IV9bDKHLEFBtEtTfCw3.jpg",
+      "descripcion": "This series takes an unprecedented closeup look at Lionel Messi and the Argentine team's battle to break a 28-year title drought in 2021's Copa América.",
+      "actores": [
+        {
+          "name": "Lionel Messi"
+        },
+        {
+          "name": "Lionel Scaloni"
+        },
+        {
+          "name": "Angel di Maria"
+        },
+        {
+          "name": "Rodrigo De Paul"
+        },
+        {
+          "name": "Lisandro Martínez"
+        },
+        {
+          "name": "Alejandro Darío Gómez"
+        }
+      ]
+    },
+    {
+      "type": "serie",
+      "titulo": "Once",
+      "yearEstreno": "2017-06-19",
+      "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/zbVwpFNma4RV7HkIVT3aOUmGUJf.jpg",
+      "descripcion": "The series revolves around Gabo, a soccer-loving teenager who, upon receiving a scholarship from the prestigious Sports Academic Institute (IAD) of Buenos Aires, will see his dream of playing at Los Halcones Dorados, the renowned amateur team of the school, and also his longing to become a professional footballer.",
+      "actores": [
+        {
+          "name": "Mariano González"
+        },
+        {
+          "name": "Sebastián Athié"
+        },
+        {
+          "name": "Juan David Penagos"
+        },
+        {
+          "name": "Luan Brum"
+        }
+      ]
+    },
+    {
+      "type": "serie",
+      "titulo": "Attack on Titan",
+      "yearEstreno": "2013-04-07",
+      "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/yFPQ4JhhirnCVe2UIKGMYX7TOGZ.jpg",
+      "descripcion": "Several hundred years ago, humans were nearly exterminated by Titans. Titans are typically several stories tall, seem to have no intelligence, devour human beings and, worst of all, seem to do it for the pleasure rather than as a food source. A small percentage of humanity survived by walling themselves in a city protected by extremely high walls, even taller than the biggest Titans. Flash forward to the present and the city has not seen a Titan in over 100 years. Teenage boy Eren and his foster sister Mikasa witness something horrific as the city walls are destroyed by a Colossal Titan that appears out of thin air. As the smaller Titans flood the city, the two kids watch in horror as their mother is eaten alive. Eren vows that he will murder every single Titan and take revenge for all of mankind.",
+      "actores": [
+        {
+          "name": "Yuki Kaji"
+        },
+        {
+          "name": "Yui Ishikawa"
+        },
+        {
+          "name": "Marina Inoue"
+        }
+      ]
+    },
+    {
+      "type": "serie",
+      "titulo": "Weightlifting Fairy Kim Bok-joo",
+      "yearEstreno": "2016-11-16",
+      "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/8SW0FS3U4nJQVIQj1hecU2Fon8Z.jpg",
+      "descripcion": "A competitive swimmer crosses paths with his childhood friend, a rising weight lifting star, and realizes that she has a secret crush on his cousin.",
+      "actores": [
+        {
+          "name": "Kyung Soo-jin"
+        },
+        {
+          "name": "Lee Jae-yoon"
+        },
+        {
+          "name": "Cho Hye-jung"
+        }
+      ]
+    },
+    {
+      "type": "serie",
+      "titulo": "Hunter x Hunter",
+      "yearEstreno": "2011-10-02",
+      "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/ucpgmUR1h5Te1BYegKItoPjOeF7.jpg",
+      "descripcion": "Twelve-year-old Gon Freecss one day discovers that the father he had always been told was dead was alive. His Father, Ging, is a Hunter — a member of society's elite with a license to go anywhere or do almost anything. Gon, determined to follow in his father's footsteps, decides to take the Hunter Examination and eventually find his father to prove himself as a Hunter in his own right. But on the way, he learns that there is more to becoming a Hunter than previously thought, and the challenges that he must face are considered the toughest in the world.",
+      "actores": [
+        {
+          "name": "Megumi Han"
+        },
+        {
+          "name": "Mariya Ise"
+        },
+        {
+          "name": "Miyuki Sawashiro"
+        },
+        {
+          "name": "Keiji Fujiwara"
+        }
+      ]
     }
 ];
 
@@ -323,276 +752,6 @@
   ];
    
   module.exports = {
-        apiMovie,
+    apiMoviesySeries,
         genres
     };
-
-    /*
-
-    {
-      "type": "serie",
-      "titulo": "Breaking Bad",
-      "yearEstreno": "2008-01-20",
-      "descripcion": "When Walter White, a New Mexico chemistry teacher, is diagnosed with Stage III cancer and given a prognosis of only two years left to live. He becomes filled with a sense of fearlessness and an unrelenting desire to secure his family's financial future at any cost as he enters the dangerous world of drugs and crime.",
-      "actores": [
-        {
-          "name": "Bryan Cranston"
-        },
-        {
-          "name": "Aaron Paul"
-        },
-        {
-          "name": "Anna Gunn"
-        },
-        {
-          "name": "Dean Norris"
-        },
-        {
-          "name": "Jonathan Banks"
-        },
-        {
-          "name": "Bob Odenkirk"
-        },
-        {
-          "name": "Betsy Brandt"
-        },
-        {
-          "name": "RJ Mitte"
-        }
-        ]
-    },
-    {
-      "type": "serie",
-      "titulo": "Arcane",
-      "yearEstreno": "2021-11-06",
-      "descripcion": "Amid the stark discord of twin cities Piltover and Zaun, two sisters fight on rival sides of a war between magic technologies and clashing convictions.",
-      "actores":[
-        {
-          "name": "Hailee Steinfeld"
-        },
-        {
-          "name": "Ella Purnell"
-        },
-        {
-          "name": "Kevin Alejandro"
-        },
-        {
-          "name": "Jason Spisak"
-        },
-        {
-          "name": "Toks Olagundoye"
-        },
-        {
-          "name": "Harry Lloyd"
-        },
-        {
-          "name": "Christian Linke"
-        }
-      ]
-    },
-    {
-      "type": "serie",
-      "yearEstreno": "1999-10-20",
-      "name": "One Piece",
-      "overview": "Years ago, the fearsome Pirate King, Gol D. Roger was executed leaving a huge pile of treasure and the famous \"One Piece\" behind. Whoever claims the \"One Piece\" will be named the new King of the Pirates.\n\nMonkey D. Luffy, a boy who consumed a \"Devil Fruit,\" decides to follow in the footsteps of his idol, the pirate Shanks, and find the One Piece. It helps, of course, that his body has the properties of rubber and that he's surrounded by a bevy of skilled fighters and thieves to help him along the way.\n\nLuffy will do anything to get the One Piece and become King of the Pirates!",
-      "actores": [
-        {
-          "name": "Mayumi Tanaka"
-        },
-        {
-          "name": "Kazuya Nakai"
-        },
-        {
-          "name": "Akemi Okamura"
-        },
-        {
-          "name": "Hiroaki Hirata"
-        },
-        {
-          "name": "Kappei Yamaguchi"
-        },
-        {
-          "name": "Yuriko Yamaguchi"
-        },
-        {
-          "name": "Ikue Otani"
-        },
-        {
-          "name": "Kazuki Yao"
-        },
-        {
-          "name": "Cho"
-        },
-        {
-          "name": "Katsuhisa Houki"
-        },
-        {
-           "name": "Tessyo Genda"
-        }
-      ]
-    },
-    {
-      "type": "serie",
-      "yearEstreno": "2013-12-02",
-      "name": "Rick and Morty",
-      "descripcion": "Rick is a mentally-unbalanced but scientifically gifted old man who has recently reconnected with his family. He spends most of his time involving his young grandson Morty in dangerous, outlandish adventures throughout space and alternate universes. Compounded with Morty's already unstable family life, these events cause Morty much distress at home and school.",
-      "actores": [
-        {
-          "name": "Justin Roiland"
-        },
-        {
-          "name": "Chris Parnell"
-        },
-        {
-          "name": "Spencer Grammer"
-        },
-        {
-          "name": "Sarah Chalke"
-        }
-      ]
-    },
-    {
-      "type": "serie",
-      "name": "Anne with an E",
-      "yearEstreno": "2017-03-19",
-      "descripcion": "A coming-of-age story about an outsider who, against all odds and numerous challenges, fights for love and acceptance and for her place in the world. The series centers on a young orphaned girl in the late 1890’s, who, after an abusive childhood spent in orphanages and the homes of strangers, is mistakenly sent to live with an elderly woman and her aging brother. Over time, 13-year-old Anne will transform their lives and eventually the small town in which they live with her unique spirit, fierce intellect and brilliant imagination.",
-      "actores": [
-        {
-          "name": "Amybeth McNulty",
-        },
-        {
-          "name": "Geraldine James"
-        },
-        {
-          "name": "R. H. Thomson"
-        },
-        {
-          "name": "Lucas Jade Zumann"
-        },
-        {
-          "name": "Kiawentiio"
-        }
-      ]
-    },
-    {
-      "type": "serie",
-      "name": "Fullmetal Alchemist: Brotherhood",
-      "yearEstreno": "2009-04-05",
-      "id": 31911,
-      "overview": "Edward and Alphonse Elric's reckless disregard for alchemy's fun­damental laws ripped half of Ed's limbs from his body and left Al's soul clinging to a cold suit of armor. To restore what was lost, the brothers scour a war-torn land for the Philosopher's Sto­ne, a fabled relic which grants the ability to perform alchemy in impossible ways.\n\nThe Elrics are not alone in their search; the corrupt State Military is also eager to harness the artifact's power. So too are the strange Homunculi and their shadowy creator. The mythical gem lures exotic alchemists from distant kingdoms, scarring some deeply enough to inspire murder. As the Elrics find their course altered by these enemies and allies, their purpose remains unchanged – and their bond unbreakable.",
-      "actores": []
-    },
-    {
-      "type": "serie",
-      "name": "Avatar: The Last Airbender",
-      "yearEstreno": "2005-02-21",
-      "id": 246,
-      "overview": "In a war-torn world of elemental magic, a young boy reawakens to undertake a dangerous mystic quest to fulfill his destiny as the Avatar, and bring peace to the world.",
-      "actores": []
-    },
-    {
-      "type": "serie",
-      "name": "The Last of Us",
-      "yearEstreno": "2023-01-15",
-      "id": 100088,
-      "overview": "Twenty years after modern civilization has been destroyed, Joel, a hardened survivor, is hired to smuggle Ellie, a 14-year-old girl, out of an oppressive quarantine zone. What starts as a small job soon becomes a brutal, heartbreaking journey, as they both must traverse the United States and depend on each other for survival.",
-      "actores": []
-    },
-    {
-      "type": "serie",
-      "name": "Demon Slayer: Kimetsu no Yaiba",
-      "yearEstreno": "2019-04-06",
-      "id": 85937,
-      "overview": "It is the Taisho Period in Japan. Tanjiro, a kindhearted boy who sells charcoal for a living, finds his family slaughtered by a demon. To make matters worse, his younger sister Nezuko, the sole survivor, has been transformed into a demon herself. Though devastated by this grim reality, Tanjiro resolves to become a “demon slayer” so that he can turn his sister back into a human, and kill the demon that massacred his family.",
-      "actores": []
-    },
-    {
-      "type": "serie",
-      "name": "Goblin",
-      "yearEstreno": "2016-12-02",
-      "id": 67915,
-      "overview": "In his quest for a bride to break his immortal curse, a 939-year-old guardian of souls meets a grim reaper and a sprightly student with a tragic past.",
-      "actores": []
-    },
-    {
-      "type": "serie",
-      "name": "Invincible",
-      "yearEstreno": "2021-03-25",
-      "id": 95557,
-      "overview": "Mark Grayson is a normal teenager except for the fact that his father is the most powerful superhero on the planet. Shortly after his seventeenth birthday, Mark begins to develop powers of his own and enters into his father’s tutelage.",
-      "actores": []
-    },
-    {
-      "type": "serie",
-      "name": "Regular Show",
-      "yearEstreno": "2010-09-06",
-      "id": 31132,
-      "overview": "Two bored groundskeepers, Mordecai (a six-foot-tall blue jay) and Rigby (a hyperactive raccoon) are best friends who spend their days trying to entertain themselves by any means necessary, much to the displeasure of their boss. Their everyday pursuits often lead to things spiraling out of control and into the surreal.",
-      "actores": []
-    },
-    {
-      "type": "serie",
-      "name": "My Hero Academia",
-      "yearEstreno": "2016-04-03",
-      "id": 65930,
-      "overview": "In a world where eighty percent of the population has some kind of super-powered Quirk, Izuku was unlucky enough to be born completely normal. But that won't stop him from enrolling in a prestigious hero academy. Now, he'll get his first taste of brutal rivalry from other schools as he braves the cutthroat, no-holds-barred provisional license exam.",
-      "actores": []
-    },
-    {
-      "type": "serie",
-      "name": "The Owl House",
-      "yearEstreno": "2020-01-10",
-      "id": 92685,
-      "overview": "An animated fantasy-comedy series that follows Luz, a self-assured teenage girl who accidentally stumbles upon a portal to a magical world where she befriends a rebellious witch, Eda, and an adorably tiny warrior, King. Despite not having magical abilities, Luz pursues her dream of becoming a witch by serving as Eda's apprentice at the Owl House and ultimately finds a new family in an unlikely setting.",
-      "actores": []
-    },
-    {
-      "type": "serie",
-      "name": "Primal",
-      "yearEstreno": "2019-10-08",
-      "id": 89456,
-      "overview": "A caveman forms a bond with a dinosaur as they struggle to survive in a hostile world.",
-      "actores": []
-    },
-    {
-      "type": "serie",
-      "name": "Be Eternal: Champions of America",
-      "yearEstreno": "2022-11-03",
-      "id": 213762,
-      "overview": "This series takes an unprecedented closeup look at Lionel Messi and the Argentine team's battle to break a 28-year title drought in 2021's Copa América.",
-      "actores": []
-    },
-    {
-      "type": "serie",
-      "name": "Once",
-      "yearEstreno": "2017-06-19",
-      "id": 72637,
-      "overview": "The series revolves around Gabo, a soccer-loving teenager who, upon receiving a scholarship from the prestigious Sports Academic Institute (IAD) of Buenos Aires, will see his dream of playing at Los Halcones Dorados, the renowned amateur team of the school, and also his longing to become a professional footballer.",
-      "actores": []
-    },
-    {
-      "type": "serie",
-      "name": "Attack on Titan",
-      "yearEstreno": "2013-04-07",
-      "id": 1429,
-      "overview": "Several hundred years ago, humans were nearly exterminated by Titans. Titans are typically several stories tall, seem to have no intelligence, devour human beings and, worst of all, seem to do it for the pleasure rather than as a food source. A small percentage of humanity survived by walling themselves in a city protected by extremely high walls, even taller than the biggest Titans. Flash forward to the present and the city has not seen a Titan in over 100 years. Teenage boy Eren and his foster sister Mikasa witness something horrific as the city walls are destroyed by a Colossal Titan that appears out of thin air. As the smaller Titans flood the city, the two kids watch in horror as their mother is eaten alive. Eren vows that he will murder every single Titan and take revenge for all of mankind.",
-      "actores": []
-    },
-    {
-      "type": "serie",
-      "name": "Weightlifting Fairy Kim Bok-joo",
-      "yearEstreno": "2016-11-16",
-      "id": 68349,
-      "overview": "A competitive swimmer crosses paths with his childhood friend, a rising weight lifting star, and realizes that she has a secret crush on his cousin.",
-      "actores": []
-    },
-    {
-      "type": "serie",
-      "name": "Hunter x Hunter",
-      "yearEstreno": "2011-10-02",
-      "id": 46298,
-      "overview": "Twelve-year-old Gon Freecss one day discovers that the father he had always been told was dead was alive. His Father, Ging, is a Hunter — a member of society's elite with a license to go anywhere or do almost anything. Gon, determined to follow in his father's footsteps, decides to take the Hunter Examination and eventually find his father to prove himself as a Hunter in his own right. But on the way, he learns that there is more to becoming a Hunter than previously thought, and the challenges that he must face are considered the toughest in the world.",
-      "actores": []
-    }
-  
-    */
