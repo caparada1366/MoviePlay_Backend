@@ -285,7 +285,7 @@
       "yearEstreno": "2008-01-20",
       "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/ggFHVNu6YYI5L9pCfOacjizRGt.jpg",
       "price": 2.50,
-      "descripcion": "When Walter White, a New Mexico chemistry teacher, is diagnosed with Stage III cancer and given a prognosis of only two years left to live. He becomes filled with a sense of fearlessness and an unrelenting desire to secure his family's financial future at any cost as he enters the dangerous world of drugs and crime.",
+      "descripcion": "Cuando a Walter White, un profesor de química de Nuevo México, se le diagnostica cáncer en etapa III y se le da un pronóstico de que solo le quedan dos años de vida. Se llena de una sensación de valentía y un deseo implacable de asegurar el futuro financiero de su familia a toda costa. mientras entra en el peligroso mundo de las drogas y el crimen",
       "actores": [
         {
           "name": "Bryan Cranston"
@@ -311,6 +311,14 @@
         {
           "name": "RJ Mitte"
         }
+        ],
+        "genres": [
+          {
+            "name": "Drama"
+          },
+          {
+            "name": "Crime"
+          }
         ]
     },
     {
@@ -319,7 +327,7 @@
       "yearEstreno": "2021-11-06",
       "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/fqldf2t8ztc9aiwn3k6mlX3tvRT.jpg",
       "price": 2.00,
-      "descripcion": "Amid the stark discord of twin cities Piltover and Zaun, two sisters fight on rival sides of a war between magic technologies and clashing convictions.",
+      "descripcion": "En medio de la dura discordia de las ciudades gemelas de Piltóver y Zaun, dos hermanas luchan en bandos rivales de una guerra entre tecnologías mágicas y convicciones enfrentadas",
       "actores":[
         {
           "name": "Hailee Steinfeld"
@@ -342,6 +350,20 @@
         {
           "name": "Christian Linke"
         }
+      ],
+      "genres": [
+        {
+          "name": "Animation"
+        },
+        {
+          "name": "Drama"
+        },
+        {
+          "name": "Sci-Fi & Fantasy"
+        },
+        {
+          "name": "Action & Adventure"
+        }
       ]
     },
     {
@@ -350,7 +372,7 @@
       "yearEstreno": "1999-10-20",
       "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/fcXdJlbSdUEeMSJFsXKsznGwwok.jpg",
       "price": 3.50,
-      "descripcion": "Years ago, the fearsome Pirate King, Gol D. Roger was executed leaving a huge pile of treasure and the famous \"One Piece\" behind. Whoever claims the \"One Piece\" will be named the new King of the Pirates.\n\nMonkey D. Luffy, a boy who consumed a \"Devil Fruit,\" decides to follow in the footsteps of his idol, the pirate Shanks, and find the One Piece. It helps, of course, that his body has the properties of rubber and that he's surrounded by a bevy of skilled fighters and thieves to help him along the way.\n\nLuffy will do anything to get the One Piece and become King of the Pirates!",
+      "descripcion": "Hace años, el temible Rey de los Piratas, Gol D. Roger, fue ejecutado dejando una enorme pila de tesoros y el famoso 'One Piece' detrás. Quien reclame el 'One Piece' será nombrado el nuevo Rey de los Piratas. Monkey D. Luffy, un chico que consumió una 'Fruta del Diablo', decide seguir los pasos de su ídolo, el pirata Shanks, y encontrar el One Piece. Ayuda, por supuesto, que su cuerpo tenga propiedades de goma y que esté rodeado por un grupo de hábiles luchadores y ladrones para ayudarlo en el camino. ¡Luffy hará cualquier cosa para obtener el One Piece y convertirse en el Rey de los Piratas!",
       "actores": [
         {
           "name": "Mayumi Tanaka"
@@ -373,7 +395,18 @@
         {
           "name": "Ikue Otani"
         }
-      ]
+      ],
+      "genres": [
+        {
+          "name": "Action & Adventure"
+        },
+        {
+          "name": "Comedy"
+        },
+        {
+          "name": "Animation"
+        }
+      ],
     },
     {
       "type": "serie",
@@ -381,7 +414,7 @@
       "yearEstreno": "2013-12-02",
       "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/5Yiep9EwcQgLolg013ETBVqHxuD.jpg",
       "price": 3.50,
-      "descripcion": "Rick is a mentally-unbalanced but scientifically gifted old man who has recently reconnected with his family. He spends most of his time involving his young grandson Morty in dangerous, outlandish adventures throughout space and alternate universes. Compounded with Morty's already unstable family life, these events cause Morty much distress at home and school.",
+      "descripcion": "Rick es un anciano mentalmente desequilibrado pero científicamente dotado que recientemente se ha vuelto a conectar con su familia. Pasa la mayor parte de su tiempo involucrando a su joven nieto Morty en aventuras peligrosas y extravagantes en el espacio y universos alternativos. Agravado con la vida familiar ya inestable de Morty, estos eventos causan mucha angustia a Morty en el hogar y la escuela.",
       "actores": [
         {
           "name": "Justin Roiland"
@@ -395,6 +428,20 @@
         {
           "name": "Sarah Chalke"
         }
+      ],
+      "genres": [
+        {
+          "name": "Animation"
+        },
+        {
+          "name": "Comedy"
+        },
+        {
+          "name": "Sci-Fi & Fantasy"
+        },
+        {
+          "name": "Action & Adventure"
+        }
       ]
     },
     {
@@ -403,7 +450,7 @@
       "yearEstreno": "2017-03-19",
       "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/6P6tXhjT5tK3qOXzxF9OMLlG7iz.jpg",
       "price": 2.50,
-      "descripcion": "A coming-of-age story about an outsider who, against all odds and numerous challenges, fights for love and acceptance and for her place in the world. The series centers on a young orphaned girl in the late 1890’s, who, after an abusive childhood spent in orphanages and the homes of strangers, is mistakenly sent to live with an elderly woman and her aging brother. Over time, 13-year-old Anne will transform their lives and eventually the small town in which they live with her unique spirit, fierce intellect and brilliant imagination.",
+      "descripcion": "Una historia sobre la mayoría de edad sobre una forastera que, contra viento y marea y numerosos desafíos, lucha por el amor y la aceptación y por su lugar en el mundo. La serie se centra en una joven huérfana a fines de la década de 1890, quien, después de un una infancia abusiva pasada en orfanatos y casas de extraños, es enviada por error a vivir con una anciana y su hermano anciano.Con el tiempo, Anne, de 13 años, transformará sus vidas y, finalmente, el pequeño pueblo en el que viven con su singular espíritu, intelecto feroz y brillante imaginación.",
       "actores": [
         {
           "name": "Amybeth McNulty",
@@ -420,7 +467,15 @@
         {
           "name": "Kiawentiio"
         }
-      ]
+      ],
+      "genres": [
+        {
+          "name": "Drama"
+        },
+        {
+          "name": "Family"
+        }
+      ],
     },
     {
       "type": "serie",
@@ -428,7 +483,7 @@
       "yearEstreno": "2009-04-05",
       "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/5ZFUEOULaVml7pQuXxhpR2SmVUw.jpg",
       "price": 2.50,
-      "descripcion": "Edward and Alphonse Elric's reckless disregard for alchemy's fundamental laws ripped half of Ed's limbs from his body and left Al's soul clinging to a cold suit of armor. To restore what was lost, the brothers scour a war-torn land for the Philosopher's Sto­ne, a fabled relic which grants the ability to perform alchemy in impossible ways.\n\nThe Elrics are not alone in their search; the corrupt State Military is also eager to harness the artifact's power. So too are the strange Homunculi and their shadowy creator. The mythical gem lures exotic alchemists from distant kingdoms, scarring some deeply enough to inspire murder. As the Elrics find their course altered by these enemies and allies, their purpose remains unchanged – and their bond unbreakable.",
+      "descripcion": "El temerario desprecio de Edward y Alphonse Elric por las leyes fundamentales de la alquimia arrancó la mitad de las extremidades de Ed y dejó el alma de Al aferrada a una fría armadura. Para restaurar lo que se había perdido, los hermanos recorren una tierra devastada por la guerra en busca de la Piedra Filosofal, un reliquia legendaria que otorga la capacidad de realizar alquimia de maneras imposibles. Los Elric no están solos en su búsqueda, las corruptas Fuerzas Armadas del Estado también están ansiosas por aprovechar el poder del artefacto. También lo están los extraños Homúnculos y su sombrío creador. La gema mítica atrae alquimistas exóticos de reinos lejanos, dejando cicatrices en algunos lo suficientemente profundas como para inspirar el asesinato. A medida que los enemigos y aliados alteran el rumbo de los Elric, su propósito permanece invariable y su vínculo es inquebrantable",
       "actores": [
         {
           "name": "Romi Park"
@@ -454,6 +509,17 @@
         {
           "name": "Mamoru Miyano"
         }
+      ],
+      "genres": [
+        {
+          "name": "Action & Adventure"
+        },
+        {
+          "name": "Animation"
+        },
+        {
+          "name": "Sci-Fi & Fantasy"
+        }
       ]
     },
     {
@@ -462,7 +528,7 @@
       "yearEstreno": "2005-02-21",
       "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/wymjTykWokonutxkeurydNvqN5Z.jpg",
       "price": 2.50,
-      "descripcion": "In a war-torn world of elemental magic, a young boy reawakens to undertake a dangerous mystic quest to fulfill his destiny as the Avatar, and bring peace to the world.",
+      "descripcion": "En un mundo de magia elemental devastado por la guerra, un joven despierta para emprender una peligrosa búsqueda mística para cumplir su destino como Avatar y traer la paz al mundo",
       "actores": [
         {
           "name": "Zach Tyler"
@@ -476,6 +542,17 @@
         {
           "name": "Dante Basco"
         }
+      ],
+      "genres": [
+        {
+          "name": "Animation"
+        },
+        {
+          "name": "Action & Adventure"
+        },
+        {
+          "name": "Sci-Fi & Fantasy"
+        }
       ]
     },
     {
@@ -484,13 +561,18 @@
       "yearEstreno": "2023-01-15",
       "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/tNQWO6cNzQYCyvw36mUcAQQyf5F.jpg",
       "price": 2.25,
-      "descripcion": "Twenty years after modern civilization has been destroyed, Joel, a hardened survivor, is hired to smuggle Ellie, a 14-year-old girl, out of an oppressive quarantine zone. What starts as a small job soon becomes a brutal, heartbreaking journey, as they both must traverse the United States and depend on each other for survival.",
+      "descripcion": "Veinte años después de que la civilización moderna haya sido destruida, Joel, un sobreviviente endurecido, es contratado para sacar de contrabando a Ellie, una niña de 14 años, fuera de una opresiva zona de cuarentena. Lo que comienza como un pequeño trabajo pronto se convierte en un viaje brutal y desgarrador. , ya que ambos deben atravesar los Estados Unidos y depender el uno del otro para sobrevivir",
       "actores": [
         {
           "name": "Pedro Pascal"
         },
         {
           "name": "Bella Ramsey"
+        }
+      ],
+      "genres": [
+        {
+          "name": "Drama"
         }
       ]
     },
@@ -500,7 +582,7 @@
       "yearEstreno": "2019-04-06",
       "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/tK4GsDa6BREEh6Hfng1tWPuq8oE.jpg",
       "price": 4.50,
-      "descripcion": "It is the Taisho Period in Japan. Tanjiro, a kindhearted boy who sells charcoal for a living, finds his family slaughtered by a demon. To make matters worse, his younger sister Nezuko, the sole survivor, has been transformed into a demon herself. Though devastated by this grim reality, Tanjiro resolves to become a “demon slayer” so that he can turn his sister back into a human, and kill the demon that massacred his family.",
+      "descripcion": "Es el Período Taisho en Japón. Tanjiro, un niño de buen corazón que vende carbón para ganarse la vida, encuentra a su familia masacrada por un demonio. Para empeorar las cosas, su hermana menor Nezuko, la única superviviente, se ha transformado en un demonio. Aunque devastado por esta sombría realidad, Tanjiro decide convertirse en un 'asesino de demonios' para poder convertir a su hermana en humana y matar al demonio que masacró a su familia",
       "actores": [
         {
           "name": "Natsuki Hanae"
@@ -511,6 +593,17 @@
         {
           "name": "Kengo Kawanishi"
         }
+      ],
+      "genres": [
+        {
+          "name": "Animation"
+        },
+        {
+          "name": "Action & Adventure"
+        },
+        {
+          "name": "Sci-Fi & Fantasy"
+        }
       ]
     },
     {
@@ -519,7 +612,7 @@
       "yearEstreno": "2016-12-02",
       "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/t7aUi8jbsIUSCNqA1akAbKjBWjU.jpg",
       "price": 2.90,
-      "descripcion": "In his quest for a bride to break his immortal curse, a 939-year-old guardian of souls meets a grim reaper and a sprightly student with a tragic past.",
+      "descripcion": "En su búsqueda de una novia para romper su maldición inmortal, un guardián de almas de 939 años se encuentra con un ángel de la muerte y un estudiante vivaz con un pasado trágico",
       "actores": [
         {
           "name": "Gong Yoo"
@@ -530,6 +623,11 @@
         {
           "name": "Lee Dong-wook"
         }
+      ],
+      "genres": [
+        {
+          "name": "Drama"
+        }
       ]
     },
     {
@@ -538,7 +636,7 @@
       "yearEstreno": "2021-03-25",
       "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/5VKvz8H12yVM5OmSKwmXmcU1Tpt.jpg",
       "price": 2.35,
-      "descripcion": "Mark Grayson is a normal teenager except for the fact that his father is the most powerful superhero on the planet. Shortly after his seventeenth birthday, Mark begins to develop powers of his own and enters into his father’s tutelage.",
+      "descripcion": "Mark Grayson es un adolescente normal excepto por el hecho de que su padre es el superhéroe más poderoso del planeta. Poco después de su decimoséptimo cumpleaños, Mark comienza a desarrollar sus propios poderes y entra en la tutela de su padre",
       "actores": [
         {
           "name": "Steven Yeun"
@@ -549,7 +647,21 @@
         {
           "name": "J.K. Simmons"
         }
-      ]
+      ],
+      "genres": [
+        {
+          "name": "Animation"
+        },
+        {
+          "name": "Sci-Fi & Fantasy"
+        },
+        {
+          "name": "Action & Adventure"
+        },
+        {
+          "name": "Drama"
+        }
+      ],
     },
     {
       "type": "serie",
@@ -557,7 +669,7 @@
       "yearEstreno": "2010-09-06",
       "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/6xea7V4d2xayrlBKOtMZ4wlV6wZ.jpg",
       "price": 3.90,
-      "descripcion": "Two bored groundskeepers, Mordecai (a six-foot-tall blue jay) and Rigby (a hyperactive raccoon) are best friends who spend their days trying to entertain themselves by any means necessary, much to the displeasure of their boss. Their everyday pursuits often lead to things spiraling out of control and into the surreal.",
+      "descripcion": "Dos jardineros aburridos, Mordecai (un arrendajo azul de seis pies de altura) y Rigby (un mapache hiperactivo) son los mejores amigos que pasan sus días tratando de entretenerse por cualquier medio necesario, para disgusto de su jefe. Sus actividades diarias a menudo conducen a que las cosas se salgan de control y se vuelvan surrealistas",
       "actores": [
         {
           "name": "William Salyers"
@@ -568,7 +680,15 @@
         {
           "name": "Sam Marin"
         }
-      ]
+      ],
+      "genres": [
+        {
+          "name": "Animation"
+        },
+        {
+          "name": "Comedy"
+        }
+      ],
     },
     {
       "type": "serie",
@@ -576,7 +696,7 @@
       "yearEstreno": "2016-04-03",
       "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/ivOLM47yJt90P19RH1NvJrAJz9F.jpg",
       "price": 3.30,
-      "descripcion": "In a world where eighty percent of the population has some kind of super-powered Quirk, Izuku was unlucky enough to be born completely normal. But that won't stop him from enrolling in a prestigious hero academy. Now, he'll get his first taste of brutal rivalry from other schools as he braves the cutthroat, no-holds-barred provisional license exam.",
+      "descripcion": "En un mundo donde el ochenta por ciento de la población tiene algún tipo de Quirk con superpoderes, Izuku tuvo la mala suerte de nacer completamente normal. Pero eso no impedirá que se inscriba en una prestigiosa academia de héroes. Ahora, obtendrá su primera prueba de la rivalidad brutal de otras escuelas mientras desafía el examen de licencia provisional despiadado y sin restricciones",
       "actores": [
         {
           "name": "Daiki Yamashita"
@@ -587,6 +707,14 @@
         {
           "name": "Kenta Miyake"
         }
+      ],
+      "genres": [
+        {
+          "name": "Action & Adventure"
+        },
+        {
+          "name": "Animation"
+        }
       ]
     },
     {
@@ -595,7 +723,7 @@
       "yearEstreno": "2020-01-10",
       "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/lE5OYF0axjCVtrxLMetA8i8QpZ8.jpg",
       "price": 4.95,
-      "descripcion": "An animated fantasy-comedy series that follows Luz, a self-assured teenage girl who accidentally stumbles upon a portal to a magical world where she befriends a rebellious witch, Eda, and an adorably tiny warrior, King. Despite not having magical abilities, Luz pursues her dream of becoming a witch by serving as Eda's apprentice at the Owl House and ultimately finds a new family in an unlikely setting.",
+      "descripcion": "Una serie animada de comedia fantástica que sigue a Luz, una adolescente segura de sí misma que accidentalmente se topa con un portal a un mundo mágico donde se hace amiga de una bruja rebelde, Eda, y de un adorable y diminuto guerrero, King. A pesar de no tener habilidades mágicas, Luz persigue su sueño de convertirse en bruja sirviendo como aprendiz de Eda en Owl House y finalmente encuentra una nueva familia en un entorno poco probable",
       "actores": [
         {
           "name": "Sarah-Nicole Robles"
@@ -603,7 +731,24 @@
         {
           "name": "Alex Hirsch"
         }
-      ]
+      ],
+      "genres": [
+        {
+          "name": "Animation"
+        },
+        {
+          "name": "Sci-Fi & Fantasy"
+        },
+        {
+          "name": "Drama"
+        },
+        {
+          "name": "Action & Adventure"
+        },
+        {
+          "name": "Comedy"
+        }
+      ],
     },
     {
       "type": "serie",
@@ -611,12 +756,23 @@
       "yearEstreno": "2019-10-08",
       "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/9jIatSC61s5Y3d5Q63yIeZFvP7u.jpg",
       "price": 3.36,
-      "descripcion": "A caveman forms a bond with a dinosaur as they struggle to survive in a hostile world.",
+      "descripcion": "Un hombre de las cavernas forma un vínculo con un dinosaurio mientras luchan por sobrevivir en un mundo hostil",
       "actores": [
         {
           "name": "Aaron LaPlante"
         }
-      ]
+      ],
+      "genres": [
+        {
+          "name": "Action & Adventure"
+        },
+        {
+          "name": "Animation"
+        },
+        {
+          "name": "Drama"
+        }
+      ],
     },
     {
       "type": "serie",
@@ -624,7 +780,7 @@
       "yearEstreno": "2022-11-03",
       "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/kBlqr507IV9bDKHLEFBtEtTfCw3.jpg",
       "price": 1.50,
-      "descripcion": "This series takes an unprecedented closeup look at Lionel Messi and the Argentine team's battle to break a 28-year title drought in 2021's Copa América.",
+      "descripcion": "Esta serie ofrece una mirada de cerca sin precedentes a Lionel Messi y la batalla de la selección argentina para romper una sequía de títulos de 28 años en la Copa América de 2021",
       "actores": [
         {
           "name": "Lionel Messi"
@@ -644,6 +800,17 @@
         {
           "name": "Alejandro Darío Gómez"
         }
+      ],
+      "genres": [
+        {
+          "name": "Sci-Fi & Fantasy"
+        },
+        {
+          "name": "Animation"
+        },
+        {
+          "name": "Action & Adventure"
+        }
       ]
     },
     {
@@ -652,7 +819,7 @@
       "yearEstreno": "2017-06-19",
       "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/zbVwpFNma4RV7HkIVT3aOUmGUJf.jpg",
       "price": 1.90,
-      "descripcion": "The series revolves around Gabo, a soccer-loving teenager who, upon receiving a scholarship from the prestigious Sports Academic Institute (IAD) of Buenos Aires, will see his dream of playing at Los Halcones Dorados, the renowned amateur team of the school, and also his longing to become a professional footballer.",
+      "descripcion": "La serie gira en torno a Gabo, un adolescente amante del fútbol que, al recibir una beca del prestigioso Instituto Académico del Deporte (IAD) de Buenos Aires, verá cumplido su sueño de jugar en Los Halcones Dorados, el reconocido equipo amateur de la escuela. y también su anhelo de convertirse en futbolista profesional.",
       "actores": [
         {
           "name": "Mariano González"
@@ -666,7 +833,15 @@
         {
           "name": "Luan Brum"
         }
-      ]
+      ],
+      "genres": [
+        {
+          "name": "Comedy"
+        },
+        {
+          "name": "Family"
+        }
+      ],
     },
     {
       "type": "serie",
@@ -674,7 +849,7 @@
       "yearEstreno": "2013-04-07",
       "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/yFPQ4JhhirnCVe2UIKGMYX7TOGZ.jpg",
       "price": 1.00,
-      "descripcion": "Several hundred years ago, humans were nearly exterminated by Titans. Titans are typically several stories tall, seem to have no intelligence, devour human beings and, worst of all, seem to do it for the pleasure rather than as a food source. A small percentage of humanity survived by walling themselves in a city protected by extremely high walls, even taller than the biggest Titans. Flash forward to the present and the city has not seen a Titan in over 100 years. Teenage boy Eren and his foster sister Mikasa witness something horrific as the city walls are destroyed by a Colossal Titan that appears out of thin air. As the smaller Titans flood the city, the two kids watch in horror as their mother is eaten alive. Eren vows that he will murder every single Titan and take revenge for all of mankind.",
+      "descripcion": "Hace varios cientos de años, los titanes casi exterminaron a los humanos. Los titanes suelen tener varios pisos de altura, parecen no tener inteligencia, devoran seres humanos y, lo peor de todo, parecen hacerlo por placer en lugar de como fuente de alimento. A Un pequeño porcentaje de la humanidad sobrevivió amurallándose en una ciudad protegida por muros extremadamente altos, incluso más altos que los Titanes más grandes. Avancemos al presente y la ciudad no ha visto un Titán en más de 100 años. El adolescente Eren y su hermana adoptiva Mikasa presencia algo horrible cuando las murallas de la ciudad son destruidas por un titán colosal que aparece de la nada. Mientras los titanes más pequeños inundan la ciudad, los dos niños miran horrorizados cómo su madre es devorada viva. Eren jura que asesinará a todos y cada uno de los titanes. y tomar venganza por toda la humanidad.",
       "actores": [
         {
           "name": "Yuki Kaji"
@@ -685,6 +860,17 @@
         {
           "name": "Marina Inoue"
         }
+      ],
+      "genres": [
+        {
+          "name": "Sci-Fi & Fantasy"
+        },
+        {
+          "name": "Animation"
+        },
+        {
+          "name": "Action & Adventure"
+        }
       ]
     },
     {
@@ -693,7 +879,7 @@
       "yearEstreno": "2016-11-16",
       "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/8SW0FS3U4nJQVIQj1hecU2Fon8Z.jpg",
       "price": 2.00,
-      "descripcion": "A competitive swimmer crosses paths with his childhood friend, a rising weight lifting star, and realizes that she has a secret crush on his cousin.",
+      "descripcion": "Un nadador competitivo se cruza con su amiga de la infancia, una estrella en ascenso del levantamiento de pesas, y se da cuenta de que ella está enamorada en secreto de su prima",
       "actores": [
         {
           "name": "Kyung Soo-jin"
@@ -704,7 +890,15 @@
         {
           "name": "Cho Hye-jung"
         }
-      ]
+      ],
+      "genres": [
+        {
+          "name": "Comedy"
+        },
+        {
+          "name": "Drama"
+        }
+      ],
     },
     {
       "type": "serie",
@@ -712,7 +906,7 @@
       "yearEstreno": "2011-10-02",
       "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/ucpgmUR1h5Te1BYegKItoPjOeF7.jpg",
       "price": 3.00,
-      "descripcion": "Twelve-year-old Gon Freecss one day discovers that the father he had always been told was dead was alive. His Father, Ging, is a Hunter — a member of society's elite with a license to go anywhere or do almost anything. Gon, determined to follow in his father's footsteps, decides to take the Hunter Examination and eventually find his father to prove himself as a Hunter in his own right. But on the way, he learns that there is more to becoming a Hunter than previously thought, and the challenges that he must face are considered the toughest in the world.",
+      "descripcion": "Gon Freecss de doce años, descubre un día que el padre del que siempre le habían dicho que estaba muerto estaba vivo. Su padre, Ging, es un cazador, un miembro de la élite de la sociedad con licencia para ir a cualquier parte o hacer casi cualquier cosa. Gon , decidido a seguir los pasos de su padre, decide tomar el Examen de Cazador y finalmente encontrar a su padre para demostrar que es un Cazador por derecho propio. Pero en el camino, aprende que hay más para convertirse en un Cazador de lo que pensaba anteriormente, y los retos que debe afrontar son considerados los más duros del mundo.",
       "actores": [
         {
           "name": "Megumi Han"
@@ -725,6 +919,17 @@
         },
         {
           "name": "Keiji Fujiwara"
+        }
+      ],
+      "genres": [
+        {
+          "name": "Action & Adventure"
+        },
+        {
+          "name": "Animation"
+        },
+        {
+          "name": "Drama"
         }
       ]
     }
