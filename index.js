@@ -23,3 +23,7 @@ conn.sync({ force: false }).then(async () => {
     );
   }
 });
+
+// app.get('/', (req, res) => {
+//   res.send('¡Hola, este es un proyecto con Express y Sequelize!!!!');
+// });

@@ -18,7 +18,8 @@ module.exports = (sequelize) => {
         type: DataTypes.TEXT,
       },
       yearEstreno: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.STRING,
+        allowNull: false,
       },
       actores: {
         type: DataTypes.ARRAY(DataTypes.STRING),
@@ -29,5 +30,4 @@ module.exports = (sequelize) => {
       timestamps: false,
     }
   );
-  return Series;
 };
