@@ -264,6 +264,7 @@
       "titulo": "Breaking Bad",
       "yearEstreno": "2008-01-20",
       "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/ggFHVNu6YYI5L9pCfOacjizRGt.jpg",
+      "price": 2.50,
       "descripcion": "When Walter White, a New Mexico chemistry teacher, is diagnosed with Stage III cancer and given a prognosis of only two years left to live. He becomes filled with a sense of fearlessness and an unrelenting desire to secure his family's financial future at any cost as he enters the dangerous world of drugs and crime.",
       "actores": [
         {
@@ -297,6 +298,7 @@
       "titulo": "Arcane",
       "yearEstreno": "2021-11-06",
       "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/fqldf2t8ztc9aiwn3k6mlX3tvRT.jpg",
+      "price": 2.00,
       "descripcion": "Amid the stark discord of twin cities Piltover and Zaun, two sisters fight on rival sides of a war between magic technologies and clashing convictions.",
       "actores":[
         {
@@ -327,6 +329,7 @@
       "titulo": "One Piece",
       "yearEstreno": "1999-10-20",
       "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/fcXdJlbSdUEeMSJFsXKsznGwwok.jpg",
+      "price": 3.50,
       "descripcion": "Years ago, the fearsome Pirate King, Gol D. Roger was executed leaving a huge pile of treasure and the famous \"One Piece\" behind. Whoever claims the \"One Piece\" will be named the new King of the Pirates.\n\nMonkey D. Luffy, a boy who consumed a \"Devil Fruit,\" decides to follow in the footsteps of his idol, the pirate Shanks, and find the One Piece. It helps, of course, that his body has the properties of rubber and that he's surrounded by a bevy of skilled fighters and thieves to help him along the way.\n\nLuffy will do anything to get the One Piece and become King of the Pirates!",
       "actores": [
         {
@@ -357,6 +360,7 @@
       "titulo": "Rick and Morty",
       "yearEstreno": "2013-12-02",
       "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/5Yiep9EwcQgLolg013ETBVqHxuD.jpg",
+      "price": 3.50,
       "descripcion": "Rick is a mentally-unbalanced but scientifically gifted old man who has recently reconnected with his family. He spends most of his time involving his young grandson Morty in dangerous, outlandish adventures throughout space and alternate universes. Compounded with Morty's already unstable family life, these events cause Morty much distress at home and school.",
       "actores": [
         {
@@ -378,6 +382,7 @@
       "titulo": "Anne with an E",
       "yearEstreno": "2017-03-19",
       "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/6P6tXhjT5tK3qOXzxF9OMLlG7iz.jpg",
+      "price": 2.50,
       "descripcion": "A coming-of-age story about an outsider who, against all odds and numerous challenges, fights for love and acceptance and for her place in the world. The series centers on a young orphaned girl in the late 1890’s, who, after an abusive childhood spent in orphanages and the homes of strangers, is mistakenly sent to live with an elderly woman and her aging brother. Over time, 13-year-old Anne will transform their lives and eventually the small town in which they live with her unique spirit, fierce intellect and brilliant imagination.",
       "actores": [
         {
@@ -402,6 +407,7 @@
       "titulo": "Fullmetal Alchemist: Brotherhood",
       "yearEstreno": "2009-04-05",
       "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/5ZFUEOULaVml7pQuXxhpR2SmVUw.jpg",
+      "price": 2.50,
       "descripcion": "Edward and Alphonse Elric's reckless disregard for alchemy's fundamental laws ripped half of Ed's limbs from his body and left Al's soul clinging to a cold suit of armor. To restore what was lost, the brothers scour a war-torn land for the Philosopher's Sto­ne, a fabled relic which grants the ability to perform alchemy in impossible ways.\n\nThe Elrics are not alone in their search; the corrupt State Military is also eager to harness the artifact's power. So too are the strange Homunculi and their shadowy creator. The mythical gem lures exotic alchemists from distant kingdoms, scarring some deeply enough to inspire murder. As the Elrics find their course altered by these enemies and allies, their purpose remains unchanged – and their bond unbreakable.",
       "actores": [
         {
@@ -435,6 +441,7 @@
       "titulo": "Avatar: The Last Airbender",
       "yearEstreno": "2005-02-21",
       "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/wymjTykWokonutxkeurydNvqN5Z.jpg",
+      "price": 2.50,
       "descripcion": "In a war-torn world of elemental magic, a young boy reawakens to undertake a dangerous mystic quest to fulfill his destiny as the Avatar, and bring peace to the world.",
       "actores": [
         {
@@ -456,6 +463,7 @@
       "titulo": "The Last of Us",
       "yearEstreno": "2023-01-15",
       "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/tNQWO6cNzQYCyvw36mUcAQQyf5F.jpg",
+      "price": 2.25,
       "descripcion": "Twenty years after modern civilization has been destroyed, Joel, a hardened survivor, is hired to smuggle Ellie, a 14-year-old girl, out of an oppressive quarantine zone. What starts as a small job soon becomes a brutal, heartbreaking journey, as they both must traverse the United States and depend on each other for survival.",
       "actores": [
         {
@@ -471,6 +479,7 @@
       "titulo": "Demon Slayer: Kimetsu no Yaiba",
       "yearEstreno": "2019-04-06",
       "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/tK4GsDa6BREEh6Hfng1tWPuq8oE.jpg",
+      "price": 4.50,
       "descripcion": "It is the Taisho Period in Japan. Tanjiro, a kindhearted boy who sells charcoal for a living, finds his family slaughtered by a demon. To make matters worse, his younger sister Nezuko, the sole survivor, has been transformed into a demon herself. Though devastated by this grim reality, Tanjiro resolves to become a “demon slayer” so that he can turn his sister back into a human, and kill the demon that massacred his family.",
       "actores": [
         {
@@ -489,6 +498,7 @@
       "name": "Goblin",
       "yearEstreno": "2016-12-02",
       "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/t7aUi8jbsIUSCNqA1akAbKjBWjU.jpg",
+      "price": 2.90,
       "descripcion": "In his quest for a bride to break his immortal curse, a 939-year-old guardian of souls meets a grim reaper and a sprightly student with a tragic past.",
       "actores": [
         {
@@ -507,6 +517,7 @@
       "titulo": "Invincible",
       "yearEstreno": "2021-03-25",
       "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/5VKvz8H12yVM5OmSKwmXmcU1Tpt.jpg",
+      "price": 2.35,
       "descripcion": "Mark Grayson is a normal teenager except for the fact that his father is the most powerful superhero on the planet. Shortly after his seventeenth birthday, Mark begins to develop powers of his own and enters into his father’s tutelage.",
       "actores": [
         {
@@ -525,6 +536,7 @@
       "titulo": "Regular Show",
       "yearEstreno": "2010-09-06",
       "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/6xea7V4d2xayrlBKOtMZ4wlV6wZ.jpg",
+      "price": 3.90,
       "descripcion": "Two bored groundskeepers, Mordecai (a six-foot-tall blue jay) and Rigby (a hyperactive raccoon) are best friends who spend their days trying to entertain themselves by any means necessary, much to the displeasure of their boss. Their everyday pursuits often lead to things spiraling out of control and into the surreal.",
       "actores": [
         {
@@ -543,6 +555,7 @@
       "titulo": "My Hero Academia",
       "yearEstreno": "2016-04-03",
       "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/ivOLM47yJt90P19RH1NvJrAJz9F.jpg",
+      "price": 3.30,
       "descripcion": "In a world where eighty percent of the population has some kind of super-powered Quirk, Izuku was unlucky enough to be born completely normal. But that won't stop him from enrolling in a prestigious hero academy. Now, he'll get his first taste of brutal rivalry from other schools as he braves the cutthroat, no-holds-barred provisional license exam.",
       "actores": [
         {
@@ -561,6 +574,7 @@
       "titulo": "The Owl House",
       "yearEstreno": "2020-01-10",
       "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/lE5OYF0axjCVtrxLMetA8i8QpZ8.jpg",
+      "price": 4.95,
       "descripcion": "An animated fantasy-comedy series that follows Luz, a self-assured teenage girl who accidentally stumbles upon a portal to a magical world where she befriends a rebellious witch, Eda, and an adorably tiny warrior, King. Despite not having magical abilities, Luz pursues her dream of becoming a witch by serving as Eda's apprentice at the Owl House and ultimately finds a new family in an unlikely setting.",
       "actores": [
         {
@@ -576,6 +590,7 @@
       "titulo": "Primal",
       "yearEstreno": "2019-10-08",
       "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/9jIatSC61s5Y3d5Q63yIeZFvP7u.jpg",
+      "price": 3.36,
       "descripcion": "A caveman forms a bond with a dinosaur as they struggle to survive in a hostile world.",
       "actores": [
         {
@@ -588,6 +603,7 @@
       "titulo": "Be Eternal: Champions of America",
       "yearEstreno": "2022-11-03",
       "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/kBlqr507IV9bDKHLEFBtEtTfCw3.jpg",
+      "price": 1.50,
       "descripcion": "This series takes an unprecedented closeup look at Lionel Messi and the Argentine team's battle to break a 28-year title drought in 2021's Copa América.",
       "actores": [
         {
@@ -615,6 +631,7 @@
       "titulo": "Once",
       "yearEstreno": "2017-06-19",
       "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/zbVwpFNma4RV7HkIVT3aOUmGUJf.jpg",
+      "price": 1.90,
       "descripcion": "The series revolves around Gabo, a soccer-loving teenager who, upon receiving a scholarship from the prestigious Sports Academic Institute (IAD) of Buenos Aires, will see his dream of playing at Los Halcones Dorados, the renowned amateur team of the school, and also his longing to become a professional footballer.",
       "actores": [
         {
@@ -636,6 +653,7 @@
       "titulo": "Attack on Titan",
       "yearEstreno": "2013-04-07",
       "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/yFPQ4JhhirnCVe2UIKGMYX7TOGZ.jpg",
+      "price": 1.00,
       "descripcion": "Several hundred years ago, humans were nearly exterminated by Titans. Titans are typically several stories tall, seem to have no intelligence, devour human beings and, worst of all, seem to do it for the pleasure rather than as a food source. A small percentage of humanity survived by walling themselves in a city protected by extremely high walls, even taller than the biggest Titans. Flash forward to the present and the city has not seen a Titan in over 100 years. Teenage boy Eren and his foster sister Mikasa witness something horrific as the city walls are destroyed by a Colossal Titan that appears out of thin air. As the smaller Titans flood the city, the two kids watch in horror as their mother is eaten alive. Eren vows that he will murder every single Titan and take revenge for all of mankind.",
       "actores": [
         {
@@ -654,6 +672,7 @@
       "titulo": "Weightlifting Fairy Kim Bok-joo",
       "yearEstreno": "2016-11-16",
       "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/8SW0FS3U4nJQVIQj1hecU2Fon8Z.jpg",
+      "price": 2.00,
       "descripcion": "A competitive swimmer crosses paths with his childhood friend, a rising weight lifting star, and realizes that she has a secret crush on his cousin.",
       "actores": [
         {
@@ -672,6 +691,7 @@
       "titulo": "Hunter x Hunter",
       "yearEstreno": "2011-10-02",
       "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/ucpgmUR1h5Te1BYegKItoPjOeF7.jpg",
+      "price": 3.00,
       "descripcion": "Twelve-year-old Gon Freecss one day discovers that the father he had always been told was dead was alive. His Father, Ging, is a Hunter — a member of society's elite with a license to go anywhere or do almost anything. Gon, determined to follow in his father's footsteps, decides to take the Hunter Examination and eventually find his father to prove himself as a Hunter in his own right. But on the way, he learns that there is more to becoming a Hunter than previously thought, and the challenges that he must face are considered the toughest in the world.",
       "actores": [
         {
