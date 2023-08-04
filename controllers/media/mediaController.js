@@ -1,6 +1,5 @@
 const { Multimedia, Genres } = require('../../config/database');
 const { apiMovie, genres } = require('../../apiData/apiMovie');
-const { Op } = require('sequelize');
 
   // Cargamos la db con los datos de la fake API:  (esto es para las pruebas)
 const loadMultimedia = async() => {
@@ -13,24 +12,48 @@ const loadMultimedia = async() => {
     }
 
     // Mapeamos la api de movies y traemos la info que queramos:
-    const moviesMapped = apiMovie.map((ele) => ({
-      type: ele.type,
-      name: ele.name,
-      description: ele.description,
-      time: 120,
-      linkVideo: ele.linkVideo,
-      image: ele.image,
-      active: true,
-      price: 5.5,
-    }));
+    // const moviesMapped = apiMovie.map((ele) => ({
+    //   type: ele.type,
+    //   name: ele.name,
+    //   description: ele.description,
+    //   time: 120,
+    //   linkVideo: ele.linkVideo,
+    //   image: ele.image,
+    //   active: true,
+    //   price: ele.price,
+    //   genres: ele.genres
+    // }));
+
+     apiMovie.forEach(async ele=>{
+      let movieCreate = await Multimedia.create({
+        type: ele.type,
+        name: ele.name,
+        description: ele.description,
+        time: 120,
+        linkVideo: ele.linkVideo,
+        image: ele.image,
+        active: true,
+        price: ele.price,
+        genres: ele.genres
+          });
+
+        for (const gen of ele.genres) {
+        const [genre] = await Genres.findAll({
+          where: { name: gen },
+        });
+
+        await movieCreate.addGenres(genre);
+        }
+     }) 
+      
 
     // Cargamos a Multimedia usando bulkCreate
-    const createdMedia = await Multimedia.bulkCreate(moviesMapped);
+    //const createdMedia = await Multimedia.bulkCreate(moviesMapped);
 
     // Verificamos si todos los registros se crearon con éxito
-    if (createdMedia.length !== moviesMapped.length) {
-      throw new Error('Error loading multimedia: Some records were not created.');
-    }
+    // if (createdMedia.length !== moviesMapped.length) {
+    //   throw new Error('Error loading multimedia: Some records were not created.');
+    // }
 
     console.log('Datos de multimedia cargados correctamente.');
   } catch (error) {
@@ -42,6 +65,7 @@ const loadMultimedia = async() => {
 
 // Esto es de prueba, podemos modificarlo para que quede mejor
 const loadGenres = async() => {
+  // const apiGenres = genres;
   
     // Hacemos lo mismo con la api de genres:
     const genresMapped = genres.map( ele => {
@@ -57,7 +81,7 @@ const loadGenres = async() => {
 }
 
 
-const getAllMedia = async(name) => {
+const getAllMedia = async() => {
     const countMedia = await Multimedia.count();  // con '.count()' obtenemos el número de registros 
     const countGenre = await Genres.count();
 
@@ -72,21 +96,11 @@ const getAllMedia = async(name) => {
       include: {
         model: Genres,
         attributes: ['name'],
-        through: { attributes: [] },
+        through: { attributes: [], },  // así no nos trae la tabla de unión
       },
-      where: name
-        ? {
-            name: {
-              [Op.iLike]: `%${name}%`,
-            },
-          }
-        : {},
     });
-  
-    if (name && media.length === 0) {
-      throw new Error(`The movie with the name ${name} doesn't exist`);
-    }
-  
+
+    // Devolvemos media con toda la info cargada
     return media;
 
 
@@ -131,26 +145,25 @@ const postNewMedia = async(type, name, description, time, linkVideo, image, pric
 
   // VALIDACIONES ( SAQUÉ TIME, PRICE HASTA QUE LO AGREGUEMOS A LA API :) )
 
-  if (!type || typeof type !== 'string' || !name || typeof name !== 'string' || 
-      !description || typeof description !== 'string' || 
-      typeof time !== 'number' || 
-      !linkVideo || typeof linkVideo !== 'string' || !isValidUrl(linkVideo) || 
-      !image || typeof image !== 'string' || !isValidImageUrl(image) || 
-      typeof price !== 'number' || isNaN(price) || !isFinite(price) || 
-      genres.length === 0) {
-    throw new Error('Invalid Data: Please provide valid values for all required fields.');
-  }
+  // if (!type || typeof type !== 'string' || !name || typeof name !== 'string' || 
+  //     !description || typeof description !== 'string' || 
+  //     // !Number.isInteger(time) || 
+  //     !linkVideo || typeof linkVideo !== 'string' || !isValidUrl(linkVideo) || 
+  //     !image || typeof image !== 'string' || !isValidImageUrl(image) || 
+  //     // typeof price !== 'number' || isNaN(price) || !isFinite(price) || 
+  //     genres.length === 0) {
+  //   throw new Error('Invalid Data: Please provide valid values for all required fields.');
+  // }
 
 
-    if( type === 'movie' ) {
+    
         let movieCreate = await Multimedia.create({
-            type,
-            name,
-            description,
             time,
+            name,
+            price,
+            description,
             linkVideo,
             image,
-            price,
         });
 
     for (const gen of genres) {
@@ -162,7 +175,7 @@ const postNewMedia = async(type, name, description, time, linkVideo, image, pric
     }
 
       return movieCreate
-    }
+    
 }
 
 
