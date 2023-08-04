@@ -27,6 +27,10 @@ module.exports = (sequelize) =>{
             type: DataTypes.STRING,
             allowNull: false,
         },
+        image: {
+            type: DataTypes.STRING,
+            defaultValue: 'https://cuv.upc.edu/es/shared/imatges/fotos-professorat-i-professionals/anonimo.jpg/image_view_fullscreen' 
+        },
         estadoActivo: {
             type: DataTypes.BOOLEAN,
             defaultValue: true, 
