@@ -10,6 +10,8 @@ const apiMovie = [
         "release_date": "2023-06-13",
         "type": "movie",
         "linkVideo":"https://youtu.be/jprhe-cWKGs",
+        "price":4.99,
+        "genres":["Sci-fi", "Action"]
     },
     {      
          "name": "Transformers: Rise of the Beasts",
@@ -22,6 +24,8 @@ const apiMovie = [
          "release_date": "2023-06-06",
          "type": "movie",
          "linkVideo":"https://youtu.be/ZtuFgnxQMrA",
+         "price":4.99,
+         "genres":["Sci-fi", "Action"]
     },
     {
          "name": "Barbie",
@@ -34,6 +38,8 @@ const apiMovie = [
          "release_date": "2023-07-19",
          "type": "movie",
          "linkVideo":"https://youtu.be/pBk4NYhWNMM",
+         "price":14.99,
+         "genres":["Drama"]
     },
     {
          "name": "The Little Mermaid",
@@ -46,6 +52,8 @@ const apiMovie = [
          "release_date": "2023-05-18",
          "type": "movie",
          "linkVideo":"https://youtu.be/kpGo2_d3oYE",
+         "price":24.99,
+         "genres":["Family"]
     },
     {
          "name": "バイオハザード：デスアイランド",
@@ -58,6 +66,8 @@ const apiMovie = [
          "release_date": "2023-06-22",
          "type": "movie",
          "linkVideo":"https://youtu.be/L-vkuA8oqMY",
+         "price":6.99,
+         "genres":["Sci-fi", "Action"]
     },
     {
         "name": "Guardians of the Galaxy Vol. 3",
@@ -70,6 +80,8 @@ const apiMovie = [
          "release_date": "2023-05-03",
          "type": "movie",
          "linkVideo":"https://youtu.be/AAE5VZktooM",
+         "price":14.99,
+         "genres":["Sci-fi", "Action"]
     },
     {
         "name": "Ruby Gillman, Teenage Kraken",
@@ -81,7 +93,9 @@ const apiMovie = [
          "popularity": 2266.298,
          "release_date": "2023-06-28",
          "type": "movie",
-         "linkVideo":"https://youtu.be/u4uyD8FFUIw"
+         "linkVideo":"https://youtu.be/u4uyD8FFUIw",
+         "price":4.99,
+         "genres":["Drama"]
     },
     {
          "name": "Fast X",
@@ -94,6 +108,8 @@ const apiMovie = [
          "release_date": "2023-05-17",
          "type": "movie",
          "linkVideo":"https://youtu.be/eoOaKN4qCKw",
+         "price":4.99,
+         "genres":[ "Action"]
     },
     {
          "name": "Мавка: Лісова пісня",
@@ -106,6 +122,8 @@ const apiMovie = [
          "release_date": "2023-03-02",
          "type": "movie",
          "linkVideo":"https://youtu.be/WZ1je_JJTv8",
+         "price":14.99,
+         "genres":["Drama", "Action"]
     },
     {
          "name": "Warhorse One",
@@ -118,6 +136,8 @@ const apiMovie = [
          "release_date": "2023-06-30",
          "type": "movie",
          "linkVideo":"https://youtu.be/63rL3f2zl8Q",
+         "price":4.99,
+         "genres":["War", "Action"]
     },
     {
          "name": "Knights of the Zodiac",
@@ -130,6 +150,8 @@ const apiMovie = [
          "release_date": "2023-04-27",
          "type": "movie",
          "linkVideo":"https://youtu.be/gZ3o0lTfYOs",
+         "price":4.99,
+         "genres":["Sci-fi", "Action"]
     },
     {
          "name": "John Wick: Chapter 4",
@@ -142,6 +164,8 @@ const apiMovie = [
          "release_date": "2023-03-22",
          "type": "movie",
          "linkVideo":"https://youtu.be/yjRHZEUamCc",
+         "price":34.99,
+         "genres":["Action"]
     },
     {
          "name": "Oppenheimer",
@@ -154,6 +178,8 @@ const apiMovie = [
          "release_date": "2023-07-19",
          "type": "movie",
          "linkVideo":"https://youtu.be/uYPbbksJxIg",
+         "price":34.99,
+         "genres":["History"]
     },
     {
          "name": "The Super Mario Bros. Movie",
@@ -166,6 +192,8 @@ const apiMovie = [
          "release_date": "2023-04-05",
          "type": "movie",
          "linkVideo":"https://youtu.be/RjNcTBXTk4I",
+         "price":14.99,
+         "genres":["Family"]
     },
     {
          "name": "Sound of Freedom",
@@ -177,7 +205,9 @@ const apiMovie = [
          "popularity": 1240.461,
          "release_date": "2023-07-03",
          "type": "movie",
-         "linkVideo":"https://youtu.be/hyyyKcfJRGQ"
+         "linkVideo":"https://youtu.be/hyyyKcfJRGQ",
+         "price":4.99,
+         "genres":["Drama"]
     },
     {
          "name": "Elemental",
@@ -190,6 +220,8 @@ const apiMovie = [
          "release_date": "2023-06-14",
          "type": "movie",
          "linkVideo":"https://youtu.be/dJgSXsnrHrw",
+         "price":4.99,
+         "genres":["Sci-fi", "Action"]
     },
     {
          "name": "La Leyenda de los Chaneques",      
@@ -202,6 +234,8 @@ const apiMovie = [
          "release_date": "2023-07-14",
          "type": "movie",
          "linkVideo":"https://youtu.be/iAdeQvl5qKg",
+         "price":4.99,
+         "genres":["Adventure"]
     },
     {
          "name": "Spider-Man: Across the Spider-Verse",
@@ -214,6 +248,8 @@ const apiMovie = [
          "release_date": "2023-05-31",
          "type": "movie",
          "linkVideo":"https://youtu.be/b_yMOiRgMmQ",
+         "price":4.99,
+         "genres":["Action"]
     },
     { 
          "name": "Insidious: The Last Key",     
@@ -226,6 +262,8 @@ const apiMovie = [
          "release_date": "2018-01-03",
          "type": "movie",
          "linkVideo":"https://youtu.be/lUwaosQZkHU",
+         "price":24.99,
+         "genres":["Horror"]
     },
     {
          "name": "Fresh",     
@@ -237,7 +275,10 @@ const apiMovie = [
          "popularity": 966.329,
          "type": "movie",
          "release_date": "2022-03-03",
-         "linkVideo": "https://youtu.be/wKk5VAK1GZQ"
+         "linkVideo": "https://youtu.be/wKk5VAK1GZQ",
+         "price":16.99,
+        "genres":["Comedy"]
+
     }
 ];
 

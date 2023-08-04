@@ -24,6 +24,15 @@ const Series = sequelize.define('Series', {
     type: DataTypes.ARRAY(DataTypes.STRING),
     allowNull: false,
   },
+  active: {
+    type: DataTypes.BOOLEAN,
+    defaultValue: true, 
+    allowNull: false,
+  },
+  price: {
+    type: DataTypes.FLOAT,
+    allowNull: false
+},
 }, 
 { 
   timestamps: false,
