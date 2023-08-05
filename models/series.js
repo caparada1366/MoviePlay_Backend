@@ -24,6 +24,10 @@ const Series = sequelize.define('Series', {
     type: DataTypes.ARRAY(DataTypes.STRING),
     allowNull: false,
   },
+  image: {
+    type: DataTypes.STRING,
+    allowNull: false
+  },
   active: {
     type: DataTypes.BOOLEAN,
     defaultValue: true, 
