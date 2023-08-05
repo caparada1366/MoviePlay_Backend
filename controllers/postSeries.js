@@ -6,13 +6,15 @@ const postSeries = async (req, res) => {
         descripcion, 
         yearEstreno, 
         actores, 
-        genres, 
+        genres,
+        image, 
         numEpisodio,
         numTemporada,
         tituloEpisodio,
         descripcionEpisodio,
         linkVideo,
-        duracion } = req.body;
+        duracion,
+        price } = req.body;
 
     try {
         const series = await Series.findOne({
@@ -29,17 +31,22 @@ const postSeries = async (req, res) => {
           })
           series.addEpisodios(episodio);
         } else {
-            series = await Series.create({
+            const newSerie = await Series.create({
              titulo: titulo,
              descripcion: descripcion, 
              yearEstreno: yearEstreno, 
-             actores: actores
+             image: image,
+             actores: actores,
+             price: price
          });
      
-        const genre = await Genres.findOne({
-         where: { name: genres}
-        })
-        await series.addGenres(genre);
+         for (const gen of genres) {
+            const [genre] = await Genres.findOrCreate({
+              where: { name: gen },
+            });
+      
+            await newSerie.addGenres(genre);
+          }
         const episodio = await Episodios.create({
             numEpisodio,
             numTemporada,
@@ -48,7 +55,7 @@ const postSeries = async (req, res) => {
             linkVideo,
             duracion
           })
-          series.addEpisodios(episodio);
+          newSerie.addEpisodios(episodio);
         };
         const serieCreada = await Series.findOne({
              where: { titulo: titulo },
