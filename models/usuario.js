@@ -30,6 +30,10 @@ module.exports = (sequelize) =>{
         estadoActivo: {
             type: DataTypes.BOOLEAN,
             defaultValue: true, 
+        },
+        rol:{
+            type: DataTypes.STRING,
+            defaultValue: "Usuario"
         }
 
     })
