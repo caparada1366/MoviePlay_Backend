@@ -18,11 +18,11 @@ module.exports = (sequelize) => {
         type: DataTypes.INTEGER,
         allowNull: false,
       },
-      titulo: {
+      tituloEpisodio: {
         type: DataTypes.STRING,
         allowNull: false,
       },
-      descripcion: {
+      descripcionEpisodio: {
         type: DataTypes.TEXT,
         allowNull: false,
       },

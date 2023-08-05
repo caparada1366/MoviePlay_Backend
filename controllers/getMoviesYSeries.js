@@ -58,6 +58,7 @@ const getMoviesYSeries = async (req, res)=>{
               offset: offset,
               limit: pageSize, 
         })
+        console.log(count);
         const totalPages = Math.ceil(count / pageSize);
         const arrayRespuestaPelis = []
         rows.forEach(element =>{
