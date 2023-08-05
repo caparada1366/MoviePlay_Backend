@@ -1,5 +1,5 @@
-const { Multimedia, Genres } = require("../../config/database");
-const { apiMovie, genres, apiMoviesySeries } = require("../../apiData/apiMovie");
+const { Multimedia, Genres, Series, Episodios } = require("../../config/database");
+const { apiMovie, genres, apiMoviesySeries, series, episodio } = require("../../apiData/apiMovie");
 const { Op } = require("sequelize");
 
 // Cargamos la db con los datos de la fake API:  (esto es para las pruebas)
@@ -46,6 +46,67 @@ const loadMultimedia = async () => {
   }
 
 };
+//cargar todas las series con su primer episodio
+
+const loadSeries =async()=>{
+  try {
+    series.forEach(async serie =>{
+      let nuevaSerie = await Series.create({
+        titulo: serie.titulo,
+        descripcion: serie.descripcion,
+        yearEstreno : serie.yearEstreno,
+        actores: serie.actores,
+        image: serie.image,
+        price: serie.price
+       
+      })
+      for (const gen of serie.genres) {
+        const [genre] = await Genres.findAll({
+          where: { name: gen },
+        });
+
+        await nuevaSerie.addGenres(genre);
+      }
+      let nuevoEpisodio = await Episodios.create({
+        numEpisodio: serie.numEpisodio,
+        numTemporada: serie.numTemporada,
+        descripcionEpisodio: serie.descripcionEpisodio,
+        tituloEpisodio: serie.tituloEpisodio,
+        linkVideo: serie.linkVideo,
+        duracion: serie.duracion
+      })
+      await nuevaSerie.addEpisodios(nuevoEpisodio)
+    })
+  } catch (error) {
+    throw new Error(error.message)
+  }
+}
+
+///Metodo para cargar episodios 
+const loadEpisodios =async()=>{
+  try {
+    episodio.forEach(async (ep)=>{
+      const laSerie = await Series.findOne({
+        where: { titulo: ep.titulo }
+      })
+      
+      if(laSerie){
+      let nuevoEpisodio = await Episodios.create({
+        numEpisodio: ep.numEpisodio,
+        numTemporada: ep.numTemporada,
+        descripcionEpisodio: ep.descripcionEpisodio,
+        tituloEpisodio: ep.tituloEpisodio,
+        linkVideo: ep.linkVideo,
+        duracion: ep.duracion
+      })
+      await laSerie.addEpisodios(nuevoEpisodio);
+    };
+    })
+  } catch (error) {
+    throw new Error(error.message)
+  }
+}
+
 
 // Esto es de prueba, podemos modificarlo para que quede mejor
 const loadGenres = async () => {
@@ -62,17 +123,16 @@ const loadGenres = async () => {
   return generos;
 };
 
-const getAllMedia = async (name) => {
+const getAllMedia = async () => {
   const countGenre = await Genres.count();
   const countMedia = await Multimedia.count(); // con '.count()' obtenemos el número de registros
 
-  if (countGenre === 0) {
-    // Si no hay nada, entonces activamos la función para cargar Genres
-    await loadGenres();
-  }
-  if (countMedia === 0) {
+    if (countMedia === 0 && countGenre === 0) {
     // Si no hay nada, entonces activamos la función para cargar Multimedia
+    await loadGenres();
     await loadMultimedia();
+    await loadSeries();
+    await loadEpisodios();
   }
 
   const media = await Multimedia.findAll({
