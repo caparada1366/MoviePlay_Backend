@@ -15,6 +15,8 @@ const Genres = sequelize.define('Genres', {
         type: DataTypes.STRING,
         allowNull: false
   }
-})
+}, 
+{ timestamps: false },
+)
 return Genres;
 }

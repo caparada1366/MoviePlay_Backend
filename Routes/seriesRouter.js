@@ -1,10 +1,10 @@
-const { Router } = require('express');
-const { postSeries } = require('../controllers/postSeries');
-const { getSeries } = require('../controllers/seriesController');
+// const { Router } = require('express');
+// const { postSeries } = require('../controllers/postSeries');
+// const { getSeries } = require('../controllers/seriesController');
 
-const seriesRouter = Router();
+// const seriesRouter = Router();
 
-seriesRouter.get('/', getSeries);
-seriesRouter.post('/', postSeries);
+// seriesRouter.get('/', getSeries);
+// seriesRouter.post('/', postSeries);
 
-module.exports = seriesRouter;
+// module.exports = seriesRouter;
