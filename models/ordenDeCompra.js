@@ -11,14 +11,21 @@ const OrdenDeCompra = sequelize.define('OrdenDeCompra', {
         primaryKey: true,
         autoIncrement: true
     },
-    price: {
+    seriesCompradas:{
+        type: DataTypes.ARRAY(DataTypes.JSON)
+    },
+    pelisCompradas:{
+        type: DataTypes.ARRAY(DataTypes.JSON)
+    },
+    total: {
         type: DataTypes.FLOAT,  
         allowNull: false,
     },
     state: {
         type: DataTypes.STRING,
         allowNull: false
-    }
+    },
+
 });
     return OrdenDeCompra;
 }
