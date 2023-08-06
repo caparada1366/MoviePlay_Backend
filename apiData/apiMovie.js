@@ -290,32 +290,7 @@ const apiMoviesySeries = [
       "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/ggFHVNu6YYI5L9pCfOacjizRGt.jpg",
       "price": 2.5,
       "descripcion": "Cuando a Walter White, un profesor de química de Nuevo México, se le diagnostica cáncer en etapa III y se le da un pronóstico de que solo le quedan dos años de vida. Se llena de una sensación de valentía y un deseo implacable de asegurar el futuro financiero de su familia a toda costa. mientras entra en el peligroso mundo de las drogas y el crimen",
-      "actores": [
-        {
-          "name": "Bryan Cranston"
-        },
-        {
-          "name": "Aaron Paul"
-        },
-        {
-          "name": "Anna Gunn"
-        },
-        {
-          "name": "Dean Norris"
-        },
-        {
-          "name": "Jonathan Banks"
-        },
-        {
-          "name": "Bob Odenkirk"
-        },
-        {
-          "name": "Betsy Brandt"
-        },
-        {
-          "name": "RJ Mitte"
-        }
-      ],
+      "actores": [ "Bryan Cranston", "Aaron Paul","Anna Gunn","Dean Norris", "Jonathan Banks","Bob Odenkirk","Betsy Brandt", "RJ Mitte" ],
       "genres": ["Drama","Crimen"],
       "numEpisodio":1,
       "numTemporada":1,
@@ -331,29 +306,7 @@ const apiMoviesySeries = [
       "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/fqldf2t8ztc9aiwn3k6mlX3tvRT.jpg",
       "price": 2.0,
       "descripcion": "En medio de la dura discordia de las ciudades gemelas de Piltóver y Zaun, dos hermanas luchan en bandos rivales de una guerra entre tecnologías mágicas y convicciones enfrentadas",
-      "actores": [
-        {
-          "name": "Hailee Steinfeld"
-        },
-        {
-          "name": "Ella Purnell"
-        },
-        {
-          "name": "Kevin Alejandro"
-        },
-        {
-          "name": "Jason Spisak"
-        },
-        {
-          "name": "Toks Olagundoye"
-        },
-        {
-          "name": "Harry Lloyd"
-        },
-        {
-          "name": "Christian Linke"
-        }
-      ],
+      "actores": ["Hailee Steinfeld", "Ella Purnell", "Kevin Alejandro", "Jason Spisak","Toks Olagundoye", "Harry Lloyd", "Christian Linke" ],
       "genres": ["Animacion", "Drama", "Ciencia Ficcion","Fantasia", "Aventura","Accion" ],
       "numEpisodio": 1,
       "numTemporada": 1,
@@ -369,29 +322,7 @@ const apiMoviesySeries = [
       "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/fcXdJlbSdUEeMSJFsXKsznGwwok.jpg",
       "price": 3.5,
       "descripcion": "Hace años, el temible Rey de los Piratas, Gol D. Roger, fue ejecutado dejando una enorme pila de tesoros y el famoso 'One Piece' detrás. Quien reclame el 'One Piece' será nombrado el nuevo Rey de los Piratas. Monkey D. Luffy, un chico que consumió una 'Fruta del Diablo', decide seguir los pasos de su ídolo, el pirata Shanks, y encontrar el One Piece. Ayuda, por supuesto, que su cuerpo tenga propiedades de goma y que esté rodeado por un grupo de hábiles luchadores y ladrones para ayudarlo en el camino. ¡Luffy hará cualquier cosa para obtener el One Piece y convertirse en el Rey de los Piratas!",
-      "actores": [
-        {
-          "name": "Mayumi Tanaka"
-        },
-        {
-          "name": "Kazuya Nakai"
-        },
-        {
-          "name": "Akemi Okamura"
-        },
-        {
-          "name": "Hiroaki Hirata"
-        },
-        {
-          "name": "Kappei Yamaguchi"
-        },
-        {
-          "name": "Yuriko Yamaguchi"
-        },
-        {
-          "name": "Ikue Otani"
-        }
-      ],
+      "actores": ["Mayumi Tanaka", "Kazuya Nakai", "Akemi Okamura", "Hiroaki Hirata", "Kappei Yamaguchi", "Yuriko Yamaguchi", "Ikue Otani"],
       "genres": ["Accion", "Aventura", "Comedia", "Animacion" ],
       "numEpisodio":1,
       "numTemporada":1,
@@ -407,20 +338,7 @@ const apiMoviesySeries = [
       "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/5Yiep9EwcQgLolg013ETBVqHxuD.jpg",
       "price": 3.5,
       "descripcion": "Rick es un anciano mentalmente desequilibrado pero científicamente dotado que recientemente se ha vuelto a conectar con su familia. Pasa la mayor parte de su tiempo involucrando a su joven nieto Morty en aventuras peligrosas y extravagantes en el espacio y universos alternativos. Agravado con la vida familiar ya inestable de Morty, estos eventos causan mucha angustia a Morty en el hogar y la escuela.",
-      "actores": [
-        {
-          "name": "Justin Roiland"
-        },
-        {
-          "name": "Chris Parnell"
-        },
-        {
-          "name": "Spencer Grammer"
-        },
-        {
-          "name": "Sarah Chalke"
-        }
-      ],
+      "actores": ["Justin Roiland", "Chris Parnell", "Spencer Grammer", "Sarah Chalke"],
       "genres": ["Animacion", "Comedia", "Ciencia Ficcion", "Fantasia", "Aventura", "Accion"],
       "numEpisodio": 1,
       "numTemporada": 1,
@@ -436,23 +354,7 @@ const apiMoviesySeries = [
       "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/6P6tXhjT5tK3qOXzxF9OMLlG7iz.jpg",
       "price": 2.5,
       "descripcion": "Una historia sobre la mayoría de edad sobre una forastera que, contra viento y marea y numerosos desafíos, lucha por el amor y la aceptación y por su lugar en el mundo. La serie se centra en una joven huérfana a fines de la década de 1890, quien, después de un una infancia abusiva pasada en orfanatos y casas de extraños, es enviada por error a vivir con una anciana y su hermano anciano.Con el tiempo, Anne, de 13 años, transformará sus vidas y, finalmente, el pequeño pueblo en el que viven con su singular espíritu, intelecto feroz y brillante imaginación.",
-      "actores": [
-        {
-          "name": "Amybeth McNulty"
-        },
-        {
-          "name": "Geraldine James"
-        },
-        {
-          "name": "R. H. Thomson"
-        },
-        {
-          "name": "Lucas Jade Zumann"
-        },
-        {
-          "name": "Kiawentiio"
-        }
-      ],
+      "actores": ["Amybeth McNulty", "Geraldine James", "R. H. Thomson", "Lucas Jade Zumann", "Kiawentiio"],
       "genres": ["Drama", "Familiar"],
       "numEpisodio":1,
       "numTemporada":1,
@@ -468,32 +370,7 @@ const apiMoviesySeries = [
       "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/5ZFUEOULaVml7pQuXxhpR2SmVUw.jpg",
       "price": 2.5,
       "descripcion": "El temerario desprecio de Edward y Alphonse Elric por las leyes fundamentales de la alquimia arrancó la mitad de las extremidades de Ed y dejó el alma de Al aferrada a una fría armadura. Para restaurar lo que se había perdido, los hermanos recorren una tierra devastada por la guerra en busca de la Piedra Filosofal, un reliquia legendaria que otorga la capacidad de realizar alquimia de maneras imposibles. Los Elric no están solos en su búsqueda, las corruptas Fuerzas Armadas del Estado también están ansiosas por aprovechar el poder del artefacto. También lo están los extraños Homúnculos y su sombrío creador. La gema mítica atrae alquimistas exóticos de reinos lejanos, dejando cicatrices en algunos lo suficientemente profundas como para inspirar el asesinato. A medida que los enemigos y aliados alteran el rumbo de los Elric, su propósito permanece invariable y su vínculo es inquebrantable",
-      "actores": [
-        {
-          "name": "Romi Park"
-        },
-        {
-          "name": "Rie Kugimiya"
-        },
-        {
-          "name": "Shin-ichiro Miki"
-        },
-        {
-          "name": "Kenta Miyake"
-        },
-        {
-          "name": "Fumiko Orikasa"
-        },
-        {
-          "name": "Megumi Takamoto"
-        },
-        {
-          "name": "Hidekatsu Shibata"
-        },
-        {
-          "name": "Mamoru Miyano"
-        }
-      ],
+      "actores": ["Romi Park", "Rie Kugimiya", "Shin-ichiro Miki", "Kenta Miyake", "Fumiko Orikasa", "Megumi Takamoto", "Hidekatsu Shibata", "Mamoru Miyano"],
       "genres": ["Accion", "Aventura", "Animacion",  "Ciencia Ficcion", "Fantasia"],
       "numEpisodio":1,
       "numTemporada":1,
@@ -509,20 +386,7 @@ const apiMoviesySeries = [
       "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/wymjTykWokonutxkeurydNvqN5Z.jpg",
       "price": 2.5,
       "descripcion": "En un mundo de magia elemental devastado por la guerra, un joven despierta para emprender una peligrosa búsqueda mística para cumplir su destino como Avatar y traer la paz al mundo",
-      "actores": [
-        {
-          "name": "Zach Tyler"
-        },
-        {
-          "name": "Mae Whitman"
-        },
-        {
-          "name": "Jack De Sena"
-        },
-        {
-          "name": "Dante Basco"
-        }
-      ],
+      "actores": ["Zach Tyler","Mae Whitman", "Jack De Sena", "Dante Basco"],
       "genres": ["Animacion", "Accion", "Aventura", "Ciencia Ficcion", "Fantasia" ],
       "numEpisodio": 1,
       "numTemporada": 1,
@@ -538,14 +402,7 @@ const apiMoviesySeries = [
       "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/tNQWO6cNzQYCyvw36mUcAQQyf5F.jpg",
       "price": 2.25,
       "descripcion": "Veinte años después de que la civilización moderna haya sido destruida, Joel, un sobreviviente endurecido, es contratado para sacar de contrabando a Ellie, una niña de 14 años, fuera de una opresiva zona de cuarentena. Lo que comienza como un pequeño trabajo pronto se convierte en un viaje brutal y desgarrador. , ya que ambos deben atravesar los Estados Unidos y depender el uno del otro para sobrevivir",
-      "actores": [
-        {
-          "name": "Pedro Pascal"
-        },
-        {
-          "name": "Bella Ramsey"
-        }
-      ],
+      "actores": [ "Pedro Pascal", "Bella Ramsey"],
       "genres": ["Drama"],
       "numEpisodio": 1,
       "numTemporada": 1,
@@ -561,17 +418,7 @@ const apiMoviesySeries = [
       "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/tK4GsDa6BREEh6Hfng1tWPuq8oE.jpg",
       "price": 4.5,
       "descripcion": "Es el Período Taisho en Japón. Tanjiro, un niño de buen corazón que vende carbón para ganarse la vida, encuentra a su familia masacrada por un demonio. Para empeorar las cosas, su hermana menor Nezuko, la única superviviente, se ha transformado en un demonio. Aunque devastado por esta sombría realidad, Tanjiro decide convertirse en un 'asesino de demonios' para poder convertir a su hermana en humana y matar al demonio que masacró a su familia",
-      "actores": [
-        {
-          "name": "Natsuki Hanae"
-        },
-        {
-          "name": "Akari Kito"
-        },
-        {
-          "name": "Kengo Kawanishi"
-        }
-      ],
+      "actores": [ "Natsuki Hanae", "Akari Kito", "Kengo Kawanishi"],
       "genres": ["Animacion", "Accion", "Aventura", "Ciencia Ficcion", "Fantasia"],
       "numEpisodio": 1,
       "numTemporada": 1,
@@ -587,17 +434,7 @@ const apiMoviesySeries = [
       "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/t7aUi8jbsIUSCNqA1akAbKjBWjU.jpg",
       "price": 2.9,
       "descripcion": "En su búsqueda de una novia para romper su maldición inmortal, un guardián de almas de 939 años se encuentra con un ángel de la muerte y un estudiante vivaz con un pasado trágico",
-      "actores": [
-        {
-          "name": "Gong Yoo"
-        },
-        {
-          "name": "Kim Go-eun"
-        },
-        {
-          "name": "Lee Dong-wook"
-        }
-      ],
+      "actores": [ "Gong Yoo", "Kim Go-eun", "Lee Dong-wook"],
       "genres": ["Drama"],
       "numEpisodio": 1,
       "numTemporada": 1,
@@ -613,17 +450,7 @@ const apiMoviesySeries = [
       "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/5VKvz8H12yVM5OmSKwmXmcU1Tpt.jpg",
       "price": 2.35,
       "descripcion": "Mark Grayson es un adolescente normal excepto por el hecho de que su padre es el superhéroe más poderoso del planeta. Poco después de su decimoséptimo cumpleaños, Mark comienza a desarrollar sus propios poderes y entra en la tutela de su padre",
-      "actores": [
-        {
-          "name": "Steven Yeun"
-        },
-        {
-          "name": "Sandra Oh"
-        },
-        {
-          "name": "J.K. Simmons"
-        }
-      ],
+      "actores": [ "Steven Yeun", "Sandra Oh", "J.K. Simmons"],
       "genres": ["Animacion", "Ciencia Ficcion", "Fantasia", "Accion", "Aventura", "Drama"],
       "numEpisodio": 1,
       "numTemporada": 1,
@@ -639,17 +466,7 @@ const apiMoviesySeries = [
       "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/6xea7V4d2xayrlBKOtMZ4wlV6wZ.jpg",
       "price": 3.9,
       "descripcion": "Dos jardineros aburridos, Mordecai (un arrendajo azul de seis pies de altura) y Rigby (un mapache hiperactivo) son los mejores amigos que pasan sus días tratando de entretenerse por cualquier medio necesario, para disgusto de su jefe. Sus actividades diarias a menudo conducen a que las cosas se salgan de control y se vuelvan surrealistas",
-      "actores": [
-        {
-          "name": "William Salyers"
-        },
-        {
-          "name": "Mark Hamill"
-        },
-        {
-          "name": "Sam Marin"
-        }
-      ],
+      "actores": [ "William Salyers", "Mark Hamill","Sam Marin"],
       "genres": ["Animacion", "Comedia"],
       "numEpisodio": 1,
       "numTemporada": 1,
@@ -665,17 +482,7 @@ const apiMoviesySeries = [
       "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/ivOLM47yJt90P19RH1NvJrAJz9F.jpg",
       "price": 3.3,
       "descripcion": "En un mundo donde el ochenta por ciento de la población tiene algún tipo de Quirk con superpoderes, Izuku tuvo la mala suerte de nacer completamente normal. Pero eso no impedirá que se inscriba en una prestigiosa academia de héroes. Ahora, obtendrá su primera prueba de la rivalidad brutal de otras escuelas mientras desafía el examen de licencia provisional despiadado y sin restricciones",
-      "actores": [
-        {
-          "name": "Daiki Yamashita"
-        },
-        {
-          "name": "Nobuhiko Okamoto"
-        },
-        {
-          "name": "Kenta Miyake"
-        }
-      ],
+      "actores": [ "Daiki Yamashita", "Nobuhiko Okamoto", "Kenta Miyake"],
       "genres": ["Accion", "Aventura", "Animacion"],
       "numEpisodio": 1,
       "numTemporada": 1,
@@ -691,14 +498,7 @@ const apiMoviesySeries = [
       "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/lE5OYF0axjCVtrxLMetA8i8QpZ8.jpg",
       "price": 4.95,
       "descripcion": "Una serie animada de comedia fantástica que sigue a Luz, una adolescente segura de sí misma que accidentalmente se topa con un portal a un mundo mágico donde se hace amiga de una bruja rebelde, Eda, y de un adorable y diminuto guerrero, King. A pesar de no tener habilidades mágicas, Luz persigue su sueño de convertirse en bruja sirviendo como aprendiz de Eda en Owl House y finalmente encuentra una nueva familia en un entorno poco probable",
-      "actores": [
-        {
-          "name": "Sarah-Nicole Robles"
-        },
-        {
-          "name": "Alex Hirsch"
-        }
-      ],
+      "actores": [ "Sarah-Nicole Robles","Alex Hirsch"],
       "genres": ["Animacion", "Ciencia Ficcion", "Fantasia", "Drama", "Accion", "Aventura", "Comedia" ],
       "numEpisodio": 1,
       "numTemporada": 1,
@@ -714,11 +514,7 @@ const apiMoviesySeries = [
       "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/9jIatSC61s5Y3d5Q63yIeZFvP7u.jpg",
       "price": 3.36,
       "descripcion": "Un hombre de las cavernas forma un vínculo con un dinosaurio mientras luchan por sobrevivir en un mundo hostil",
-      "actores": [
-        {
-          "name": "Aaron LaPlante"
-        }
-      ],
+      "actores": ["Aaron LaPlante"],
       "genres": ["Accion", "Aventura", "Animacion", "Drama"],
       "numEpisodio": 1,
       "numTemporada": 1,
@@ -734,26 +530,7 @@ const apiMoviesySeries = [
       "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/kBlqr507IV9bDKHLEFBtEtTfCw3.jpg",
       "price": 1.5,
       "descripcion": "Esta serie ofrece una mirada de cerca sin precedentes a Lionel Messi y la batalla de la selección argentina para romper una sequía de títulos de 28 años en la Copa América de 2021",
-      "actores": [
-        {
-          "name": "Lionel Messi"
-        },
-        {
-          "name": "Lionel Scaloni"
-        },
-        {
-          "name": "Angel di Maria"
-        },
-        {
-          "name": "Rodrigo De Paul"
-        },
-        {
-          "name": "Lisandro Martínez"
-        },
-        {
-          "name": "Alejandro Darío Gómez"
-        }
-      ],
+      "actores": [ "Lionel Messi", "Lionel Scaloni", "Angel di Maria","Rodrigo De Paul", "Lisandro Martínez", "Alejandro Darío Gómez"],
       "genres": ["Ciencia Ficcion", "Fantasia", "Animacion", "Accion", "Aventura"],
       "numEpisodio": 1,
       "numTemporada": 1,
@@ -770,20 +547,7 @@ const apiMoviesySeries = [
       "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/zbVwpFNma4RV7HkIVT3aOUmGUJf.jpg",
       "price": 1.9,
       "descripcion": "La serie gira en torno a Gabo, un adolescente amante del fútbol que, al recibir una beca del prestigioso Instituto Académico del Deporte (IAD) de Buenos Aires, verá cumplido su sueño de jugar en Los Halcones Dorados, el reconocido equipo amateur de la escuela. y también su anhelo de convertirse en futbolista profesional.",
-      "actores": [
-        {
-          "name": "Mariano González"
-        },
-        {
-          "name": "Sebastián Athié"
-        },
-        {
-          "name": "Juan David Penagos"
-        },
-        {
-          "name": "Luan Brum"
-        }
-      ],
+      "actores": [ "Mariano González", "Sebastián Athié", "Juan David Penagos", "Luan Brum"],
       "genres": ["Comedia", "Familiar"],
       "numEpisodio": 1,
       "numTemporada": 1,
@@ -799,17 +563,7 @@ const apiMoviesySeries = [
       "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/yFPQ4JhhirnCVe2UIKGMYX7TOGZ.jpg",
       "price": 1.0,
       "descripcion": "Hace varios cientos de años, los titanes casi exterminaron a los humanos. Los titanes suelen tener varios pisos de altura, parecen no tener inteligencia, devoran seres humanos y, lo peor de todo, parecen hacerlo por placer en lugar de como fuente de alimento. A Un pequeño porcentaje de la humanidad sobrevivió amurallándose en una ciudad protegida por muros extremadamente altos, incluso más altos que los Titanes más grandes. Avancemos al presente y la ciudad no ha visto un Titán en más de 100 años. El adolescente Eren y su hermana adoptiva Mikasa presencia algo horrible cuando las murallas de la ciudad son destruidas por un titán colosal que aparece de la nada. Mientras los titanes más pequeños inundan la ciudad, los dos niños miran horrorizados cómo su madre es devorada viva. Eren jura que asesinará a todos y cada uno de los titanes. y tomar venganza por toda la humanidad.",
-      "actores": [
-        {
-          "name": "Yuki Kaji"
-        },
-        {
-          "name": "Yui Ishikawa"
-        },
-        {
-          "name": "Marina Inoue"
-        }
-      ],
+      "actores": ["Yuki Kaji","Yui Ishikawa", "Marina Inoue"],
       "genres": ["Ciencia Ficcion", "Fantasia", "Animacion", "Accion", "Aventura"],
       "numEpisodio": 1,
       "numTemporada": 1,
@@ -825,17 +579,7 @@ const apiMoviesySeries = [
       "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/8SW0FS3U4nJQVIQj1hecU2Fon8Z.jpg",
       "price": 2.0,
       "descripcion": "Un nadador competitivo se cruza con su amiga de la infancia, una estrella en ascenso del levantamiento de pesas, y se da cuenta de que ella está enamorada en secreto de su prima",
-      "actores": [
-        {
-          "name": "Kyung Soo-jin"
-        },
-        {
-          "name": "Lee Jae-yoon"
-        },
-        {
-          "name": "Cho Hye-jung"
-        }
-      ],
+      "actores": ["Kyung Soo-jin", "Lee Jae-yoon", "Cho Hye-jung"],
       "genres": ["Comedia", "Drama"],
       "numEpisodio": 1,
       "numTemporada": 1,
@@ -851,20 +595,7 @@ const apiMoviesySeries = [
       "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/ucpgmUR1h5Te1BYegKItoPjOeF7.jpg",
       "price": 3.0,
       "descripcion": "Gon Freecss de doce años, descubre un día que el padre del que siempre le habían dicho que estaba muerto estaba vivo. Su padre, Ging, es un cazador, un miembro de la élite de la sociedad con licencia para ir a cualquier parte o hacer casi cualquier cosa. Gon , decidido a seguir los pasos de su padre, decide tomar el Examen de Cazador y finalmente encontrar a su padre para demostrar que es un Cazador por derecho propio. Pero en el camino, aprende que hay más para convertirse en un Cazador de lo que pensaba anteriormente, y los retos que debe afrontar son considerados los más duros del mundo.",
-      "actores": [
-        {
-          "name": "Megumi Han"
-        },
-        {
-          "name": "Mariya Ise"
-        },
-        {
-          "name": "Miyuki Sawashiro"
-        },
-        {
-          "name": "Keiji Fujiwara"
-        }
-      ],
+      "actores": [ "Megumi Han","Mariya Ise","Miyuki Sawashiro","Keiji Fujiwara"],
       "genres": ["Accion", "Aventura", "Animacion", "Drama"],
       "numEpisodio": 1,
       "numTemporada": 1,

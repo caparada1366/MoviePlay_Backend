@@ -8,6 +8,7 @@ const {
 const getMoviesYSeries = require("../../controllers/getMoviesYSeries");
 const getSeries = require("../../controllers/getSeries")
 const getMovies = require("../../controllers/getMovies");
+const serieByID = require("../../controllers/getSerieByID");
 
 const mediaRouter = Router();
 
@@ -16,6 +17,7 @@ mediaRouter.get("/series", getSeries);
 mediaRouter.get("/movies", getMovies);
 mediaRouter.get("/", getMedia);
 mediaRouter.get("/:id", mediaByID);
+mediaRouter.get("/series/:id", serieByID);
 mediaRouter.post("/", postMedia);
 
 module.exports = mediaRouter;
