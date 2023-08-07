@@ -1,5 +1,5 @@
 const {DataTypes} = require('sequelize')
-const sequelize = require('../config/database')
+const sequelize = require('../config/database');
 
 module.exports = (sequelize) =>{
 
@@ -10,20 +10,12 @@ const Multimedia = sequelize.define('Multimedia', {
         primaryKey: true,
         autoIncrement: true
     },
-    type: {
-        type: DataTypes.STRING,
-        allowNull: false
-    },
     name: {
         type: DataTypes.STRING,
         allowNull: false
     },
-    genre: {
-        type: DataTypes.ARRAY(DataTypes.STRING),
-        allowNull: false
-    },
     description: {
-        type: DataTypes.STRING,
+        type: DataTypes.TEXT,
         allowNull: false
     },
     time: {
@@ -40,25 +32,15 @@ const Multimedia = sequelize.define('Multimedia', {
     },
     active: {
         type: DataTypes.BOOLEAN,
-        allowNull: false
-    },
-    nameSerie: {
-        type: DataTypes.STRING,
-        allowNull: false
-    },
-    numCapitulo: {
-        type: DataTypes.INTEGER,
-        allowNull: false
-    },
-    numTeporada: {
-        type: DataTypes.INTEGER,
-        allowNull: false
+        defaultValue: true, 
+        allowNull: false,
     },
     price: {
         type: DataTypes.FLOAT,
         allowNull: false
-    }
+    },
 });
 return Multimedia;
 }
+
 
