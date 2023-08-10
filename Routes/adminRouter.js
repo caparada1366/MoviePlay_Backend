@@ -6,8 +6,8 @@ const {convertirEnAdmin} = require('../controllers/convertirEnAdmin');
 const adminRouter = Router();
 
 // Admins
-usuarioRouter.delete('/disableUser/:id', deleteUser)
-usuarioRouter.put('/enableUser/:id', enableUser)
-usuarioRouter.put('/transform/:id', convertirEnAdmin)
+adminRouter.delete('/disableUser/:id', deleteUser)
+adminRouter.put('/enableUser/:id', enableUser)
+adminRouter.put('/transform/:id', convertirEnAdmin)
 
 module.exports = adminRouter;
