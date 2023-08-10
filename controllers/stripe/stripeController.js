@@ -13,3 +13,5 @@ async function pago (req, res){
     })
     res.redirect(303, session.url)
 }
+
+module.exports = pago;
