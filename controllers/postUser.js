@@ -1,7 +1,7 @@
 const {Usuario} = require('../config/database')
 
 const postUser = async(req, res) => {
-    const {nombre, apellido, email, password, image} = req.body;
+    const {nombre, apellido, email, password} = req.body;
 
     try {
         if(!nombre || !apellido || !email || !password){
@@ -18,7 +18,6 @@ const postUser = async(req, res) => {
                 apellido,
                 email,
                 password,
-                image
             })
         }
        return res.status(201).json('Usuario creado con éxito')
