@@ -9,12 +9,8 @@ module.exports = (sequelize) =>{
             primaryKey: true,
             autoIncrement: true
         },
-        peliculasCarrito:{
-            type: DataTypes.ARRAY(DataTypes.JSON)
-        },
-        seriesCarrito:{
-            type: DataTypes.ARRAY(DataTypes.JSON)
-        }
-
-    })
+   
+    },{ 
+        timestamps: false,
+      })
 }
