@@ -1,9 +1,10 @@
 // config/database.js
 require("dotenv").config();
 const { Sequelize } = require('sequelize');
-const { DB_USER, DB_PASSWORD, DB_HOST,DB_NAME,DB_URL,DB_PORT } = process.env;
+const { DB_USER, DB_PASSWORD, DB_HOST,DB_NAME,DB_URL,DB_PORT, DB_PASSWORD_DEPLOY } = process.env;
 const fs = require("fs");
 const path = require("path");
+
 
 const local = true; // Cambiar a false para trabajar con el deployado
 
@@ -15,7 +16,10 @@ const sequelize = local === true?  new Sequelize(DB_NAME, DB_USER, DB_PASSWORD, 
   logging: false// Cambia esto al dialecto de tu base de datos (por ejemplo, 'mysql' para MySQL)
 }):
 new Sequelize( `${DB_URL}`,
-{ logging: false, native: false });
+{ 
+  logging: false,
+   native: false,
+   });
 
 const basename = path.basename(__filename);
 const modelDefiners = [];
@@ -43,8 +47,8 @@ fs.readdirSync(path.join(__dirname, '../models'))
   Genres.belongsToMany(Multimedia, {through: 'MultimediaGenres', foreignKey: 'idgenre'});
 
   // Una serie puede tener varios episodios..
-  Series.belongsToMany(Genres, {through: 'SeriesGenres', foreignKey: 'idgenre'});
-  Genres.belongsToMany(Series, {through: 'SeriesGenres', foreignKey: 'idserie'});
+  Series.belongsToMany(Genres, {through: 'SeriesGenres', foreignKey: 'idserie'});
+  Genres.belongsToMany(Series, {through: 'SeriesGenres', foreignKey: 'idgenre'});
   
   // Un episodio pertenece a una Serie
   Series.hasMany(Episodios, { foreignKey: 'serieId' });
@@ -55,11 +59,11 @@ fs.readdirSync(path.join(__dirname, '../models'))
   Usuario.hasMany(OrdenDeCompra, {foreignKey: 'usuarioId'});
   OrdenDeCompra.belongsTo(Usuario, {foreignKey: 'ordenCompraId'});
 
-  // Un carrito de compra tiene muchas peliculas y series 
-  CarroCompra.hasMany(Multimedia, {as: 'peliculas', foreignKey: 'carroCompraID'});
-  Multimedia.belongsTo(CarroCompra, {foreignKey: 'carroCompraId'});
-  CarroCompra.hasMany(Series, {as: 'series', foreignKey: 'carroCompraId'});
-  Series.belongsTo(CarroCompra, {foreignKey: 'carroCompraId'});
+  // Un carrito de compra tiene muchas peliculas y series, y cada pelicula o serie puede estar en muchos carritos
+  CarroCompra.belongsToMany(Multimedia, {through: 'peliculasXcarro', foreignKey: 'carroCompraId'});
+  Multimedia.belongsToMany(CarroCompra, {through: 'peliculasXcarro', foreignKey: 'multimediaId'});
+  CarroCompra.belongsToMany(Series, {through: 'seriesXcarro', foreignKey: 'carroCompraId'});
+  Series.belongsToMany(CarroCompra, {through: 'seriesXcarro', foreignKey: 'serieId'});
 
 
 // Una orden de compra tiene muchas peliculas y series
@@ -68,8 +72,8 @@ fs.readdirSync(path.join(__dirname, '../models'))
   OrdenDeCompra.hasMany(Series, {as: 'series', foreignKey: 'ordenCompraID'});
   Series.belongsTo(OrdenDeCompra, {foreignKey: 'ordenCompraID'});
 
-  Usuario.hasOne(CarroCompra, {foreignKey: 'usuarioId'});
-  CarroCompra.belongsTo(Usuario, {foreignKey: 'usuarioId'})
+  Usuario.hasOne(CarroCompra, {foreignKey: 'userId'});
+  CarroCompra.belongsTo(Usuario, {foreignKey: 'userId'})
 
 
 
