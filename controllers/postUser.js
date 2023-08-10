@@ -18,7 +18,7 @@ const postUser = async(req, res) => {
                 apellido,
                 email,
                 password,
-                image
+                // image
             })
         }
        return res.status(201).json('Usuario creado con éxito')
