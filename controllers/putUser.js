@@ -12,7 +12,7 @@ const putUser = async(req, res) =>{
         where: { id },
     }
     );
-    if(email){
+    if(email, id){
         throw new Error('Error al modificar datos')
     } else {
         res.status(200).send('Datos del usuario actualizados')
