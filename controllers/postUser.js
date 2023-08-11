@@ -4,7 +4,7 @@ const createAccessToken = require('./libs/jwt');
 
 
 const postUser = async(req, res) => {
-    const {nombre, apellido, email, password, image} = req.body;
+    const {nombre, apellido, email, password} = req.body;
 
     try {
         
