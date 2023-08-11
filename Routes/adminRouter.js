@@ -2,8 +2,10 @@ const {Router} = require('express');
 const {deleteUser} = require('../controllers/deleteUser');
 const {enableUser} = require('../controllers/enableUser');
 const {convertirEnAdmin} = require('../controllers/convertirEnAdmin');
-const { activeMovies, getAdminMovies } = require('../controllers/activeMovies');
-const { activeSeries, getAdminSeries } = require('../controllers/activeSeries');
+const activeMovies = require('../controllers/activeMovies');
+const getMovies = require('../controllers/getMovies');
+const activeSeries = require('../controllers/activeSeries');
+const getSeries = require('../controllers/getSeries');
 
 const adminRouter = Router();
 
@@ -13,21 +15,7 @@ adminRouter.put('/enableUser/:id', enableUser)
 adminRouter.put('/transform/:id', convertirEnAdmin)
 adminRouter.put('/disableMovies/:id', activeMovies)
 adminRouter.put('/disableSeries/:id', activeSeries)
-adminRouter.get('/disableMovies', getAdminMovies)
-adminRouter.get('/disableSeries', getAdminSeries)
+adminRouter.get('/disableMovies', getMovies)
+adminRouter.get('/disableSeries', getSeries)
 
 module.exports = adminRouter;
-// const series = await Series.findByPk(id);
-// if(!series){
-//     throw new Error('No se ecnontro la serie')
-// } else if (series.active === true) {
-//     series.active = false;
-//     series.save();
-// } else {
-//     series.active = true;
-//     series.save();
-// }
-// res.status(200).json('La series se actualizo exitosamente')
-// } catch (error) {
-// res.status(400).json({error: error.message})
-// }
