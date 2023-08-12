@@ -4,6 +4,7 @@ const {Op} = require('sequelize');
 const getMovies = async (req, res)=>{
     try{
     const {busqueda, page, genre, ordprecio, ordalfa, tipo} = req.query
+    const url = req.originalUrl
     const pageNumber = parseInt(page) || 1;
     const pageSize = 10;
     const offset = (pageNumber - 1) * pageSize;
@@ -12,7 +13,9 @@ const getMovies = async (req, res)=>{
     var condicionGenre = "";
     const orden = [];
 
-    arrayCondiciones.push({active: true});          //Condicion que trae todos los productos activos 
+    if( !url.includes('admin') ){
+        arrayCondiciones.push({active: true});          //Condicion que trae todos los productos activos 
+    }
    
 
     if(busqueda){
@@ -62,12 +65,12 @@ const getMovies = async (req, res)=>{
     const totalPages = Math.ceil(count / pageSize);
     const arrayRespuestaPelis = []
     rows.forEach(element =>{
-        const {id, name, image, price, Genres} = element;
+        const {id, name, image, price, active, Genres} = element;
         var arrayGenres = [];
         Genres.forEach(g=>{
             arrayGenres.push(g.name);
         })
-        const elementoFinal = {id, name, image, price, genres: arrayGenres, tipo: "Pelicula"}
+        const elementoFinal = {id, name, image, price, active, genres: arrayGenres, tipo: "Pelicula"}
         arrayRespuestaPelis.push(elementoFinal)
     });
     res.json({
