@@ -7,10 +7,12 @@ const getMovies = require('../controllers/getMovies');
 const activeSeries = require('../controllers/activeSeries');
 const getSeries = require('../controllers/getSeries');
 const { updateMovies, updateSeries } = require('../controllers/updateMovies&Series');
+const { getAllUser } = require('../controllers/getAllUser');
 
 const adminRouter = Router();
 
 // Admins
+adminRouter.get('/allUser', getAllUser) // trae todos lo usuarios, paginado y searchBar incluido.
 adminRouter.delete('/disableUser/:id', deleteUser) // banear usuario
 adminRouter.put('/enableUser/:id', enableUser) // desbanear
 adminRouter.put('/transform/:id', convertirEnAdmin) // convertir a Admin
