@@ -10,7 +10,7 @@ const getAllUser = async(req, res) => {
         const arrayUser = [];
 
         if(busqueda){
-            arrayUser.push({ nombre: {[Op.iLike]: `%${busqueda}%`}});
+            arrayUser.push({ email: {[Op.iLike]: `%${busqueda}%`}});
         }
 
         const response = await Usuario.findAll({
