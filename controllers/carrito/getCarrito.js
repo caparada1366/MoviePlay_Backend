@@ -10,8 +10,8 @@ const getCarrito = async (req, res)=>{
             include: [
                 {
                 model: CarroCompra,
-                include: [{model: Multimedia, attributes:['name', 'price']},
-                {model: Series, attributes:['titulo', 'price']}],
+                include: [{model: Multimedia, attributes:['name', 'price', 'image']},
+                {model: Series, attributes:['titulo', 'price', 'image']}],
                 attributes: ['id']
         }],
         attributes:['email']

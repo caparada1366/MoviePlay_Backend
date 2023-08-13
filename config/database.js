@@ -57,7 +57,7 @@ fs.readdirSync(path.join(__dirname, '../models'))
 
   // Un usuario puede tener muchas ordenes de compra
   Usuario.hasMany(OrdenDeCompra, {foreignKey: 'usuarioId'});
-  OrdenDeCompra.belongsTo(Usuario, {foreignKey: 'ordenCompraId'});
+  OrdenDeCompra.belongsTo(Usuario, {foreignKey: 'usuarioId'});
 
   // Un carrito de compra tiene muchas peliculas y series, y cada pelicula o serie puede estar en muchos carritos
   CarroCompra.belongsToMany(Multimedia, {through: 'peliculasXcarro', foreignKey: 'carroCompraId'});
@@ -66,11 +66,12 @@ fs.readdirSync(path.join(__dirname, '../models'))
   Series.belongsToMany(CarroCompra, {through: 'seriesXcarro', foreignKey: 'serieId'});
 
 
-// Una orden de compra tiene muchas peliculas y series
-  OrdenDeCompra.hasMany(Multimedia, {as: 'peliculas', foreignKey: 'ordenCompraID'});
-  Multimedia.belongsTo(OrdenDeCompra, {foreignKey: 'ordenCompraID'});
-  OrdenDeCompra.hasMany(Series, {as: 'series', foreignKey: 'ordenCompraID'});
-  Series.belongsTo(OrdenDeCompra, {foreignKey: 'ordenCompraID'});
+// Una orden de compra tiene muchas peliculas y series y una serie o pelicula puede estar en muchas ordenes de compra
+  OrdenDeCompra.belongsToMany(Multimedia, {through: 'peliculasXOC', foreignKey: 'ordenCompraId'});
+  Multimedia.belongsToMany(OrdenDeCompra, {through: 'peliculasXOC', foreignKey: 'multimediaId'});
+  OrdenDeCompra.belongsToMany(Series, {through: 'seriesXOC', foreignKey: 'ordenCompraId'});
+  Series.belongsToMany(OrdenDeCompra, {through: 'seriesXOC', foreignKey: 'serieId'});
+
 
   Usuario.hasOne(CarroCompra, {foreignKey: 'userId'});
   CarroCompra.belongsTo(Usuario, {foreignKey: 'userId'})
