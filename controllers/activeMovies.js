@@ -1,37 +1,22 @@
-const {Multimedia, Series} = require('../config/database')
-const {getMoviesYSeries} = require('./getMoviesYSeries')
+const {Multimedia} = require('../config/database')
 
 const activeMovies = async(req, res) => {
     try {
-        const {busqueda, page, genre} = req.query
-        const {id} = req.params
-        const pageNumber = parseInt(page) || 1;
-        const pageSize = 10;
-        const offset = (pageNumber - 1) * pageSize;
-        const arrayCondicionesMovies = [];
-        var condicionGenre = "";
-        const orden = [['id', 'ASC']];
+        const { id } = req.params;
+        const movie = await Multimedia.findByPk(id);
 
-        if(busqueda){
-            arrayCondicionesMovies.push({ name: {[Op.iLike]: `%${busqueda}%`}});
+        if(!movie) {
+            return res.status(404).json({ error: "Película no encontrada." });
         }
-        if(genre){
-            condicionGenre = {name: genre};
-        }
-        const pelicula = await Multimedia.findByPk(id);
-        if(!pelicula){
-            throw new Error('No se ecnontro la pelicula')
-        } else if (pelicula.active === true) {
-            pelicula.active = false;
-            pelicula.save();
-        } else {
-            pelicula.active = true;
-            pelicula.save();
-        }
-        res.status(200).json('La pelicula se actualizo exitosamente')
+
+        movie.active = !movie.active;
+        await movie.save();
+
+        res.status(200).json({ message: "Estado de película cambiado exitosamente." });
     } catch (error) {
-        res.status(400).json({error: error.message})
+        res.status(500).json({ error: error.message })
     }
-};
+}
 
-module.exports = {activeMovies}
+
+module.exports = activeMovies;

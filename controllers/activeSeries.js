@@ -2,36 +2,20 @@ const {Series} = require('../config/database')
 
 const activeSeries = async(req, res) => {
     try {
-        const {busqueda, page, genre} = req.query
-        const {id} = req.params
-        const pageNumber = parseInt(page) || 1;
-        const pageSize = 10;
-        const offset = (pageNumber - 1) * pageSize;
-        const arrayCondicionesSeries = [];
-        var condicionGenre = "";
-        const orden = [['id', 'ASC']];
+        const { id } = req.params;
+        const serie = await Series.findByPk(id);
 
-        if(busqueda){
-            arrayCondicionesSeries.push({ name: {[Op.iLike]: `%${busqueda}%`}});
+        if(!serie) {
+            return res.status(404).json({ error: "Serie no encontrada." });
         }
-        if(genre){
-            condicionGenre = {name: genre};
-        }
-        const series = await Series.findByPk(id);
-        if(!series){
-            throw new Error('No se ecnontro la serie')
-        } else if (series.active === true) {
-            series.active = false;
-            series.save();
-        } else {
-            series.active = true;
-            series.save();
-        }
-        res.status(200).json('La series se actualizo exitosamente')
+
+        serie.active = !serie.active;
+        await serie.save();
+
+        res.status(200).json({ message: "Estado de serie cambiado exitosamente." });
     } catch (error) {
-        res.status(400).json({error: error.message})
+        res.status(500).json({ error: error.message })
     }
-};
-
+}
 
 module.exports = activeSeries;

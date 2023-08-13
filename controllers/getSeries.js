@@ -4,6 +4,7 @@ const {Op} = require('sequelize');
 const getSeries = async (req, res)=>{
     try{
     const {busqueda, page, genre, ordprecio, ordalfa, tipo} = req.query
+    const url = req.originalUrl
     const pageNumber = parseInt(page) || 1;
     const pageSize = 10;
     const offset = (pageNumber - 1) * pageSize;
@@ -11,7 +12,9 @@ const getSeries = async (req, res)=>{
     var condicionGenre = "";
     const orden = [];
 
-    arrayCondiciones.push({active: true});          //Condicion que trae todos los productos activos 
+    if( !url.includes('admin') ){
+        arrayCondiciones.push({active: true});          //Condicion que trae todos los productos activos 
+    }
 
     if(busqueda){
         arrayCondiciones.push({ titulo: {[Op.iLike]: `%${busqueda}%`}});
@@ -58,12 +61,12 @@ const getSeries = async (req, res)=>{
         const totalPages = Math.ceil(count / pageSize);
         const arrayRespuestaSeries = []
         rows.forEach(element =>{
-            const {serieId, titulo, image, price, Genres} = element;
+            const {serieId, titulo, image, price, active, Genres} = element;
             var arrayGenres = [];
             Genres.forEach(g=>{
                 arrayGenres.push(g.name);
             })
-            const elementoFinal = {id: serieId, name: titulo, image, price, genres: arrayGenres, tipo: "Serie"}
+            const elementoFinal = {id: serieId, name: titulo, image, price, active, genres: arrayGenres, tipo: "Serie"}
             arrayRespuestaSeries.push(elementoFinal)
         });
         res.json({
