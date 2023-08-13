@@ -5,28 +5,28 @@ const {OrdenDeCompra, Multimedia, Series, Usuario} = require('../../config/datab
 
 async function pago (req, res){
   try{
-    const { amount,
+    const { amount, id
       //arrayMovies,
       //arraySeries
       //emailUsuario
     } = req.body
     const arrayMovies = [2,6,4]
     const arraySeries = [3,4,5]
-    var emailUsuario = "hola@gmail.com"
+    var emailUsuario = "ca.parada1366@gmail.com"
 
     const paymentIntent = await stripe.paymentIntents.create({
         amount: amount,
-        currency: "usd",
-        automatic_payment_methods: {
-          enabled: true,
-        },
+        currency: "USD",
+        payment_method: id,
+        description:"pago realizado",
+        confirm:true
       });
 
     ///// Aqui se crea la nueva OC   
     await crearOC(emailUsuario, arraySeries, arrayMovies, amount)
 
       res.send({
-        clientSecret: paymentIntent.client_secret,
+        message: 'Succesful payment',
         //paymentIntent
       });   
     }catch(error){
