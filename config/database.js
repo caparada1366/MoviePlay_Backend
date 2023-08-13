@@ -6,7 +6,7 @@ const fs = require("fs");
 const path = require("path");
 
 
-const local = false; // Cambiar a false para trabajar con el deployado
+const local = true; // Cambiar a false para trabajar con el deployado
 
 const sequelize = local === true?  new Sequelize(DB_NAME, DB_USER, DB_PASSWORD, {
   host: DB_HOST,
@@ -47,8 +47,8 @@ fs.readdirSync(path.join(__dirname, '../models'))
   Genres.belongsToMany(Multimedia, {through: 'MultimediaGenres', foreignKey: 'idgenre'});
 
   // Una serie puede tener varios episodios..
-  Series.belongsToMany(Genres, {through: 'SeriesGenres', foreignKey: 'idgenre'});
-  Genres.belongsToMany(Series, {through: 'SeriesGenres', foreignKey: 'idserie'});
+  Series.belongsToMany(Genres, {through: 'SeriesGenres', foreignKey: 'idserie'});
+  Genres.belongsToMany(Series, {through: 'SeriesGenres', foreignKey: 'idgenre'});
   
   // Un episodio pertenece a una Serie
   Series.hasMany(Episodios, { foreignKey: 'serieId' });
@@ -57,23 +57,24 @@ fs.readdirSync(path.join(__dirname, '../models'))
 
   // Un usuario puede tener muchas ordenes de compra
   Usuario.hasMany(OrdenDeCompra, {foreignKey: 'usuarioId'});
-  OrdenDeCompra.belongsTo(Usuario, {foreignKey: 'ordenCompraId'});
+  OrdenDeCompra.belongsTo(Usuario, {foreignKey: 'usuarioId'});
 
-  // Un carrito de compra tiene muchas peliculas y series 
-  CarroCompra.hasMany(Multimedia, {as: 'peliculas', foreignKey: 'carroCompraID'});
-  Multimedia.belongsTo(CarroCompra, {foreignKey: 'carroCompraId'});
-  CarroCompra.hasMany(Series, {as: 'series', foreignKey: 'carroCompraId'});
-  Series.belongsTo(CarroCompra, {foreignKey: 'carroCompraId'});
+  // Un carrito de compra tiene muchas peliculas y series, y cada pelicula o serie puede estar en muchos carritos
+  CarroCompra.belongsToMany(Multimedia, {through: 'peliculasXcarro', foreignKey: 'carroCompraId'});
+  Multimedia.belongsToMany(CarroCompra, {through: 'peliculasXcarro', foreignKey: 'multimediaId'});
+  CarroCompra.belongsToMany(Series, {through: 'seriesXcarro', foreignKey: 'carroCompraId'});
+  Series.belongsToMany(CarroCompra, {through: 'seriesXcarro', foreignKey: 'serieId'});
 
 
-// Una orden de compra tiene muchas peliculas y series
-  OrdenDeCompra.hasMany(Multimedia, {as: 'peliculas', foreignKey: 'ordenCompraID'});
-  Multimedia.belongsTo(OrdenDeCompra, {foreignKey: 'ordenCompraID'});
-  OrdenDeCompra.hasMany(Series, {as: 'series', foreignKey: 'ordenCompraID'});
-  Series.belongsTo(OrdenDeCompra, {foreignKey: 'ordenCompraID'});
+// Una orden de compra tiene muchas peliculas y series y una serie o pelicula puede estar en muchas ordenes de compra
+  OrdenDeCompra.belongsToMany(Multimedia, {through: 'peliculasXOC', foreignKey: 'ordenCompraId'});
+  Multimedia.belongsToMany(OrdenDeCompra, {through: 'peliculasXOC', foreignKey: 'multimediaId'});
+  OrdenDeCompra.belongsToMany(Series, {through: 'seriesXOC', foreignKey: 'ordenCompraId'});
+  Series.belongsToMany(OrdenDeCompra, {through: 'seriesXOC', foreignKey: 'serieId'});
 
-  Usuario.hasOne(CarroCompra, {foreignKey: 'usuarioId'});
-  CarroCompra.belongsTo(Usuario, {foreignKey: 'usuarioId'})
+
+  Usuario.hasOne(CarroCompra, {foreignKey: 'userId'});
+  CarroCompra.belongsTo(Usuario, {foreignKey: 'userId'})
 
 
 
