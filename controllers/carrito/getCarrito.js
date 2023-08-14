@@ -2,7 +2,7 @@ const {Usuario, CarroCompra, Series, Multimedia, sequelize} = require('../../con
 
 
 const getCarrito = async (req, res)=>{
-    const {emailUsuario} = req.body;
+    const {emailUsuario} = req.query;
 
     try {
         const usuario = await Usuario.findOne({
