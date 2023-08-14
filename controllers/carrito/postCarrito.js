@@ -68,8 +68,7 @@ const postCarrito = async (req, res)=>{
 
     try {
         
-        const idSerieN = parseInt(idSerie);
-        const idMovieN = parseInt(idMovie);
+   
         const usuario = await Usuario.findOne({
             where: {email : emailUsuario},
             include: [
@@ -96,8 +95,8 @@ const postCarrito = async (req, res)=>{
         }
 
         await usuario.reload();
-       const mensajeSerie = await agregarSerieCarrito(idSerieN, usuario.CarroCompra.id);
-        const mensajeMovie = await agregarMovieCarrito(idMovieN, usuario.CarroCompra.id);
+       const mensajeSerie = await agregarSerieCarrito(idSerie, usuario.CarroCompra.id);
+        const mensajeMovie = await agregarMovieCarrito(idMovie, usuario.CarroCompra.id);
         await usuario.CarroCompra.reload();
         
         if(mensajeSerie) mensaje += mensajeSerie;
