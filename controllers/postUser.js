@@ -1,4 +1,4 @@
-const {Usuario} = require('../config/database');
+const { Usuario } = require('../config/database');
 const bcrypt = require("bcrypt");
 const createAccessToken = require('./libs/jwt');
 
@@ -29,6 +29,7 @@ const postUser = async(req, res) => {
                 message: 'Usuario creado con éxito',
                 id: userSaved.id,
                 nombre: userSaved.nombre,
+                apellido: userSaved.apellido,
                 email: userSaved.email     
             });
         }
@@ -56,6 +57,7 @@ const loginUser = async (req, res) => {
         return res.json({
                     id: userFound.id,
                     nombre: userFound.nombre,
+                    apellido: userFound.apellido,
                     email: userFound.email     
                 });
         
@@ -71,8 +73,27 @@ const logoutUser = (req, res) => {
     res.sendStatus(200);
 };
 
+const perfil = async (req, res) => {
+    try {
+        const userFound = await Usuario.findByPk(req.usuario.id)
+    
+        if(!userFound) return res.status(404).json({ message: 'Usuario no encontrado'})
+    
+        console.log(userFound);
+        return res.status(200).json({
+            id: userFound.id,
+            nombre: userFound.nombre,
+            apellido: userFound.apellido,
+            email: userFound.email
+        })
+    } catch (error) {
+        res.status(404).json({ message: error.message })
+    }
+};
+
 module.exports = {
     postUser,
     loginUser,
-    logoutUser
+    logoutUser,
+    perfil
 }
