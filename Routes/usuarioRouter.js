@@ -10,7 +10,7 @@ const usuarioRouter = Router()
 usuarioRouter.post('/', registroValidator, postUser);
 usuarioRouter.post('/login', loginValidator, loginUser);
 usuarioRouter.post('/logout', loginValidator, logoutUser);
-// usuarioRouter.get('/', getUser);
+usuarioRouter.post('/google', getUser);
 usuarioRouter.put('/:id', putUser);
 
 
