@@ -54,10 +54,11 @@ const borrarMovieCarrito = async (idMovie, idCarro)=>{
 //Funcion principal para borrar pelicula o serie del carro de compras 
 
 const deleteCarrito = async (req, res)=>{
-    const {emailUsuario, idSerie, idMovie} = req.body;
+    const {emailUsuario, idSerie, idMovie} = req.query;
 
     try {
-       
+        const idSerieN = parseInt(idSerie);
+        const idMovieN = parseInt(idMovie);
         const usuario = await Usuario.findOne({
             where: {email : emailUsuario},
             include: [
@@ -72,8 +73,8 @@ const deleteCarrito = async (req, res)=>{
         var mensaje = "";
 
  
-       const mensajeSerie = await borrarSerieCarrito(idSerie, usuario.CarroCompra.id);
-        const mensajeMovie = await borrarMovieCarrito(idMovie, usuario.CarroCompra.id);
+       const mensajeSerie = await borrarSerieCarrito(idSerieN, usuario.CarroCompra.id);
+        const mensajeMovie = await borrarMovieCarrito(idMovieN, usuario.CarroCompra.id);
         await usuario.CarroCompra.reload();
         
         if(mensajeSerie) mensaje += mensajeSerie;
