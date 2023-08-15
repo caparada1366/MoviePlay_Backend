@@ -78,7 +78,7 @@ const postCarrito = async (req, res)=>{
                 {model: Series, attributes:['titulo']}],
         }],
         })
-        console.log("llamando el post" + JSON.stringify(usuario));
+        //console.log("llamando el post" + JSON.stringify(usuario));
      
         var mensaje = "";
 
