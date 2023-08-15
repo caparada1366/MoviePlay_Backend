@@ -33,7 +33,7 @@ const borrarMovieCarrito = async (idMovie, idCarro)=>{
         const carrito = await CarroCompra.findByPk(idCarro,{
             include: Multimedia
         });
-        console.log(JSON.stringify(carrito))
+        //console.log(JSON.stringify(carrito))
         if(movie && carrito){
             if(await carrito.hasMultimedia(movie)){
                 await carrito.removeMultimedia(movie)
@@ -88,4 +88,8 @@ const deleteCarrito = async (req, res)=>{
     }
 }
 
-module.exports = deleteCarrito;
+module.exports = {
+    deleteCarrito,
+    borrarMovieCarrito,
+    borrarSerieCarrito,
+};
