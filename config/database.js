@@ -41,7 +41,7 @@ fs.readdirSync(path.join(__dirname, '../models'))
   
   sequelize.models = Object.fromEntries(capsEntries);
 
-  const { Multimedia, OrdenDeCompra, Genres, Series, Episodios, CarroCompra, Usuario } = sequelize.models;
+  const { Multimedia, OrdenDeCompra, Genres, Series, Episodios, CarroCompra, Usuario, Review } = sequelize.models;
 
   Multimedia.belongsToMany(Genres, {through: 'MultimediaGenres', foreignKey: 'idmultimedia'});
   Genres.belongsToMany(Multimedia, {through: 'MultimediaGenres', foreignKey: 'idgenre'});
@@ -76,6 +76,15 @@ fs.readdirSync(path.join(__dirname, '../models'))
   Usuario.hasOne(CarroCompra, {foreignKey: 'userId'});
   CarroCompra.belongsTo(Usuario, {foreignKey: 'userId'})
 
+  // Un usuario puede tener muchas calificaciones cada calificacion solo pertenece a un usuario
+  Usuario.hasMany(Review, {foreignKey: 'usuarioId'});
+  Review.belongsTo(Usuario, {foreignKey: 'usuarioId'});
+    
+  // Calificacion pertenece a una pelicula o serie, pero cada pelicula o serie puede tener muchas calificaciones
+  Series.hasMany(Review, {foreignKey: 'serieId'});
+  Review.belongsTo(Series, {foreignKey: 'serieId'});
+  Multimedia.hasMany(Review, {foreignKey: 'movieId'});
+  Review.belongsTo(Multimedia, {foreignKey: 'movieId'});
 
 
 module.exports ={...sequelize.models, conn: sequelize, sequelize};
