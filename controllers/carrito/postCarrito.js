@@ -68,7 +68,7 @@ const postCarrito = async (req, res)=>{
 
     try {
         
-      
+
         const usuario = await Usuario.findOne({
             where: {email : emailUsuario},
             include: [
