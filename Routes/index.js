@@ -5,7 +5,7 @@ const usuarioRouter = require('./usuarioRouter')
 const carroCompraRouter = require('./carroCompraRouter')
 const stripeRouter = require('./stripeRouter')
 const ordenCompraRouter = require('./ordenCompraRouter');
-
+const favsRouter = require('./favsRouter');
 const adminRouter = require('./adminRouter');
 
 const mainRouter = Router();
@@ -19,6 +19,7 @@ mainRouter.use('/carroCompra', carroCompraRouter)
 mainRouter.use('/pago', stripeRouter);
 mainRouter.use('/admin', adminRouter);
 mainRouter.use('/ordenCompra', ordenCompraRouter)
+mainRouter.use('/favs', favsRouter)
 
 
 

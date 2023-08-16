@@ -76,6 +76,14 @@ fs.readdirSync(path.join(__dirname, '../models'))
   Usuario.hasOne(CarroCompra, {foreignKey: 'userId'});
   CarroCompra.belongsTo(Usuario, {foreignKey: 'userId'})
 
+  //Tabla intermedia de favs entre Usuarios y Peliculas.
+  Usuario.belongsToMany(Multimedia, {through: "favsMoviesXUser"}, {foreignKey: "userId"});
+  Multimedia.belongsToMany(Usuario, {through: "favsMoviesXUser"}, {foreignKey: "MultimediumId"});
+
+  //Tabla intermedia de favs entre Usuarios y Series
+  Usuario.belongsToMany(Series, {through: "favsSeriesXUser"}, {foreignKey: "userId"});
+  Series.belongsToMany(Usuario, {through: "favsSeriesXUser"}, {foreignKey: "SeriesSerieId"});
+
 
 
 module.exports ={...sequelize.models, conn: sequelize, sequelize};
