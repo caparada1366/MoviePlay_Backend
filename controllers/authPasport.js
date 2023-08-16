@@ -4,7 +4,7 @@
 
 
 // const GOOGLE_CLIENT_ID = "455768951489-dpmia14fe22vcrimo4fmgbtqnngab2b7.apps.googleusercontent.com";
-// const GOOGLE_CLIENT_SECRET = "" ;
+// const GOOGLE_CLIENT_SECRET = "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" ;
 
 // passport.use(new GoogleStrategy({
 //   clientID: GOOGLE_CLIENT_ID,
