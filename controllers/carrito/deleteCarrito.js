@@ -33,7 +33,7 @@ const borrarMovieCarrito = async (idMovie, idCarro)=>{
         const carrito = await CarroCompra.findByPk(idCarro,{
             include: Multimedia
         });
-        console.log(JSON.stringify(carrito))
+        //console.log(JSON.stringify(carrito))
         if(movie && carrito){
             if(await carrito.hasMultimedia(movie)){
                 await carrito.removeMultimedia(movie)
@@ -57,7 +57,7 @@ const deleteCarrito = async (req, res)=>{
     const {emailUsuario, idSerie, idMovie} = req.query;
 
     try {
-   
+
         const usuario = await Usuario.findOne({
             where: {email : emailUsuario},
             include: [
@@ -87,5 +87,8 @@ const deleteCarrito = async (req, res)=>{
         res.status(404).send(error.message)
     }
 }
-
-module.exports = deleteCarrito;
+module.exports = {
+    deleteCarrito,
+    borrarMovieCarrito,
+    borrarSerieCarrito,
+}

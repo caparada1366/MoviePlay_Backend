@@ -1,4 +1,4 @@
-const { Series, Genres, Episodios} = require('../config/database');
+const { Series, Genres, Episodios, Review} = require('../config/database');
 
 const serieByID = async (req, res) => {
     let { id } = req.params;
@@ -7,7 +7,8 @@ const serieByID = async (req, res) => {
       const serieId = await Series.findByPk(id, {
         include: [
             { model: Episodios },
-            { model: Genres }
+            { model: Genres },
+            { model: Review}
         ]
     });
       res.status(200).json(serieId);

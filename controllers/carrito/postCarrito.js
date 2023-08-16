@@ -68,7 +68,7 @@ const postCarrito = async (req, res)=>{
 
     try {
         
-   
+
         const usuario = await Usuario.findOne({
             where: {email : emailUsuario},
             include: [
@@ -78,7 +78,7 @@ const postCarrito = async (req, res)=>{
                 {model: Series, attributes:['titulo']}],
         }],
         })
-        console.log("llamando el post" + JSON.stringify(usuario));
+        //console.log("llamando el post" + JSON.stringify(usuario));
      
         var mensaje = "";
 
