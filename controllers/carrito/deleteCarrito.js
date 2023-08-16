@@ -33,7 +33,7 @@ const borrarMovieCarrito = async (idMovie, idCarro)=>{
         const carrito = await CarroCompra.findByPk(idCarro,{
             include: Multimedia
         });
-        console.log(JSON.stringify(carrito))
+        //console.log(JSON.stringify(carrito))
         if(movie && carrito){
             if(await carrito.hasMultimedia(movie)){
                 await carrito.removeMultimedia(movie)
@@ -57,8 +57,7 @@ const deleteCarrito = async (req, res)=>{
     const {emailUsuario, idSerie, idMovie} = req.query;
 
     try {
-        const idSerieN = parseInt(idSerie);
-        const idMovieN = parseInt(idMovie);
+       
         const usuario = await Usuario.findOne({
             where: {email : emailUsuario},
             include: [
@@ -73,8 +72,8 @@ const deleteCarrito = async (req, res)=>{
         var mensaje = "";
 
  
-       const mensajeSerie = await borrarSerieCarrito(idSerieN, usuario.CarroCompra.id);
-        const mensajeMovie = await borrarMovieCarrito(idMovieN, usuario.CarroCompra.id);
+       const mensajeSerie = await borrarSerieCarrito(idSerie, usuario.CarroCompra.id);
+        const mensajeMovie = await borrarMovieCarrito(idMovie, usuario.CarroCompra.id);
         await usuario.CarroCompra.reload();
         
         if(mensajeSerie) mensaje += mensajeSerie;
@@ -89,4 +88,8 @@ const deleteCarrito = async (req, res)=>{
     }
 }
 
-module.exports = deleteCarrito;
+module.exports = {
+    deleteCarrito,
+    borrarMovieCarrito,
+    borrarSerieCarrito,
+};

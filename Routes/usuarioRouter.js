@@ -8,11 +8,11 @@ const authUser = require('../midlleware/validateToken')
 
 const usuarioRouter = Router()
 
-usuarioRouter.post('/', authUser, postUser);
-usuarioRouter.post('/login', loginUser);
-usuarioRouter.post('/logout', logoutUser);
+usuarioRouter.post('/', registroValidator, postUser);
+usuarioRouter.post('/login', loginValidator, loginUser);
+usuarioRouter.post('/logout', loginValidator, logoutUser);
+usuarioRouter.post('/google', getUser);
 usuarioRouter.get('/perfil', authUser, perfil);
-// usuarioRouter.get('/', getUser);
 usuarioRouter.put('/:id', putUser);
 
 

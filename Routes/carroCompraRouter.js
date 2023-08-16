@@ -1,6 +1,6 @@
 const { Router } = require('express');
 const postCarrito = require('../controllers/carrito/postCarrito')
-const deleteCarrito = require('../controllers/carrito/deleteCarrito')
+const {deleteCarrito} = require('../controllers/carrito/deleteCarrito')
 const getCarrito = require('../controllers/carrito/getCarrito')
 
 

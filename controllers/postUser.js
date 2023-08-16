@@ -57,8 +57,8 @@ const loginUser = async (req, res) => {
         return res.json({
                     id: userFound.id,
                     nombre: userFound.nombre,
-                    apellido: userFound.apellido,
-                    email: userFound.email     
+                    email: userFound.email,
+                    rol: userFound.rol     
                 });
         
     } catch (error) {
