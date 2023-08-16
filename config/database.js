@@ -6,7 +6,7 @@ const fs = require("fs");
 const path = require("path");
 
 
-const local = true; // Cambiar a false para trabajar con el deployado
+const local = false; // Cambiar a false para trabajar con el deployado
 
 const sequelize = local === true?  new Sequelize(DB_NAME, DB_USER, DB_PASSWORD, {
   host: DB_HOST,
@@ -41,7 +41,7 @@ fs.readdirSync(path.join(__dirname, '../models'))
   
   sequelize.models = Object.fromEntries(capsEntries);
 
-  const { Multimedia, OrdenDeCompra, Genres, Series, Episodios, CarroCompra, Usuario } = sequelize.models;
+  const { Multimedia, OrdenDeCompra, Genres, Series, Episodios, CarroCompra, Usuario, Review } = sequelize.models;
 
   Multimedia.belongsToMany(Genres, {through: 'MultimediaGenres', foreignKey: 'idmultimedia'});
   Genres.belongsToMany(Multimedia, {through: 'MultimediaGenres', foreignKey: 'idgenre'});
@@ -84,6 +84,15 @@ fs.readdirSync(path.join(__dirname, '../models'))
   Usuario.belongsToMany(Series, {through: "favsSeriesXUser"}, {foreignKey: "userId"});
   Series.belongsToMany(Usuario, {through: "favsSeriesXUser"}, {foreignKey: "SeriesSerieId"});
 
+  // Un usuario puede tener muchas calificaciones cada calificacion solo pertenece a un usuario
+  Usuario.hasMany(Review, {foreignKey: 'usuarioId'});
+  Review.belongsTo(Usuario, {foreignKey: 'usuarioId'});
+    
+  // Calificacion pertenece a una pelicula o serie, pero cada pelicula o serie puede tener muchas calificaciones
+  Series.hasMany(Review, {foreignKey: 'serieId'});
+  Review.belongsTo(Series, {foreignKey: 'serieId'});
+  Multimedia.hasMany(Review, {foreignKey: 'movieId'});
+  Review.belongsTo(Multimedia, {foreignKey: 'movieId'});
 
 
 module.exports ={...sequelize.models, conn: sequelize, sequelize};
