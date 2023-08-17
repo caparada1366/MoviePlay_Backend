@@ -1,14 +1,10 @@
-const { Series, Genres, Episodios, Multimedia, Usuario } = require('../config/database');
+const { Series, Genres, Episodios, Multimedia } = require('../config/database');
 const {Op} = require('sequelize');
 
 const getMovies = async (req, res)=>{
     try{
     const {busqueda, page, genre, ordprecio, ordalfa, tipo} = req.query
-    // const url = req.originalUrl
-    const user = req.user;
-    const usuario = await Usuario.findOne({ 
-        where: { email: user.email } 
-    });
+    const url = req.originalUrl
     const pageNumber = parseInt(page) || 1;
     const pageSize = 10;
     const offset = (pageNumber - 1) * pageSize;
@@ -17,7 +13,7 @@ const getMovies = async (req, res)=>{
     var condicionGenre = "";
     const orden = [];
 
-    if( usuario.rol('Usuario') ){
+    if( !url.includes('admin') ){
         arrayCondiciones.push({active: true});          //Condicion que trae todos los productos activos 
     }
    
