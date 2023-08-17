@@ -2,7 +2,7 @@ const {Usuario, CarroCompra, Series, Multimedia, sequelize} = require('../../con
 
 
 const getCarrito = async (req, res)=>{
-    const {emailUsuario} = req.body;
+    const {emailUsuario} = req.query;
 
     try {
         const usuario = await Usuario.findOne({
@@ -10,8 +10,8 @@ const getCarrito = async (req, res)=>{
             include: [
                 {
                 model: CarroCompra,
-                include: [{model: Multimedia, attributes:['name', 'price']},
-                {model: Series, attributes:['titulo', 'price']}],
+                include: [{model: Multimedia, attributes:['name', 'price', 'image']},
+                {model: Series, attributes:['titulo', 'price', 'image']}],
                 attributes: ['id']
         }],
         attributes:['email']

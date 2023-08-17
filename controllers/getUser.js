@@ -1,11 +1,11 @@
 const {Usuario} = require('../config/database')
 
 const getUser = async(req, res) =>{
-    const {email, password} = req.body
+    const {email} = req.body
 
     try {
         const login = await Usuario.findOne({
-            where: {email: email, password: password}
+            where: {email: email}
         });
         if(!login){
             throw new Error('Los datos no coinciden')

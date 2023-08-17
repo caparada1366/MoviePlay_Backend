@@ -1,4 +1,4 @@
-const {Usuario} = require('../config/database');
+const {Usuario,  CarroCompra} = require('../config/database');
 const bcrypt = require("bcrypt");
 const createAccessToken = require('./libs/jwt');
 
@@ -24,6 +24,15 @@ const postUser = async(req, res) => {
             });
             const userSaved = await nuevoUsuario.save();
             const token = await createAccessToken({ id: userSaved.id });
+
+
+            //// Se crea el carrito 
+            const nuevoCarro = await CarroCompra.create({
+                userId: nuevoUsuario.id,
+             });
+            nuevoUsuario.carroCompraId = nuevoCarro.id;
+            await nuevoUsuario.save();
+
             res.cookie('token', token)
             return res.status(201).json({
                 message: 'Usuario creado con éxito',
@@ -56,7 +65,8 @@ const loginUser = async (req, res) => {
         return res.json({
                     id: userFound.id,
                     nombre: userFound.nombre,
-                    email: userFound.email     
+                    email: userFound.email,
+                    rol: userFound.rol     
                 });
         
     } catch (error) {
