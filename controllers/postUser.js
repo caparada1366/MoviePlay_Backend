@@ -1,6 +1,27 @@
 const {Usuario,  CarroCompra} = require('../config/database');
 const bcrypt = require("bcrypt");
 const createAccessToken = require('./libs/jwt');
+const transporter = require('../config/nodeMailer')
+const nodemailer = require("nodemailer");
+
+
+const enviarCorreoBienvenida = (email, nombre, apellido) =>{
+    const mailOptions = {
+        from: "movieplayhenry@gmail.com",
+        to: email,
+        subject: "Bienvenido a Movieplay",
+        text: `Has creado una nueva cuenta en Movieplay con el correo ${email}` ,
+        html: `<h1>Hola ${nombre} ${apellido}, Acabas de crear una cuenta en Movieplay</h1>`
+    }
+    transporter.sendMail(mailOptions, (error, info)=>{
+        if(error){
+            console.log("no se pudo enviar correo por"+ error.message)
+        }else{
+            console.log("mensaje enviado exitosamente", info.response)
+        }
+        
+    })
+}
 
 
 const postUser = async(req, res) => {
@@ -34,6 +55,7 @@ const postUser = async(req, res) => {
             await nuevoUsuario.save();
 
             res.cookie('token', token)
+            enviarCorreoBienvenida(email, nombre, apellido);
             return res.status(201).json({
                 message: 'Usuario creado con éxito',
                 id: userSaved.id,
