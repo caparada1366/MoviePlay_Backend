@@ -57,7 +57,7 @@ const deleteCarrito = async (req, res)=>{
     const {emailUsuario, idSerie, idMovie} = req.query;
 
     try {
-       
+
         const usuario = await Usuario.findOne({
             where: {email : emailUsuario},
             include: [
@@ -87,9 +87,8 @@ const deleteCarrito = async (req, res)=>{
         res.status(404).send(error.message)
     }
 }
-
 module.exports = {
     deleteCarrito,
     borrarMovieCarrito,
     borrarSerieCarrito,
-};
+}

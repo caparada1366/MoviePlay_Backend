@@ -8,6 +8,7 @@ const activeSeries = require('../controllers/activeSeries');
 const getSeriesAdmin = require('../controllers/admin/getSeriesAdmin');
 const { updateMovies, updateSeries } = require('../controllers/updateMovies&Series');
 const { getAllUser } = require('../controllers/getAllUser');
+const { topFiveMovie } = require('../controllers/getTopFive');
 
 const adminRouter = Router();
 
@@ -22,5 +23,6 @@ adminRouter.get('/disableMovies', getMoviesAdmin) // traer las movies al dashboa
 adminRouter.get('/disableSeries', getSeriesAdmin) // traer las series al dashboard (filtros, ordenados, etc)
 adminRouter.put('/updateMovies/:id', updateMovies) // actualizar info de las pelis 
 adminRouter.put('/updateSeries/:id', updateSeries) // actualizar info de las series
+adminRouter.get('/topFive', topFiveMovie)
 
 module.exports = adminRouter;

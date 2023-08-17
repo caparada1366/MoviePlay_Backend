@@ -1,4 +1,4 @@
-const { Multimedia, Genres, Series, Episodios } = require("../../config/database");
+const { Multimedia, Genres, Series, Episodios, Review } = require("../../config/database");
 const { apiMovie, genres, apiMoviesySeries, series, episodio } = require("../../apiData/apiMovie");
 const { Op } = require("sequelize");
 
@@ -153,11 +153,11 @@ const getAllMedia = async () => {
 const getMediaById = async (id) => {
   const media = await Multimedia.findOne({
     where: { id: id },
-    include: {
+    include: [{
       model: Genres,
       attributes: ["name"],
       through: { attributes: [] },
-    },
+    }, Review],
   });
 
   if (!media) {
