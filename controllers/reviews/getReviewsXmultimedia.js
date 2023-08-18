@@ -2,7 +2,7 @@ const { Series, Usuario, Multimedia, Review } = require('../../config/database')
 
 async function getReviewsXmultimedia(req, res) {
 
-    const {idMovie, idSerie} = req.body;
+    const {idMovie, idSerie} = req.query;
     try {
         if(idSerie){
             const reviews = await Series.findByPk(idSerie, {

@@ -6,7 +6,7 @@ const fs = require("fs");
 const path = require("path");
 
 
-const local = false; // Cambiar a false para trabajar con el deployado
+const local = true; // Cambiar a false para trabajar con el deployado
 
 const sequelize = local === true?  new Sequelize(DB_NAME, DB_USER, DB_PASSWORD, {
   host: DB_HOST,
@@ -75,6 +75,14 @@ fs.readdirSync(path.join(__dirname, '../models'))
 
   Usuario.hasOne(CarroCompra, {foreignKey: 'userId'});
   CarroCompra.belongsTo(Usuario, {foreignKey: 'userId'})
+
+  //Tabla intermedia de favs entre Usuarios y Peliculas.
+  Usuario.belongsToMany(Multimedia, {through: "favsMoviesXUser"}, {foreignKey: "userId"});
+  Multimedia.belongsToMany(Usuario, {through: "favsMoviesXUser"}, {foreignKey: "MultimediumId"});
+
+  //Tabla intermedia de favs entre Usuarios y Series
+  Usuario.belongsToMany(Series, {through: "favsSeriesXUser"}, {foreignKey: "userId"});
+  Series.belongsToMany(Usuario, {through: "favsSeriesXUser"}, {foreignKey: "SeriesSerieId"});
 
   // Un usuario puede tener muchas calificaciones cada calificacion solo pertenece a un usuario
   Usuario.hasMany(Review, {foreignKey: 'usuarioId'});
