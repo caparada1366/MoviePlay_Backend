@@ -34,7 +34,8 @@ const getSeriesAdmin = async (req, res)=>{
             orden.push(ordena);
             console.log(orden);
     }
-     
+
+    orden.push(['serieId', 'ASC']); 
     
         const {count, rows} = await Series.findAndCountAll({
             order: orden
