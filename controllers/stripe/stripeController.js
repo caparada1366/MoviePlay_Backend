@@ -28,7 +28,7 @@ async function pago (req, res){
       where: {userId: usuario.id},
       include: [Multimedia, Series]
     })
-    console.log(carrito)
+    //console.log(carrito)
     carrito.Multimedia.forEach(peli=>{
       arrayMovies.push(peli);
     })
@@ -108,8 +108,8 @@ const enviarCorreo = async (emailUsuario, arraySeries, arrayMovies, amount)=>{
   try{
     var todosObjetos = [];
     var textoHTML = [];
-    console.log(arrayMovies)
-    console.log(arraySeries)
+    //console.log(arrayMovies)
+   // console.log(arraySeries)
 
     arrayMovies.forEach(mov =>{
       const objMovie = {
@@ -199,7 +199,14 @@ const enviarCorreo = async (emailUsuario, arraySeries, arrayMovies, amount)=>{
       to: emailUsuario,
       subject: "Resumen Orden de compra MoviePlay",
       text: `Has hecho una compra en MoviePlay` ,
-      html: htmlContent
+      html: htmlContent,
+      attachments: [
+        {
+          filename: 'Logo.png',
+          path: path.join(__dirname, '../../html/imagenes/Logo.png'),
+          cid: 'Logo'
+        }
+      ]
     }
 
     transporter.sendMail(mailOptions, (error, info)=>{
