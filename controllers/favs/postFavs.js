@@ -1,7 +1,7 @@
 const {Usuario, Multimedia, Series} = require('../../config/database')
 
 const postFavs = async(req, res) => {
- const {email, idSerie, idMovie} = req.query;
+ const {email, idSerie, idMovie} = req.body;
 
  try {
     const usuario = await Usuario.findOne({
