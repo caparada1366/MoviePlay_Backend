@@ -9,7 +9,7 @@ const apiMoviesySeries = [
       "popularity": 5125.277,
       "release_date": "2023-06-13",
       "type": "movie",
-      "linkVideo": "https://youtu.be/jprhe-cWKGs",
+      "linkVideo": "https://www.youtube.com/watch?v=hebWYacbdvc",
       "price": 4.99,
       "genres": ["Ciencia Ficcion", "Accion"]
     },
@@ -23,7 +23,7 @@ const apiMoviesySeries = [
       "popularity": 4876.203,
       "release_date": "2023-06-06",
       "type": "movie",
-      "linkVideo": "https://youtu.be/ZtuFgnxQMrA",
+      "linkVideo": "https://www.youtube.com/watch?v=itnqEauWQZM",
       "price": 4.99,
       "genres": ["Ciencia Ficcion", "Accion"]
     },
@@ -37,7 +37,7 @@ const apiMoviesySeries = [
       "popularity": 4848.299,
       "release_date": "2023-07-19",
       "type": "movie",
-      "linkVideo": "https://youtu.be/pBk4NYhWNMM",
+      "linkVideo": "https://www.youtube.com/watch?v=pBk4NYhWNMM",
       "price": 14.99,
       "genres": ["Drama"]
     },
@@ -51,7 +51,7 @@ const apiMoviesySeries = [
       "popularity": 4119.643,
       "release_date": "2023-05-18",
       "type": "movie",
-      "linkVideo": "https://youtu.be/kpGo2_d3oYE",
+      "linkVideo": "https://www.youtube.com/watch?v=kpGo2_d3oYE",
       "price": 24.99,
       "genres": ["Familiar"]
     },
@@ -65,7 +65,7 @@ const apiMoviesySeries = [
       "popularity": 3648.875,
       "release_date": "2023-06-22",
       "type": "movie",
-      "linkVideo": "https://youtu.be/L-vkuA8oqMY",
+      "linkVideo": "https://www.youtube.com/watch?v=L-vkuA8oqMY",
       "price": 6.99,
       "genres": ["Ciencia Ficcion", "Accion"]
     },
@@ -79,7 +79,7 @@ const apiMoviesySeries = [
       "popularity": 2435.231,
       "release_date": "2023-05-03",
       "type": "movie",
-      "linkVideo": "https://youtu.be/AAE5VZktooM",
+      "linkVideo": "https://www.youtube.com/watch?v=u3V5KDHRQvk",
       "price": 14.99,
       "genres": ["Ciencia Ficcion, Accion"]
     },
@@ -93,7 +93,7 @@ const apiMoviesySeries = [
       "popularity": 2266.298,
       "release_date": "2023-06-28",
       "type": "movie",
-      "linkVideo": "https://youtu.be/u4uyD8FFUIw",
+      "linkVideo": "https://www.youtube.com/watch?v=iAMKwDsfUeU",
       "price": 4.99,
       "genres": ["Drama"]
     },
@@ -107,7 +107,7 @@ const apiMoviesySeries = [
       "popularity": 2122.445,
       "release_date": "2023-05-17",
       "type": "movie",
-      "linkVideo": "https://youtu.be/eoOaKN4qCKw",
+      "linkVideo": "https://www.youtube.com/watch?v=32RAq6JzY-w",
       "price": 4.99,
       "genres": ["Accion"]
     },
@@ -121,7 +121,7 @@ const apiMoviesySeries = [
       "popularity": 1824.712,
       "release_date": "2023-03-02",
       "type": "movie",
-      "linkVideo": "https://youtu.be/WZ1je_JJTv8",
+      "linkVideo": "https://www.youtube.com/watch?v=sdzFcSQp-x0",
       "price": 14.99,
       "genres": ["Drama", "Accion"]
     },
@@ -135,7 +135,7 @@ const apiMoviesySeries = [
       "popularity": 1776.012,
       "release_date": "2023-06-30",
       "type": "movie",
-      "linkVideo": "https://youtu.be/63rL3f2zl8Q",
+      "linkVideo": "https://www.youtube.com/watch?v=awpDl9eB6Tg",
       "price": 4.99,
       "genres": ["Guerra", "Accion"]
     },
@@ -149,7 +149,7 @@ const apiMoviesySeries = [
       "popularity": 1353.514,
       "release_date": "2023-04-27",
       "type": "movie",
-      "linkVideo": "https://youtu.be/gZ3o0lTfYOs",
+      "linkVideo": "https://www.youtube.com/watch?v=Sko0o_KoBHY",
       "price": 4.99,
       "genres": ["Ciencia Ficcion, Accion"]
     },
@@ -163,7 +163,7 @@ const apiMoviesySeries = [
       "popularity": 1288.752,
       "release_date": "2023-03-22",
       "type": "movie",
-      "linkVideo": "https://youtu.be/yjRHZEUamCc",
+      "linkVideo": "https://www.youtube.com/watch?v=qEVUtrk8_B4",
       "price": 34.99,
       "genres": ["Accion"]
     },
@@ -177,7 +177,7 @@ const apiMoviesySeries = [
       "popularity": 1285.469,
       "release_date": "2023-07-19",
       "type": "movie",
-      "linkVideo": "https://youtu.be/uYPbbksJxIg",
+      "linkVideo": "https://www.youtube.com/watch?v=bK6ldnjE3Y0",
       "price": 34.99,
       "genres": ["Historia"]
     },
@@ -191,7 +191,7 @@ const apiMoviesySeries = [
       "popularity": 1259.027,
       "release_date": "2023-04-05",
       "type": "movie",
-      "linkVideo": "https://youtu.be/RjNcTBXTk4I",
+      "linkVideo": "https://www.youtube.com/watch?v=TnGl01FkMMo",
       "price": 14.99,
       "genres": ["Familiar"]
     },
@@ -205,7 +205,7 @@ const apiMoviesySeries = [
       "popularity": 1240.461,
       "release_date": "2023-07-03",
       "type": "movie",
-      "linkVideo": "https://youtu.be/hyyyKcfJRGQ",
+      "linkVideo": "https://www.youtube.com/watch?v=Rt0kp4VW1cI",
       "price": 4.99,
       "genres": ["Drama"]
     },
@@ -219,7 +219,7 @@ const apiMoviesySeries = [
       "popularity": 1224.414,
       "release_date": "2023-06-14",
       "type": "movie",
-      "linkVideo": "https://youtu.be/dJgSXsnrHrw",
+      "linkVideo": "https://www.youtube.com/watch?v=hXzcyx9V0xw",
       "price": 4.99,
       "genres": ["Ciencia Ficcion, Accion"]
     },
@@ -233,7 +233,7 @@ const apiMoviesySeries = [
       "popularity": 1171.542,
       "release_date": "2023-07-14",
       "type": "movie",
-      "linkVideo": "https://youtu.be/iAdeQvl5qKg",
+      "linkVideo": "https://www.youtube.com/watch?v=iAdeQvl5qKg",
       "price": 4.99,
       "genres": ["Aventura"]
     },
@@ -247,7 +247,7 @@ const apiMoviesySeries = [
       "popularity": 1102.07,
       "release_date": "2023-05-31",
       "type": "movie",
-      "linkVideo": "https://youtu.be/b_yMOiRgMmQ",
+      "linkVideo": "https://www.youtube.com/watch?v=cqGjhVJWtEg",
       "price": 4.99,
       "genres": ["Accion"]
     },
@@ -261,7 +261,7 @@ const apiMoviesySeries = [
       "popularity": 988.343,
       "release_date": "2018-01-03",
       "type": "movie",
-      "linkVideo": "https://youtu.be/lUwaosQZkHU",
+      "linkVideo": "https://www.youtube.com/watch?v=acQyrwQyCOk",
       "price": 24.99,
       "genres": ["Terror"]
     },
@@ -275,7 +275,7 @@ const apiMoviesySeries = [
       "popularity": 966.329,
       "type": "movie",
       "release_date": "2022-03-03",
-      "linkVideo": "https://youtu.be/wKk5VAK1GZQ",
+      "linkVideo": "https://www.youtube.com/watch?v=wKk5VAK1GZQ",
       "price": 16.99,
       "genres": ["Comedia"]
     }]
@@ -296,7 +296,7 @@ const apiMoviesySeries = [
       "numTemporada":1,
       "tituloEpisodio":"Pilot",
       "descripcionEpisodio": "Cuando un profesor de química de secundaria sin pretensiones descubre que tiene una forma rara de cáncer de pulmón, decide unirse a un ex alumno y crear una metanfetamina de cristal de primera línea en un RV usado, para mantener a su familia una vez que se haya ido.",
-      "linkVideo": "https://youtu.be/XZ8daibM3AE",
+      "linkVideo": "https://www.youtube.com/watch?v=HhesaQXLuRY",
       "duracion":"59min",
     },
     {
@@ -312,7 +312,7 @@ const apiMoviesySeries = [
       "numTemporada": 1,
       "tituloEpisodio":"Welcome to the Playground",
       "descripcionEpisodio": "Las hermanas huérfanas Vi y Powder traen problemas a las calles subterráneas de Zaun tras un atraco en el elegante Piltover",
-      "linkVideo":"https://youtu.be/IA-v_LB3Qpc",
+      "linkVideo":"https://www.youtube.com/watch?v=fXmAurh012s",
       "duracion": "44min",
     },
     {
@@ -328,7 +328,7 @@ const apiMoviesySeries = [
       "numTemporada":1,
       "tituloEpisodio":"I'm Luffy! The Man Who Will Become the Pirate King!",
       "descripcionEpisodio": "Un grupo de piratas liderados por Alvida saquea un barco, solo para encontrar un barril que contiene a un chico extraño llamado Luffy. Luffy tiene la misión de encontrar el tesoro legendario 'One Piece' y se hace amigo del grumete del barco, Coby, que en realidad quiere convertirse en oficial de la marina. Luffy derrota a Alvida y los dos viajan en busca de compañeros de tripulación.",
-      "linkVideo":"https://youtu.be/H4b2YjVWgqo",
+      "linkVideo":"https://www.youtube.com/watch?v=S8_YwFLCh4U",
       "duracion":"25min",
     },
     {
@@ -344,7 +344,7 @@ const apiMoviesySeries = [
       "numTemporada": 1,
       "tituloEpisodio":"Pilot",
       "descripcionEpisodio":"Rick se muda con la familia de su hija y se establece como una mala influencia para su nieto, Morty.",
-      "linkVideo":"https://youtu.be/wh10k2LPZiI",
+      "linkVideo":"https://www.youtube.com/watch?v=E8cXKMR9a1Q",
       "duracion":"22min",
     },
     {
@@ -360,7 +360,7 @@ const apiMoviesySeries = [
       "numTemporada":1,
       "tituloEpisodio":"Your Will Shall Decide Your Destiny",
       "descripcionEpisodio":"Cuando una falta de comunicación trae a una niña a Tejas Verdes en lugar de un niño, Marilla y Matthew se enfrentan a una decisión que les cambiará la vida.",
-      "linkVideo":"https://youtu.be/S5qJXYNNINo",
+      "linkVideo":"https://www.youtube.com/watch?v=S5qJXYNNINo",
       "duracion":"1hr29min",
     },
     {
@@ -376,7 +376,7 @@ const apiMoviesySeries = [
       "numTemporada":1,
       "tituloEpisodio":"Fullmetal Alchemist",
       "descripcionEpisodio":"Después de escapar de la Prisión Central, el Alquimista Congelador, Isaac McDougal, pone en marcha su plan para matar al Führer King Bradley. Sin embargo, bajo el mando del teniente coronel Roy Mustang, los alquimistas militares y estatales intentan detenerlo.",
-      "linkVideo":"https://youtu.be/AYlksPeSXrs",
+      "linkVideo":"https://www.youtube.com/watch?v=kx0nBaS_q50",
       "duracion":"25min",
     },
     {
@@ -392,7 +392,7 @@ const apiMoviesySeries = [
       "numTemporada": 1,
       "tituloEpisodio":"The Boy in the Iceberg",
       "descripcionEpisodio":"Dos hermanos adolescentes (Sokka y Katara) que viven en el Polo Sur descubren a un niño muy extraño (Aang), junto con su mascota, el bisonte volador Appa, en un iceberg. Pero, ¿pueden confiar en él cuando accidentalmente atrae la guerra a la puerta de su pueblo?",
-      "linkVideo":"https://youtu.be/QOg9LUIvaig",
+      "linkVideo":"https://www.youtube.com/watch?v=fWoNNqBV3W8",
       "duracion":"24min",
     },
     {
@@ -408,7 +408,7 @@ const apiMoviesySeries = [
       "numTemporada": 1,
       "tituloEpisodio":"When You're Lost in the Darkness",
       "descripcionEpisodio":"2003. Cuando un brote de hongos parasitarios comienza a devastar el país y el mundo, Joel Miller intenta escapar del creciente caos con su hija y su hermano. Veinte años después, Joel, ahora endurecido, y su compañera Tess luchan por sobrevivir bajo un régimen totalitario, mientras que las luciérnagas insurgentes albergan a una adolescente con un don único",
-      "linkVideo":"https://youtu.be/uLtkt8BonwM",
+      "linkVideo":"https://www.youtube.com/watch?v=uLtkt8BonwM",
       "duracion":"1hr21min",
     },
     {
@@ -424,7 +424,7 @@ const apiMoviesySeries = [
       "numTemporada": 1,
       "tituloEpisodio":"Cruelty",
       "descripcionEpisodio": "Es el Período Taisho (es decir, 1912-1926). Tanjiro Kamado vive una vida modesta pero feliz en las montañas con su familia. Un día, cuando regresa de vender carbón en la ciudad, encuentra los restos de su familia asesinada en charcos de sangre después del ataque de un demonio. Tanjiro se precipita por la montaña nevada con el único sobreviviente, su hermana Nezuko, en la espalda. Pero en el camino, Nezuko de repente gruñe, volviéndose hacia Tanjiro.",
-      "linkVideo":"https://youtu.be/SWAMTXfqer0",
+      "linkVideo":"https://www.youtube.com/watch?v=VQGCKyvzIM4",
       "duracion":"23min",
     },
     {
@@ -440,7 +440,7 @@ const apiMoviesySeries = [
       "numTemporada": 1,
       "tituloEpisodio":"What Kind Of A Guardian Are You?",
       "descripcionEpisodio":"Un ex humano convertido en duende está condenado a permanecer inmortal y solo durante cientos de años. Ji Eun Tak, una chica que puede ver espíritus, lo convoca accidentalmente, pero ella no es lo que él esperaba.",
-      "linkVideo":"https://youtu.be/8AcNEVUzV4o",
+      "linkVideo":"https://www.youtube.com/watch?v=S94ukM8C17A",
       "duracion":"1hr29min",
     },
     {
@@ -456,7 +456,7 @@ const apiMoviesySeries = [
       "numTemporada": 1,
       "tituloEpisodio":"IT'S ABOUT TIME",
       "descripcionEpisodio":"Cuando Mark Grayson finalmente hereda los poderes de su padre superhéroe, es un sueño hecho realidad. Pero ser un héroe es mucho más que elegir un nombre y un disfraz.",
-      "linkVideo":"https://youtu.be/-bfAVpuko5o",
+      "linkVideo":"https://www.youtube.com/watch?v=-bfAVpuko5o",
       "duracion":"48min",
     },
     {
@@ -472,7 +472,7 @@ const apiMoviesySeries = [
       "numTemporada": 1,
       "tituloEpisodio":"The Power",
       "descripcionEpisodio":"Mordecai y Rigby deben encontrar una manera de tapar un agujero en la pared que crearon, y un teclado mágico al que llaman 'The Power' podría ser justo lo que necesitan.",
-      "linkVideo":"https://youtu.be/1i3ufVR4AXg",
+      "linkVideo":"https://www.youtube.com/watch?v=Mm-Zc1_I1_8",
       "duracion":"11min",
     },
     {
@@ -488,7 +488,7 @@ const apiMoviesySeries = [
       "numTemporada": 1,
       "tituloEpisodio":"Izuku Midoriya: Origin",
       "descripcionEpisodio":"Izuku Midoriya quiere desesperadamente ser un héroe, pero es uno de los pocos de su generación que nació sin un Quirk. ¿Conocer al héroe número uno, All Might, cambiará su destino?",
-      "linkVideo":"https://youtu.be/EPVkcwyLQQ8",
+      "linkVideo":"https://www.youtube.com/watch?v=EPVkcwyLQQ8",
       "duracion":"24min",
     },
     {
@@ -504,7 +504,7 @@ const apiMoviesySeries = [
       "numTemporada": 1,
       "tituloEpisodio":"A Lying Witch and a Warden",
       "descripcionEpisodio":"Luz, una adolescente segura de sí misma, tropieza accidentalmente con un portal a un mundo mágico donde se hace amiga de una bruja rebelde, Eda, y de un adorable y diminuto guerrero, King. Para llegar a casa, Luz debe ayudarlos con una misión.",
-      "linkVideo":"https://youtu.be/1W1FFiT51lg",
+      "linkVideo":"https://www.youtube.com/watch?v=1W1FFiT51lg",
       "duracion":"22min",
     },
     {
@@ -520,7 +520,7 @@ const apiMoviesySeries = [
       "numTemporada": 1,
       "tituloEpisodio":"Spear and Fang",
       "descripcionEpisodio":"La tragedia obliga a un hombre de las cavernas y a un dinosaurio a confiar el uno en el otro para sobrevivir.",
-      "linkVideo":"https://youtu.be/V4UN616BFDA",
+      "linkVideo":"https://www.youtube.com/watch?v=co28PDKv2VY",
       "duracion":"22min",
     },
     {
@@ -536,7 +536,7 @@ const apiMoviesySeries = [
       "numTemporada": 1,
       "tituloEpisodio":"Cuentas pendientes",
       "descripcionEpisodio":"Después de perder cuatro finales y considerar retirarse de la selección, Messi regresa con energías renovadas y encara la fase de grupos de la Copa América 2021.",
-      "linkVideo":"https://youtu.be/zkmxFvWu8Bc",
+      "linkVideo":"https://www.youtube.com/watch?v=zkmxFvWu8Bc",
       "duracion":"40min",
   
     },
@@ -553,7 +553,7 @@ const apiMoviesySeries = [
       "numTemporada": 1,
       "tituloEpisodio":"Episode 1",
       "descripcionEpisodio":"Felipe y Gabo viven en un pequeño pueblo cerca de Buenos Aires y sueñan con una carrera futbolística. Un día, aparece el señor Vitto, representante de una academia de fútbol, y tiene que decidir a quién le ofrecerá una beca.",
-      "linkVideo":"https://youtu.be/V9GzYietgnk?list=PL_lyHtTzMWda3wlc7WWin4Sbbd9qkyLcU",
+      "linkVideo":"https://www.youtube.com/watch?v=K4uFFNl6FQ4",
       "duracion":"40min"
     },
     {
@@ -569,7 +569,7 @@ const apiMoviesySeries = [
       "numTemporada": 1,
       "tituloEpisodio":"To You, in 2000 Years: The Fall of Shiganshina (1)",
       "descripcionEpisodio":"Después de cien años de paz, la humanidad recuerda repentinamente el terror de estar a merced de los titanes.",
-      "linkVideo":"https://youtu.be/bT9csxkth8g",
+      "linkVideo":"https://www.youtube.com/watch?v=LV-nazLVmgo",
       "duracion":"25min",
     },
     {
@@ -585,7 +585,7 @@ const apiMoviesySeries = [
       "numTemporada": 1,
       "tituloEpisodio":"What Do We Do About the People We Hate?",
       "descripcionEpisodio":"Un día, Bok-joo, la estrella del club de levantamiento de pesas de su universidad deportiva, se encuentra con Joon-hyung, un nadador que es débil bajo presión.",
-      "linkVideo":"https://youtu.be/FKpPKqEg2Pc",
+      "linkVideo":"https://www.youtube.com/watch?v=6t5dLenA85Y",
       "duracion":"1hr1min",
     },
     {
@@ -601,7 +601,7 @@ const apiMoviesySeries = [
       "numTemporada": 1,
       "tituloEpisodio":"Departure x And x Friends",
       "descripcionEpisodio": "La historia comienza con un joven llamado Gon, que aspira a ser cazador al igual que su padre Ging. Ging deja a su hijo al cuidado de Mito, la tía de Gon, y no ha sido visto desde entonces. Gon atrapa el pez monstruo local, 'Lord of the Lake', para demostrar su habilidad para tomar el examen. Aunque Mito se resiste a dejar que Gon abandone su hogar, ella cede después de que él está decidido a comprender la razón por la que su padre lo dejó y su interés por ser cazador.",
-      "linkVideo":"https://youtu.be/d6kBeJjTGnY",
+      "linkVideo":"https://www.youtube.com/watch?v=d6kBeJjTGnY",
       "duracion":"24min",
     
     }  
