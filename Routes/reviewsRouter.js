@@ -6,8 +6,8 @@ const getReviewsXmultimedia = require('../controllers/reviews/getReviewsXmultime
 
 const reviewRouter = Router()
 
-reviewRouter.post('/', postReview);
-reviewRouter.get('/', getReviewsXmultimedia);    
+reviewRouter.post('/', postReview); //calificacion, comentario, idUser, idMovie o idSerie
+reviewRouter.get('/', getReviewsXmultimedia); // idMovie o idSerie por body   
 
 
 module.exports = reviewRouter;
