@@ -3,15 +3,43 @@ const bcrypt = require("bcrypt");
 const createAccessToken = require('./libs/jwt');
 const transporter = require('../config/nodeMailer')
 const nodemailer = require("nodemailer");
+const fs = require('fs');
+const path = require('path');
+const templatePath = path.join(__dirname, '../html/bienvenida.html');
+var htmlContent = fs.readFileSync(templatePath, 'utf-8'); 
 
 
 const enviarCorreoBienvenida = (email, nombre, apellido) =>{
+
+
+htmlContent = htmlContent.replace("{{name}}", nombre);
+htmlContent = htmlContent.replace("{{lastname}}", apellido);
+htmlContent = htmlContent.replace("{{emailUsuario}}", email);
+
+
     const mailOptions = {
         from: "movieplayhenry@gmail.com",
         to: email,
         subject: "Bienvenido a Movieplay",
         text: `Has creado una nueva cuenta en Movieplay con el correo ${email}` ,
-        html: `<h1>Hola ${nombre} ${apellido}, Acabas de crear una cuenta en Movieplay</h1>`
+        html: htmlContent,
+        attachments: [
+            {
+                filename: 'cine.jpg',
+                path: path.join(__dirname, '../html/imagenes/cine.jpg'),
+                cid: 'cine'
+            },
+            {
+                filename: 'peli2023.jpg',
+                path: path.join(__dirname, '../html/imagenes/peli2023.jpg'),
+                cid: 'peli2023'
+            },
+            {
+                filename: 'Logo.png',
+                path: path.join(__dirname, '../html/imagenes/Logo.png'),
+                cid: 'Logo'
+            }
+        ]
     }
     transporter.sendMail(mailOptions, (error, info)=>{
         if(error){
