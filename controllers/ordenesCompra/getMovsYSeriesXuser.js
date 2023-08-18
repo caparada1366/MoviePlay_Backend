@@ -1,7 +1,7 @@
 const { Series, Usuario, Multimedia, OrdenDeCompra } = require('../../config/database');
 
 const getMovsYSeriesXuser = async (req, res)=>{
-    const {idUser} = req.body;
+    const {idUser} = req.query;
     try {
         const usuario = await Usuario.findOne({
             where: {id: idUser},
