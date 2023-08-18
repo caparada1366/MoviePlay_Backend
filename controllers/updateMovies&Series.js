@@ -1,4 +1,4 @@
-const { Multimedia, Genres, Series } = require('../config/database')
+const { Multimedia, Genres, Series, Episodios } = require('../config/database')
 
 const updateMovies = async(req, res) => {
     try {
@@ -55,14 +55,14 @@ const updateSeries = async(req, res) => {
     try {
         const { id } = req.params;
         const serie = await Series.findByPk(id, {
-            include: [Genres]
+            include: [Genres, Episodios]
         });
 
         if(!serie) {
             return res.status(404).json({ error: "Serie no encontrada" });
         }
 
-        const {titulo, descripcion, yearEstreno, actores, image, genres, price } = req.body
+        const {titulo, descripcion, yearEstreno, actores, image, genres, price, episodios } = req.body
 
         if (titulo) {
             serie.titulo = titulo;
@@ -92,6 +92,38 @@ const updateSeries = async(req, res) => {
           
                 await serie.addGenres(genre);
               }
+        }
+
+        // Actualiza propiedades de episodios
+        if (episodios) {
+            for (const episodio of episodios) {
+                const { episodioId, numTemporada, numEpisodio, tituloEpisodio, descripcionEpisodio, linkVideo, duracion } = episodio;
+
+                if (episodioId) {
+                    const ep = serie.Episodios.find(ep => ep.episodioId === episodioId);
+                    if (ep) {
+                        if (numTemporada) {
+                            ep.numTemporada = numTemporada;
+                        }
+                        if (numEpisodio) {
+                            ep.numEpisodio = numEpisodio;
+                        }
+                        if (tituloEpisodio) {
+                            ep.tituloEpisodio = tituloEpisodio;
+                        }
+                        if (descripcionEpisodio) {
+                            ep.descripcionEpisodio = descripcionEpisodio;
+                        }
+                        if (linkVideo) {
+                            ep.linkVideo = linkVideo;
+                        }
+                        if (duracion) {
+                            ep.duracion = duracion;
+                        }
+                        await ep.save();
+                    }
+                }
+            }
         }
 
         await serie.save();

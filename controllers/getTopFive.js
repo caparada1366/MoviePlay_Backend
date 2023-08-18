@@ -4,27 +4,32 @@ const apiKey = 'AIzaSyDW0nfjxqYa5ZlximEI6TcQDL5ZL0XA7eQ'
 
 const topFiveMovie = async (req, res) => {
     try {
-        const movies = await Multimedia.findAll();
+    const movies = await Multimedia.findAll();
 
-        const videoIds = movies.map((m) => {
-            const videoUrl = new URL(m.linkVideo)
+        const videoData = await Promise.all(movies.map(async (m) => {
+            const videoUrl = new URL(m.linkVideo);
+            const videoId = videoUrl.searchParams.get('v');
 
-            return videoUrl.searchParams.get('v')
-        });
+            const response = await axios.get('https://www.googleapis.com/youtube/v3/videos', {
+                params: {
+                    key: apiKey,
+                    id: videoId,
+                    part: 'statistics'
+                }
+            });
 
-        const response = await axios.get('https://www.googleapis.com/youtube/v3/videos', {
-            params: {
-                key: apiKey,
-                id: videoIds.join(','),
-                part: 'statistics'
-            }
-        });
-        const data = response.data.items.map(i => i.statistics.viewCount);
-        const top5 = data.sort((a, b) => b - a).slice(0, 5);
+            const title = m.name;
+            const image = m.image;
+            const viewCount = parseInt(response.data.items[0].statistics.viewCount);
 
-        res.status(200).json(top5);
+            return { title, image, viewCount };
+        }));
+
+        const sortedData = videoData.sort((a, b) => b.viewCount - a.viewCount).slice(0, 5);
+
+        res.status(200).json(sortedData);
     } catch (error) {
-        res.status(404).json({error: error.message});
+        res.status(404).json({ error: error.message });
     }
 }
 
@@ -32,30 +37,38 @@ const topFiveMovie = async (req, res) => {
 const topFiveSeries = async(req, res) => {
     try {
         const series = await Series.findAll({
-            include: [{ model: Episodios, where: {numEpisodio: 1} }]
+            include: [{ model: Episodios, where: { numEpisodio: 1 } }]
         });
 
-        const videoIds = series.map(s => {
+        const episodeIds = [];
+
+        series.forEach(s => {
             const episode = s.Episodios[0];
-            if(episode) {
+            if (episode) {
                 const videoUrl = new URL(episode.linkVideo);
-    
-                return videoUrl.searchParams.get('v')
+                const videoId = videoUrl.searchParams.get('v');
+                episodeIds.push(videoId);
             }
-            return null;
         });
 
         const response = await axios.get('https://www.googleapis.com/youtube/v3/videos', {
             params: {
                 key: apiKey,
-                id: videoIds.join(','),
+                id: episodeIds.join(','),
                 part: 'statistics'
             }
         });
-        const data = response.data.items.map(i => i.statistics.viewCount);
-        const top5 = data.sort((a, b) => b - a).slice(0, 5);
 
-        res.status(200).json(top5);
+        const videoData = response.data.items.map((item, index) => {
+            const seriesTitle = series[index].titulo;
+            const seriesImage = series[index].image; 
+            const viewCount = parseInt(item.statistics.viewCount);
+            return { seriesTitle, seriesImage, viewCount };
+        });
+
+        const sortedData = videoData.sort((a, b) => b.viewCount - a.viewCount).slice(0, 5);
+
+        res.status(200).json(sortedData);
     } catch (error) {
         res.status(404).json({ error: error.message });
     }
