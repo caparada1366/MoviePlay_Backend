@@ -6,7 +6,7 @@ const fs = require("fs");
 const path = require("path");
 
 
-const local = false; // Cambiar a false para trabajar con el deployado
+const local = true; // Cambiar a false para trabajar con el deployado
 
 const sequelize = local === true?  new Sequelize(DB_NAME, DB_USER, DB_PASSWORD, {
   host: DB_HOST,
