@@ -1,7 +1,7 @@
 const { Series, Usuario, Multimedia, OrdenDeCompra } = require('../../config/database');
 
 const getOcXUser = async (req, res)=>{
-    const {idUser, page} = req.body;
+    const {idUser, page} = req.query;
     const pageNumber = parseInt(page) || 1;
     const pageSize = 10;
     const offset = (pageNumber - 1) * pageSize;

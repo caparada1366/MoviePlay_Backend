@@ -64,11 +64,11 @@ const agregarMovieCarrito = async (idMovie, idCarro)=>{
 //Funcion principal para agregar serie o pelicula al carro de compras 
 
 const postCarrito = async (req, res)=>{
-    const {emailUsuario, idSerie, idMovie} = req.query;
+    const {emailUsuario, idSerie, idMovie} = req.body;
 
     try {
         
-      
+
         const usuario = await Usuario.findOne({
             where: {email : emailUsuario},
             include: [
