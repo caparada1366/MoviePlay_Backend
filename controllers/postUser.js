@@ -88,7 +88,8 @@ const postUser = async(req, res) => {
                 message: 'Usuario creado con éxito',
                 id: userSaved.id,
                 nombre: userSaved.nombre,
-                email: userSaved.email     
+                email: userSaved.email,
+                rol: userSaved.rol     
             });
         }
     } catch (error) {

@@ -10,7 +10,7 @@ const getUser = async(req, res) =>{
         if(!login){
             throw new Error('Los datos no coinciden')
         } else {
-            res.status(200).json('Iniciando sesion')
+            res.status(200).json(login)
         }
     } catch (error) {
         res.status(404).json({error: error.message})
