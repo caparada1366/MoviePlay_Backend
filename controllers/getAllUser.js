@@ -14,9 +14,10 @@ const getAllUser = async(req, res) => {
         }
 
         const response = await Usuario.findAll({
-            where: {[Op.and]: arrayUser},
-
-            distinct: true,
+            //where: {[Op.and]: arrayUser},
+            where: arrayUser,
+            order: [['id', 'ASC']],
+            distinct: true, 
             offset: offset,
             limit: pageSize,
         })
