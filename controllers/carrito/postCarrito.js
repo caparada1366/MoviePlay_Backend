@@ -39,7 +39,7 @@ const agregarMovieCarrito = async (idMovie, idCarro)=>{
         const carrito = await CarroCompra.findByPk(idCarro,{
             include: Multimedia
         });
-        console.log(JSON.stringify(carrito))
+        //console.log(JSON.stringify(carrito))
         if(movie && carrito){
             var repetido = false;
             carrito.Multimedia.forEach(peli =>{
