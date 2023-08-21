@@ -6,7 +6,7 @@ const {
   postMedia,
 } = require("../../controllers/media/mediaHandler");
 const getMoviesYSeries = require("../../controllers/getMoviesYSeries");
-const getSeries = require("../../controllers/getSeries")
+const {getSeries, getAllSeries} = require("../../controllers/getSeries")
 const getMovies = require("../../controllers/getMovies");
 const serieByID = require("../../controllers/getSerieByID");
 const { postSeries } = require("../../controllers/postSeries");
@@ -15,6 +15,7 @@ const authUser = require("../../midlleware/validateToken");
 const mediaRouter = Router();
 
 mediaRouter.get("/todo",  getMoviesYSeries);
+mediaRouter.get("/allSeries",  getAllSeries);
 mediaRouter.get("/series",  getSeries);
 mediaRouter.get("/movies",  getMovies);
 mediaRouter.get("/",  getMedia);
