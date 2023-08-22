@@ -81,4 +81,20 @@ const getSeries = async (req, res)=>{
     }
 }
 
-module.exports = getSeries;
+const getAllSeries = async (req, res)=>{
+    try {
+     
+        const allSeries = await Series.findAll({
+            attributes: ['titulo']
+        })
+
+        res.status(200).send(allSeries)
+        
+    } catch (error) {
+        res.status(500).send(error.message)
+    }
+}
+
+module.exports = {
+    getSeries,
+    getAllSeries};
