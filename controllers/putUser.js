@@ -1,12 +1,22 @@
 const {Usuario} = require('../config/database')
+const bcrypt = require('bcrypt')
 
 const putUser = async(req, res) =>{
     const {image, password, nombre, apellido, email} = req.body;
     const {id} = req.params;
 
     try {
+        let hashPassword = password;
+
+        if(password){
+            hashPassword = await bcrypt.hash(password, 10)
+        }
+
        await Usuario.update({
-        nombre, apellido, password, image
+        nombre, 
+        apellido, 
+        password: hashPassword, 
+        image
        },
        {
         where: { id },
