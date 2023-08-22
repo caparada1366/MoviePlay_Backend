@@ -1,4 +1,4 @@
-const { Multimedia, Genres, Series, Episodios, Review } = require("../../config/database");
+const { Multimedia, Genres, Series, Episodios, Review, Usuario } = require("../../config/database");
 const { apiMovie, genres, apiMoviesySeries, series, episodio } = require("../../apiData/apiMovie");
 const { Op } = require("sequelize");
 
@@ -157,7 +157,9 @@ const getMediaById = async (id) => {
       model: Genres,
       attributes: ["name"],
       through: { attributes: [] },
-    }, Review],
+    }, {
+      model: Review,
+      include: Usuario}],
   });
 
   if (!media) {

@@ -42,7 +42,8 @@ const getMovies = async (req, res)=>{
         console.log(orden);
     }
     
- 
+    orden.push(['id', 'ASC']);
+
     const {count, rows} = await Multimedia.findAndCountAll({
         order: orden
           ,
