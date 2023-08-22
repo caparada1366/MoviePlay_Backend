@@ -6,15 +6,15 @@ const nodemailer = require("nodemailer");
 const fs = require('fs');
 const path = require('path');
 const templatePath = path.join(__dirname, '../html/bienvenida.html');
-var htmlContent = fs.readFileSync(templatePath, 'utf-8'); 
+//var htmlContent = fs.readFileSync(templatePath, 'utf-8'); 
 
 
 const enviarCorreoBienvenida = (email, nombre, apellido) =>{
+var htmlContent = fs.readFileSync(templatePath, 'utf-8'); 
 
-
-htmlContent = htmlContent.replace("{{name}}", nombre);
-htmlContent = htmlContent.replace("{{lastname}}", apellido);
-htmlContent = htmlContent.replace("{{emailUsuario}}", email);
+htmlContent = htmlContent.replace(" <!-- {{name}}  -->", nombre);
+htmlContent = htmlContent.replace("<!-- {{lastname}} -->", apellido);
+htmlContent = htmlContent.replace(" <!-- {{emailUsuario}} -->", email);
 
 
     const mailOptions = {
@@ -82,8 +82,12 @@ const postUser = async(req, res) => {
             nuevoUsuario.carroCompraId = nuevoCarro.id;
             await nuevoUsuario.save();
 
+            // Se envía correo
+             enviarCorreoBienvenida(nuevoUsuario.email, nuevoUsuario.nombre, nuevoUsuario.apellido);
+
             res.cookie('token', token)
-            enviarCorreoBienvenida(email, nombre, apellido);
+  
+
             return res.status(201).json({
                 message: 'Usuario creado con éxito',
                 id: userSaved.id,
