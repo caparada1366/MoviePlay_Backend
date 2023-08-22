@@ -5,12 +5,17 @@ const getUser = async(req, res) =>{
 
     try {
         const login = await Usuario.findOne({
-            where: {email: email}
+            where: {email: email},
+            // includes: {
+            //     id: id,
+            //     rol: rol
+            // }
         });
         if(!login){
             throw new Error('Los datos no coinciden')
         } else {
-            res.status(200).json(login)
+            console.log(login.id, login.email, login.rol);
+            res.status(200).json({login})
         }
     } catch (error) {
         res.status(404).json({error: error.message})

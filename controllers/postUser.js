@@ -85,14 +85,15 @@ const postUser = async(req, res) => {
             res.cookie('token', token)
 
             enviarCorreoBienvenida(email, nombre, apellido);
-            console.log(res);
+            
             return res.status(201).json({
                 message: 'Usuario creado con éxito',
                 id: userSaved.id,
                 nombre: userSaved.nombre,
                 apellido: userSaved.apellido,
                 email: userSaved.email,
-                rol: userSaved.rol     
+                rol: userSaved.rol,    
+                token 
             });
             
         }
