@@ -1,4 +1,4 @@
-const { Series, Genres, Episodios, Review} = require('../config/database');
+const { Series, Genres, Episodios, Review, Usuario} = require('../config/database');
 
 const serieByID = async (req, res) => {
     let { id } = req.params;
@@ -8,7 +8,8 @@ const serieByID = async (req, res) => {
         include: [
             { model: Episodios },
             { model: Genres },
-            { model: Review}
+            { model: Review,
+            include: Usuario}
         ]
     });
       res.status(200).json(serieId);
