@@ -11,6 +11,7 @@ const getMoviesYSeries = async (req, res)=>{
         const arrayCondicionesSeries = [];
         var condicionGenre = "";
         const orden = [['id', 'ASC']];
+        const orden2 = [['serieId', 'ASC']];
 
         arrayCondiciones.push({active: true});          //Condicion que trae todos los productos activos 
         arrayCondicionesSeries.push({active: true}); 
@@ -41,8 +42,8 @@ const getMoviesYSeries = async (req, res)=>{
         
         const busquedaPelis = async ()=>{
         const {count, rows} = await Multimedia.findAndCountAll({
-            // order: orden
-            //   ,
+            order: orden
+              ,
               where: {
                 [Op.and]:
                 arrayCondiciones
@@ -77,8 +78,8 @@ const getMoviesYSeries = async (req, res)=>{
        
         const busquedaSeries = async ()=>{
         const {count, rows} = await Series.findAndCountAll({
-            // order: orden
-            //   ,
+            order: orden2
+              ,
             where: {
                 [Op.and]:
                 arrayCondicionesSeries
