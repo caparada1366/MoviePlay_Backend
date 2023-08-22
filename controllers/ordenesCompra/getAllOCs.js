@@ -15,12 +15,21 @@ const getAllOCs = async (req, res)=>{
                 offset: offset,
                 limit: pageSize, 
             })
-           const totalPages = Math.ceil(arrayOC.length / pageSize);
+           
            
             var ventaTotal = 0;
-            arrayOC.forEach(element => {
+            const precios= await OrdenDeCompra.findAll({
+                include: [
+                    {model: Series, attributes: ['serieId', 'titulo', 'image', 'price']},
+                    {model: Multimedia, attributes: ['id', 'name', 'image', 'price']}],
+                distinct: true,
+                
+            })
+
+            precios.forEach(element => {
                 ventaTotal += (element.total)/100
             });
+            const totalPages = Math.ceil(precios.length / pageSize);
 
             const respuesta = {
                 totalOCs: arrayOC.lenght,
