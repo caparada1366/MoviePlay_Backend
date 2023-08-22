@@ -5,7 +5,7 @@ const { PORT } = process.env;
 const routes = require("./Routes/index");
 
 
-conn.sync({ force: false}).then(async () => {
+conn.sync({ force: true}).then(async () => {
   //aqui se configura si se reinicia la tabla o no
   try {
     await sequelize.authenticate();
