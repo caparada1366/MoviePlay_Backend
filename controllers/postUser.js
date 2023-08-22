@@ -88,8 +88,11 @@ const postUser = async(req, res) => {
             console.log(res);
             return res.status(201).json({
                 message: 'Usuario creado con éxito',
-                userSaved,
-                token   
+                id: userSaved.id,
+                nombre: userSaved.nombre,
+                apellido: userSaved.apellido,
+                email: userSaved.email,
+                rol: userSaved.rol     
             });
             
         }
@@ -117,6 +120,7 @@ const loginUser = async (req, res) => {
         return res.json({
                     id: userFound.id,
                     nombre: userFound.nombre,
+                    apellido: userFound.apellido,
                     email: userFound.email,
                     rol: userFound.rol     
                 });
