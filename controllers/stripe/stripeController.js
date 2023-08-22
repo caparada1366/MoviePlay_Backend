@@ -104,6 +104,7 @@ async function vaciarCarro(idCarro, arrayMovies, arraySeries){
 
 
 const enviarCorreo = async (emailUsuario, arraySeries, arrayMovies, amount)=>{
+  var htmlContent = fs.readFileSync(templatePath, 'utf-8'); 
   console.log("se ejecuta el enviar correo")
   try{
     var todosObjetos = [];
