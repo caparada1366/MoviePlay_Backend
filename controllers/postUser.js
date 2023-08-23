@@ -120,6 +120,7 @@ const loginUser = async (req, res) => {
                     apellido: userFound.apellido,
                     email: userFound.email,
                     rol: userFound.rol,
+                    image: userFound.image,
                     token     
                 });
         
