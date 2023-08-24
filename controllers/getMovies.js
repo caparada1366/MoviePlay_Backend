@@ -1,4 +1,4 @@
-const { Series, Genres, Episodios, Multimedia } = require('../config/database');
+const { Series, Genres, Episodios, Multimedia, Review } = require('../config/database');
 const {Op} = require('sequelize');
 
 const getMovies = async (req, res)=>{
@@ -57,7 +57,11 @@ const getMovies = async (req, res)=>{
             attributes: ['name'],
             through: {attributes: []},
             required: true
-          }],
+          },
+        {
+            model: Review,
+            attributes: ['calificacion'] 
+        }],
           distinct: true,
           offset: offset,
           limit: pageSize, 
@@ -66,19 +70,29 @@ const getMovies = async (req, res)=>{
     const totalPages = Math.ceil(count / pageSize);
     const arrayRespuestaPelis = []
     rows.forEach(element =>{
-        const {id, name, image, price, active, Genres} = element;
+        const {id, name, image, price, active, Genres, Reviews} = element;
         var arrayGenres = [];
+        var sumaCal = 0;
+        var calProm = 0
         Genres.forEach(g=>{
             arrayGenres.push(g.name);
         })
-        const elementoFinal = {id, name, image, price, active, genres: arrayGenres, tipo: "Pelicula"}
+        if(Reviews.length >0 ){
+            Reviews.forEach(rev=>{
+                sumaCal += rev.calificacion
+            })
+            calProm = sumaCal/Reviews.length;     
+        }
+       
+        
+        const elementoFinal = {id, name, image, price, active, genres: arrayGenres, tipo: "Pelicula", calificacion: calProm}
         arrayRespuestaPelis.push(elementoFinal)
     });
-    res.json({
+    res.json({  
         totalElementos: count,
         totalPages,
         currentPage: pageNumber,
-        elementos: arrayRespuestaPelis
+        elementos: arrayRespuestaPelis,
     })}
     catch(error){
         res.status(500).json({ error: error.message });
