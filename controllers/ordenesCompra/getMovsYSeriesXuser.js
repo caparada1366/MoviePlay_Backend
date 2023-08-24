@@ -33,24 +33,40 @@ const getMovsYSeriesXuser = async (req, res)=>{
 
         usuario.OrdenDeCompras.forEach(oc=>{
             oc.Multimedia.forEach(peli=>{
-              
+                var laRev     
+                for(let i = 0; i< peli.Reviews.length; i++){
+                    console.log("uno"+peli.Reviews[i].usuarioId+" dos"+idUser)
+                    if(peli.Reviews[i].usuarioId == idUser){
+                        console.log("se cumple")
+                        laRev = peli.Reviews[i];
+                    }
+                }
+
                 const laPeli = {
                     id: peli.id,
                     name: peli.name,
                     time: peli.time,
                     image: peli.image, 
                     price: peli.price,
-                    review: peli.Reviews.length > 0 ? peli.Reviews[0] : "Sin Calificar"
+                    review: laRev || 'Sin Calificar'
                 }
                 arrayPelis.push(laPeli)
             })
             oc.Series.forEach(serie=>{
+                var laRev     
+                for(let i = 0; i< serie.Reviews.length; i++){
+                    console.log("uno"+serie.Reviews[i].usuarioId+" dos"+idUser)
+                    if(serie.Reviews[i].usuarioId == idUser){
+                        console.log("se cumple")
+                        laRev = serie.Reviews[i];
+                    }
+                }
                 const laSerie = {
                     id: serie.serieId,
                     name: serie.titulo,
                     image: serie.image, 
                     price: serie.price,
-                    review: serie.Reviews.length > 0 ? serie.Reviews[0] : "Sin Calificar"
+                    review: laRev || 'Sin Calificar'
                 }
                 arraySeries.push(laSerie)
             })
