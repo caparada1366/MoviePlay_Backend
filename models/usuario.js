@@ -29,7 +29,7 @@ module.exports = (sequelize) =>{
         },
         image: {
             type: DataTypes.STRING,
-            defaultValue: 'https://cuv.upc.edu/es/shared/imatges/fotos-professorat-i-professionals/anonimo.jpg/image_view_fullscreen' 
+            defaultValue: "https://static.vecteezy.com/system/resources/previews/008/844/895/non_2x/user-icon-design-free-png.png" 
         },
         estadoActivo: {
             type: DataTypes.BOOLEAN,
