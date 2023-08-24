@@ -1,4 +1,4 @@
-const { Series, Genres, Episodios, Multimedia } = require('../config/database');
+const { Series, Genres, Episodios, Multimedia, Review } = require('../config/database');
 const {Op} = require('sequelize');
 
 const getSeries = async (req, res)=>{
@@ -54,6 +54,10 @@ const getSeries = async (req, res)=>{
                 attributes: ['name'],
                 through: {attributes: []},
                 required: true
+            },
+            {
+                model: Review,
+                attributes: ['calificacion'] 
             }],
             distinct: true,
             offset: offset,
@@ -62,12 +66,20 @@ const getSeries = async (req, res)=>{
         const totalPages = Math.ceil(count / pageSize);
         const arrayRespuestaSeries = []
         rows.forEach(element =>{
-            const {serieId, titulo, image, price, active, Genres} = element;
+            const {serieId, titulo, image, price, active, Genres, Reviews} = element;
             var arrayGenres = [];
+            var sumaCal = 0;
+            var calProm = 0
             Genres.forEach(g=>{
                 arrayGenres.push(g.name);
             })
-            const elementoFinal = {id: serieId, name: titulo, image, price, active, genres: arrayGenres, tipo: "Serie"}
+            if(Reviews.length >0 ){
+                Reviews.forEach(rev=>{
+                    sumaCal += rev.calificacion
+                })
+                calProm = sumaCal/Reviews.length;     
+            }
+            const elementoFinal = {id: serieId, name: titulo, image, price, active, genres: arrayGenres, tipo: "Seriexx", calificacion: calProm}
             arrayRespuestaSeries.push(elementoFinal)
         });
         res.json({

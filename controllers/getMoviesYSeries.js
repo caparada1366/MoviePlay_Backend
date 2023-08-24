@@ -1,4 +1,4 @@
-const { Series, Genres, Episodios, Multimedia } = require('../config/database');
+const { Series, Genres, Episodios, Multimedia, Review } = require('../config/database');
 const {Op} = require('sequelize');
 
 const getMoviesYSeries = async (req, res)=>{
@@ -54,7 +54,11 @@ const getMoviesYSeries = async (req, res)=>{
                 attributes: ['name'],
                 through: {attributes: []},
                 required: true
-              }],
+              },
+              {
+                model: Review,
+                attributes: ['calificacion'] 
+                }],
               distinct: true,
               offset: offset,
               limit: pageSize, 
@@ -63,12 +67,20 @@ const getMoviesYSeries = async (req, res)=>{
         const totalPages = Math.ceil(count / pageSize);
         const arrayRespuestaPelis = []
         rows.forEach(element =>{
-            const {id, name, image, price, Genres} = element;
+            const {id, name, image, price, Genres, Reviews} = element;
             var arrayGenres = [];
+            var sumaCal = 0;
+            var calProm = 0
             Genres.forEach(g=>{
                 arrayGenres.push(g.name);
             })
-            const elementoFinal = {id, name, image, price, genres: arrayGenres, tipo: "Pelicula"}
+            if(Reviews.length >0 ){
+                Reviews.forEach(rev=>{
+                    sumaCal += rev.calificacion
+                })
+                calProm = sumaCal/Reviews.length;     
+            }
+            const elementoFinal = {id, name, image, price, genres: arrayGenres, tipo: "Pelicula", calificacion: calProm}
             arrayRespuestaPelis.push(elementoFinal)
         });
         return arrayRespuestaPelis;
@@ -90,7 +102,11 @@ const getMoviesYSeries = async (req, res)=>{
                 attributes: ['name'],
                 through: {attributes: []},
                 required: true
-            }],
+            },
+            {
+                model: Review,
+                attributes: ['calificacion'] 
+                }],
             distinct: true,
             offset: offset,
             limit: pageSize, 
@@ -99,12 +115,20 @@ const getMoviesYSeries = async (req, res)=>{
         const arrayRespuestaSeries = []
        
         rows.forEach(element =>{
-            const {serieId, titulo, image, price, Genres} = element;
+            const {serieId, titulo, image, price, Genres, Reviews} = element;
             var arrayGenres = [];
+            var sumaCal = 0;
+            var calProm = 0
             Genres.forEach(g=>{
                 arrayGenres.push(g.name);
             })
-            const elementoFinal = {id: serieId, name: titulo, image, price, genres: arrayGenres, tipo: "Serie"}
+            if(Reviews.length >0 ){
+                Reviews.forEach(rev=>{
+                    sumaCal += rev.calificacion
+                })
+                calProm = sumaCal/Reviews.length;     
+            }
+            const elementoFinal = {id: serieId, name: titulo, image, price, genres: arrayGenres, tipo: "Serie",calificacion: calProm}
             arrayRespuestaSeries.push(elementoFinal)
         });
             return arrayRespuestaSeries

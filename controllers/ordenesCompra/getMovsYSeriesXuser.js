@@ -1,4 +1,4 @@
-const { Series, Usuario, Multimedia, OrdenDeCompra } = require('../../config/database');
+const { Series, Usuario, Multimedia, OrdenDeCompra, Review } = require('../../config/database');
 
 const getMovsYSeriesXuser = async (req, res)=>{
     const {idUser} = req.query;
@@ -8,9 +8,21 @@ const getMovsYSeriesXuser = async (req, res)=>{
             include: [
                 {
                 model: OrdenDeCompra,
-                include: [
-                    Multimedia,
-                    Series
+                include: [{
+                    model: Multimedia,
+                    include: [
+                        {
+                        model: Review,
+                        }
+                    ]
+                },{
+                    model: Series,
+                    include: [
+                        {
+                        model: Review,
+                        }
+                    ]
+                } 
                 ]
                 }
         ]
@@ -21,12 +33,14 @@ const getMovsYSeriesXuser = async (req, res)=>{
 
         usuario.OrdenDeCompras.forEach(oc=>{
             oc.Multimedia.forEach(peli=>{
+              
                 const laPeli = {
                     id: peli.id,
                     name: peli.name,
                     time: peli.time,
                     image: peli.image, 
                     price: peli.price,
+                    review: peli.Reviews.length > 0 ? peli.Reviews[0] : "Sin Calificar"
                 }
                 arrayPelis.push(laPeli)
             })
@@ -36,6 +50,7 @@ const getMovsYSeriesXuser = async (req, res)=>{
                     name: serie.titulo,
                     image: serie.image, 
                     price: serie.price,
+                    review: serie.Reviews.length > 0 ? serie.Reviews[0] : "Sin Calificar"
                 }
                 arraySeries.push(laSerie)
             })

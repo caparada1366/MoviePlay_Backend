@@ -12,7 +12,30 @@ const serieByID = async (req, res) => {
             include: Usuario}
         ]
     });
-      res.status(200).json(serieId);
+    var sumaCal = 0;
+    var calProm = 0;
+    if(serieId.Reviews.length >0 ){
+      serieId.Reviews.forEach(rev=>{
+          sumaCal += rev.calificacion
+      })
+      calProm = sumaCal/serieId.Reviews.length;     
+    }
+      const obj = {
+        serieId: serieId.serieId,
+        titulo: serieId.titulo,
+        descripcion: serieId.descripcion,
+        yearEstreno: serieId.yearEstreno,
+        actores: serieId.actores,
+        image: serieId.image,
+        active: serieId.active,
+        price: serieId.price,
+        'Episodios': serieId.Episodios,
+        'Genres': serieId.Genres,
+        'Reviews': serieId.Reviews,
+        promCal: calProm
+      };
+      
+      res.status(200).json(obj);
     } catch (error) {
       res.status(400).json({ error: error.message });
     }
