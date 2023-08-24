@@ -110,15 +110,19 @@ const loginUser = async (req, res) => {
                 email: email,
             }
          });
-        if (!userFound) return res.status(404).json({ message: 'No se encontro el Usuario' });
+         let isActive = userFound.estadoActivo;
 
+        if (!userFound) return res.status(404).json({ message: 'No se encontro el Usuario' });
+        
         const isMatch = await bcrypt.compare(password, userFound.password);
         if(!isMatch) return res.status(400).json({ message: 'Credenciales Invalidas' });
+
+        if (isActive === false) return res.status(400).json({message: 'Usuario inactivo'});
 
         const token = await createAccessToken({ id: userFound.id });
 
         res.cookie('token', token)
-        return res.json({
+        return res.json({message:'Inciando sesion', 
                     id: userFound.id,
                     nombre: userFound.nombre,
                     apellido: userFound.apellido,
