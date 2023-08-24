@@ -161,12 +161,34 @@ const getMediaById = async (id) => {
       model: Review,
       include: Usuario}],
   });
+  var sumaCal = 0;
+  var calProm = 0;
+  if(media.Reviews.length >0 ){
+    media.Reviews.forEach(rev=>{
+        sumaCal += rev.calificacion
+    })
+    calProm = sumaCal/media.Reviews.length;     
+  }
+
+  const obj ={
+    id: media.id,
+    name: media.name,
+    description: media.description,
+    time: media.time,
+    linkVideo: media.linkVideo,
+    image: media.image,
+    active: media.active,
+    price: media.price,
+    'Genres': media.Genres,
+    'Reviews': media.Reviews,
+    promCal: calProm
+  }
 
   if (!media) {
     throw new Error(`The provided ID doesn't exist`);
   }
 
-    return media;
+    return obj;
 }
 
 
